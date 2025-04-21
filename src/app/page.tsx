@@ -126,8 +126,8 @@ const Page = () => {
                 <div className="max-w-7xl mx-auto px-5 py-2 flex justify-between items-center">
                     {/* <div className="text-xl font-bold text-white">Carpet Store</div> */}
                     <img
-                        src="/images/logo1.png"
-                        style={{ width: 70, height: 70, objectFit: 'cover' }}
+                         src="/images/logo4.png"
+                        style={{ width: 170, height: 70, objectFit: 'cover' }}
                         alt="Logo"
                         loading="eager"
                     />
