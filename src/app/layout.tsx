@@ -1,4 +1,5 @@
 import '@/assets/styles/app.css'
+import { ReactNode } from 'react'
 
 export const metadata = {
   title: 'Hand Craft',
@@ -8,7 +9,11 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }:any) {
+interface RootLayoutProps {
+  children: ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
