@@ -652,9 +652,9 @@ const Page = () => {
                 </div>
 
                 <div className="w-[60%] mx-auto p-6">
-                    <p className="graytxt sub text-xl mb-6 text-white">
-                        The Story of the World's Largest Handmade carpet <br /> At the Grand Mosque Of Nur-Sultan, Kazakhstan
-                    </p>
+                   <p className="graytxt sub text-xl mb-6 text-white">
+    The Story of the World&apos;s Largest Handmade carpet <br /> At the Grand Mosque Of Nur-Sultan, Kazakhstan
+</p>
                     <p className="graytxt text-white mb-6 text-xs">
                         In 2021, at a time when the world was in the throes of the pandemic, looking for every sign of hope, courage, and resilience, a mega-construction project was rapidly taking shape in the heart of Central Asia - a grand mosque, the largest ever built in the region.
                     </p>
