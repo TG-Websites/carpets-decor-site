@@ -112,7 +112,7 @@ const Page = () => {
     const [index, setIndex] = useState(0);
 
     const nextSlide = () => setIndex((prev) => (prev + 1) % carouselImages.length);
-    const prevSlide = () => setIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  
 
     useEffect(() => {
         const interval = setInterval(nextSlide, 3000);
