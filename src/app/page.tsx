@@ -6,7 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
-import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+
 const slides = [
     {
         link: "/collections/antique-turkish-kilims",
@@ -122,50 +122,6 @@ const Page = () => {
     return (
         <div className="bg-black text-white">
             {/* Navbar */}
-            <nav className="sticky top-0 z-50 bg-black shadow-md">
-                <div className="max-w-7xl mx-auto px-5 py-2 flex justify-between items-center">
-                    {/* <div className="text-xl font-bold text-white">Carpet Store</div> */}
-                    <img
-                         src="/images/logo4.png"
-                        style={{ width: 170, height: 70, objectFit: 'cover' }}
-                        alt="Logo"
-                        loading="eager"
-                    />
-
-
-                    {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6 text-white font-medium">
-                        <li><a href="#" className="hover:text-gray-300 transition">Home</a></li>
-                        <li><a href="#about" className="hover:text-gray-300 transition">About</a></li>
-                        <li><a href="#services" className="hover:text-gray-300 transition">Services</a></li>
-                        <li><a href="#contact" className="hover:text-gray-300 transition">Contact</a></li>
-                    </ul>
-
-                    {/* Mobile Menu Toggle */}
-                    <details className="md:hidden relative">
-                        <summary className="text-white cursor-pointer list-none">
-                            <svg
-                                className="w-7 h-7"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </summary>
-
-                        {/* Dropdown Menu */}
-                        <ul className="absolute right-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md p-4 space-y-4 z-50">
-                            <li><a href="#" className="block hover:text-gray-300">Home</a></li>
-                            <li><a href="#about" className="block hover:text-gray-300">About</a></li>
-                            <li><a href="#services" className="block hover:text-gray-300">Services</a></li>
-                            <li><a href="#contact" className="block hover:text-gray-300">Contact</a></li>
-                        </ul>
-                    </details>
-                </div>
-            </nav>
 
             {/* Slider Section */}
             <Swiper
@@ -737,77 +693,7 @@ const Page = () => {
                     ))}
                 </div>
             </section>
-            <footer className="bg-black from-gray-100 to-gray-200 text-gray-800 py-12">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pb-10 text-center sm:text-left">
-                        {/* Company Section */}
-                        <div>
-                            <p style={{ fontSize: 14 }} className="text-lg graytxt font-semibold mb-1">OUR COMPANY</p>
-                            <ul className="space-y-1">
-                                <li><a className="text-xs graytxt hover:underline">The Story</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Design Emotion</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Projects</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Videos</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-
-                        {/* Customer Service Section */}
-                        <div>
-                            <p style={{ fontSize: 14 }} className="text-lg graytxt font-semibold mb-1">CUSTOMER SERVICE</p>
-                            <ul className="space-y-2">
-                                <li><a className="text-xs graytxt hover:underline">Contact us</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Our showrooms</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Custom made</a></li>
-                                <li><a className="text-xs graytxt hover:underline">Carpet maintenance</a></li>
-                                <li><a className="text-xs graytxt hover:underline">FAQs</a></li>
-                            </ul>
-                        </div>
-
-                        {/* Newsletter */}
-                        <div className="col-span-1 sm:col-span-2 md:col-span-2 flex flex-col items-center sm:items-start">
-                            <h3 className="text-sm graytxt font-semibold mb-4">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                            <form className="flex flex-col sm:flex-row items-center sm:items-stretch gap-4 w-full max-w-md">
-                                <input
-                                    type="email"
-                                    name="contact[email]"
-                                    placeholder="Write your email address"
-                                    className="w-full flex-grow px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800"
-                                    required
-                                />
-
-
-                                <button
-                                    type="submit"
-                                    className="bg-white text-black px-6 py-2 rounded hover:bg-gray-800 transition"
-                                >
-                                    SEND
-                                </button>
-                            </form>
-
-                            {/* Social Media Links */}
-                            <div className="mt-6">
-                                <h4 className="text-sm graytxt font-semibold mb-3">FOLLOW US</h4>
-                                <div className="flex justify-center sm:justify-start space-x-4 text-white">
-                                    <a href="https://twitter.com/handscarpets" className="bg-black p-2 rounded-full" aria-label="Twitter"><FaTwitter /></a>
-                                    <a href="https://www.facebook.com/handscarpets/" className="bg-black p-2 rounded-full" aria-label="Facebook"><FaFacebookF /></a>
-                                    <a href="https://in.pinterest.com/handscarpets/" className="bg-black p-2 rounded-full" aria-label="Pinterest"><FaPinterestP /></a>
-                                    <a href="https://www.instagram.com/handscarpets/" className="bg-black p-2 rounded-full" aria-label="Instagram"><FaInstagram /></a>
-                                    <a href="https://www.youtube.com/channel/UCOtTXL-IvBsJ4EYAJVdC0_A" className="bg-black p-2 rounded-full" aria-label="YouTube"><FaYoutube /></a>
-                                    <a href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/" className="bg-white p-2 rounded-full text-black" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <img
-                        src="/images/logo4.png"
-                        style={{ width: 150, height: 150, objectFit: 'cover' }}
-                        alt="Logo"
-                        loading="eager"
-                    />
-
-                </div>
-            </footer>
+       
 
         </div>
     );

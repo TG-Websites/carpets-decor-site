@@ -1,5 +1,7 @@
 import '@/assets/styles/app.css'
 import { ReactNode } from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 export const metadata = {
   title: 'Hand Craft',
@@ -17,7 +19,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
+      <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
