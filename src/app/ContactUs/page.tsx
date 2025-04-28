@@ -24,41 +24,41 @@ function page() {
 
                     </div>
 
-                    <div style={{display:'flex',justifyContent:'center'}} className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div style={{ display: 'flex', justifyContent: 'center' }} className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {/* Contact Form */}
                         <div className="flex flex-col justify-center">
                             <h2 className="text-lg font-semibold graytxt mb-6 text-center md:text-left" style={{ fontSize: 14 }}>
                                 SEND US A MESSAGE
                             </h2>
                             <form
-    style={{ alignSelf: 'center' }}
-    className="space-y-6 w-full max-w-lg mx-auto"
->
-    <input
-        type="text"
-        placeholder="Your Name"
-        className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
-        required
-    />
-    <input
-        type="email"
-        placeholder="Your Email"
-        className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
-        required
-    />
-    <textarea
-        rows="5"
-        placeholder="Your Message"
-        className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
-        required
-    ></textarea>
-    <button
-        type="submit"
-        className="bg-white text-black px-6 py-2 rounded hover:bg-gray-800 transition w-full"
-    >
-        SEND
-    </button>
-</form>
+                                style={{ alignSelf: 'center' }}
+                                className="space-y-6 w-full max-w-lg mx-auto"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Your Email"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
+                                    required
+                                />
+                                <textarea
+                                    rows="5"
+                                    placeholder="Your Message"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
+                                    required
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    className="bg-white text-black px-6 py-2 rounded hover:bg-gray-800 transition w-full"
+                                >
+                                    SEND
+                                </button>
+                            </form>
 
                         </div>
                     </div>

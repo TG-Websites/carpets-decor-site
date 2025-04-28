@@ -27,6 +27,7 @@ function Navbar() {
                     </a></li>
                     <li><a href="/AboutUs" className="hover:text-gray-300 transition">About</a></li>
                     <li><a href="/Services" className="hover:text-gray-300 transition">Services</a></li>
+                    <li><a href="/Blog" className="hover:text-gray-300 transition">Blog</a></li>
                     <li><a href="/ContactUs" className="hover:text-gray-300 transition">Contact</a></li>
                 </ul>
 
@@ -55,6 +56,7 @@ function Navbar() {
                     </a></li>
                     <li><a href="/AboutUs" className="hover:text-gray-300 transition">About</a></li>
                     <li><a href="/Services" className="hover:text-gray-300 transition">Services</a></li>
+                    <li><a href="/Blog" className="hover:text-gray-300 transition">Blog</a></li>
                     <li><a href="/ContactUs" className="hover:text-gray-300 transition">Contact</a></li>
                     </ul>
                 </details>
