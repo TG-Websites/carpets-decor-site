@@ -12,7 +12,7 @@ function page() {
                         <div className="flex justify-center">
                             <div className="layout-element__component layout-element__component--GridTextBox text-center w-full max-w-xl px-4">
                                 <h1 className="text-[32px] md:text-[48px] leading-[1.3] font-semibold graytxt">
-                                    Contact Hands Carpets
+                                    Contact Carpets
                                 </h1>
                                 <div className="layout-element__component layout-element__component--GridTextBox text-center w-full max-w-md mx-auto px-4 mb-6">
                                     <p className="text-[#56585E] text-base">
