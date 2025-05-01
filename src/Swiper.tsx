@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Link from "next/link";
 
 const slides = [
     {
@@ -57,23 +56,9 @@ const slides = [
     },
 ];
 
-const carouselImages = [
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/1_801b1baa-c9d5-4450-a930-0f425d8bc700.jpg?v=1743656464',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2_5449037b-a2f2-4ca7-923f-affa46dd7c79.jpg?v=1743656465',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3_0d32da69-8cc8-4f0e-b581-10f9b1d4bacf.jpg?v=1743656465',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/4_8ca3fdbd-9e0d-4ea2-8a15-a4fcd0b5246d.jpg?v=1743656464',
-];
 
 function SwiperComponent() {
-    const [index, setIndex] = useState(0);
-
-    const nextSlide = () => setIndex((prev) => (prev + 1) % carouselImages.length);
-
-
-    useEffect(() => {
-        const interval = setInterval(nextSlide, 3000);
-        return () => clearInterval(interval);
-    }, []);
+  
     return (
         <div>
             <Swiper

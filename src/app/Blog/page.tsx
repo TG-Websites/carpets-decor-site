@@ -169,7 +169,7 @@ const page = () => {
                     {/* Testimonial 1 */}
                     <div className="bg-gray-800 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500 p-8 hover:bg-gray-700">
                         <p className="text-lg text-gray-300 mb-6 italic">
-                            "The carpets are of exceptional quality, and they’ve added so much warmth and character to our home. The whole process was seamless!"
+                        &quot;The carpets are of exceptional quality, and theyve added so much warmth and character to our home. The whole process was seamless!&quot;
                         </p>
                         <div className="flex items-center justify-start space-x-6">
                             <img
@@ -187,7 +187,7 @@ const page = () => {
                     {/* Testimonial 2 */}
                     <div className="bg-gray-800 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500 p-8 hover:bg-gray-700">
                         <p className="text-lg text-gray-300 mb-6 italic">
-                            "I’m absolutely in love with the quality and style of the carpets. It really brought our living room together."
+                        &quot;I’m absolutely in love with the quality and style of the carpets. It really brought our living room together.&quot;
                         </p>
                         <div className="flex items-center justify-start space-x-6">
                             <img
@@ -205,7 +205,7 @@ const page = () => {
                     {/* Testimonial 3 */}
                     <div className="bg-gray-800 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500 p-8 hover:bg-gray-700">
                         <p className="text-lg text-gray-300 mb-6 italic">
-                            "From selection to installation, the entire experience was amazing. The quality of the carpets exceeded my expectations."
+                        &quot;From selection to installation, the entire experience was amazing. The quality of the carpets exceeded my expectations.&quot;
                         </p>
                         <div className="flex items-center justify-start space-x-6">
                             <img

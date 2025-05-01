@@ -7,7 +7,20 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+interface ProductCardProps {
+    image: string;
+    title: string;
+    description: string;
+  }
+  interface CarBoxProps {
+    title: string;
+    iconColor: string;
+    gradientFrom: string;
+    gradientTo: string;
+    text: string;
+    extra?: string | React.ReactNode; // optional if not always present
+  }
+  
 // Hero Section Component
 const HeroSection = () => (
     <section
@@ -36,7 +49,7 @@ const HeroSection = () => (
 );
 
 // Product Card Component
-const ProductCard = ({ image, title, description }: any) => (
+const ProductCard = ({ image, title, description }: ProductCardProps) => (
     <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
         <img src={image} alt={title} className="w-full h-72 object-cover" />
         <div className="p-6">
@@ -53,7 +66,7 @@ const ProductCard = ({ image, title, description }: any) => (
 );
 
 // CardBox Component (For Vision, Mission, Craftsmanship)
-const CardBox = ({ title, iconColor, gradientFrom, gradientTo, text, extra }: any) => (
+const CardBox = ({ title, iconColor, gradientFrom, gradientTo, text, extra }: CarBoxProps) => (
     <div
         className={`bg-gray-800 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:bg-gradient-to-r ${gradientFrom} ${gradientTo} hover:rotate-3 hover:cursor-pointer`}
     >
@@ -147,7 +160,7 @@ const Page = () => {
                 ></div>
                 <div className="relative max-w-7xl mx-auto text-center text-white z-10">
                     <h2 className="text-6xl font-extrabold mb-6 text-gray-100">
-                        About Hands Carpets
+                        About Carpets
                     </h2>
                     <p className="text-lg mb-8 text-gray-300 leading-relaxed max-w-3xl mx-auto">
                         At Hands Carpets, we specialize in creating bespoke carpets that

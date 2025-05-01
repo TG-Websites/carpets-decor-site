@@ -19,16 +19,16 @@ function Navbar() {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6 text-white font-medium">
-                    <li><a
+                    <li><Link
                         href="/"
                         className="hover:text-gray-300 transition"
                     >
                         Home
-                    </a></li>
-                    <li><a href="/AboutUs" className="hover:text-gray-300 transition">About</a></li>
-                    <li><a href="/Services" className="hover:text-gray-300 transition">Services</a></li>
-                    <li><a href="/Blog" className="hover:text-gray-300 transition">Blog</a></li>
-                    <li><a href="/ContactUs" className="hover:text-gray-300 transition">Contact</a></li>
+                    </Link></li>
+                    <li><Link href="/AboutUs" className="hover:text-gray-300 transition">About</Link></li>
+                    <li><Link href="/Services" className="hover:text-gray-300 transition">Services</Link></li>
+                    <li><Link href="/Blog" className="hover:text-gray-300 transition">Blog</Link></li>
+                    <li><Link href="/ContactUs" className="hover:text-gray-300 transition">Contact</Link></li>
                 </ul>
 
                 {/* Mobile Menu Toggle */}
@@ -48,12 +48,12 @@ function Navbar() {
 
                     {/* Dropdown Menu */}
                     <ul className="absolute right-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md p-4 space-y-4 z-50">
-                    <li><a
+                    <li><Link
                         href="/"
                         className="hover:text-gray-300 transition"
                     >
                         Home
-                    </a></li>
+                    </Link></li>
                     <li><a href="/AboutUs" className="hover:text-gray-300 transition">About</a></li>
                     <li><a href="/Services" className="hover:text-gray-300 transition">Services</a></li>
                     <li><a href="/Blog" className="hover:text-gray-300 transition">Blog</a></li>

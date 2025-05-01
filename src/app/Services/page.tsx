@@ -194,7 +194,7 @@ const page = () => {
                         Our Premium Handcrafted Carpet Services
                     </h2>
                     <p className="text-lg text-gray-300 mb-12">
-                        Discover the range of services we offer to enhance your living space with bespoke, hand-made carpets. From personalized designs to expert crafting, we provide a service that's as unique as your home.
+                        Discover the range of services we offer to enhance your living space with bespoke, hand-made carpets. From personalized designs to expert crafting, we provide a service that&apos;s as unique as your home.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                         <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">

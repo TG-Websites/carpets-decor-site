@@ -7,7 +7,11 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+interface ProductCardProps {
+    image: string;
+    title: string;
+    description: string;
+  }
 const page = () => {
     const products = [
         {
@@ -118,7 +122,7 @@ const page = () => {
         },
     ];
 
-    const ProductCard = ({ image, title, description }:any) => (
+    const ProductCard = ({ image, title, description }:ProductCardProps) => (
         <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
             <img src={image} alt={title} className="w-full h-72 object-cover" />
             <div className="p-6">

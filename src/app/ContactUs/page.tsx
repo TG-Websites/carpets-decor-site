@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 
 function page() {
@@ -21,7 +20,6 @@ function page() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'center' }} className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -47,7 +45,7 @@ function page() {
                                     required
                                 />
                                 <textarea
-                                    rows="5"
+                                    rows={5}
                                     placeholder="Your Message"
                                     className="w-full px-4 py-2 border border-gray-300 rounded placeholder-gray-500 text-white-800 bg-transparent focus:outline-none"
                                     required
