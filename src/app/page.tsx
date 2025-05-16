@@ -58,7 +58,7 @@ const Page = () => {
     const [index, setIndex] = useState(0);
 
     const nextSlide = () => setIndex((prev) => (prev + 1) % carouselImages.length);
-  
+
 
     useEffect(() => {
         const interval = setInterval(nextSlide, 3000);
@@ -70,14 +70,12 @@ const Page = () => {
             {/* Navbar */}
 
             {/* Slider Section */}
-        <SwiperComponent/>
+            <SwiperComponent />
 
             {/* Text Content */}
             <div className="mt-6 text-center px-4 sm:px-8">
                 <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
-                    Fine handcrafted carpets since 1881. An exclusive collection – designed to stir emotion,<br />
-                    brought to life unlike any other. The hand-knotted carpet, woven inch by inch. And the hand-tufted <br />
-                    carpet, crafted with care and technique.
+                    Eco-friendly outdoor rugs are crafted from recycled materials like PET bottles, offering durability, UV resistance, and sustainability. Ideal for patios or gardens, they combine style with environmental responsibility—perfect for conscious, outdoor living.
                 </p>
             </div>
 
@@ -382,66 +380,71 @@ const Page = () => {
                     allowFullScreen
                 ></iframe>
             </div>
-            <section className="bg-black py-3 px-4">
-                <div className="text-center pb-10 pt-10">
-                    <h3 style={{ letterSpacing: '0.1em' }} className="text-white text-4xl font-semibold">FEATURED</h3>
+            <section className="bg-black py-12 px-4">
+                <div className="text-center pb-10">
+                    <h3 style={{ letterSpacing: '0.1em' }} className="text-white text-4xl font-semibold">
+                        FEATURED
+                    </h3>
                     <div className="w-16 h-0.5 bg-white mx-auto mt-2 mb-8 rounded-full"></div>
                 </div>
 
-                <div style={{ backgroundColor: '#5a5758', }} className="w-full pt-30 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                <div
+                    className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start bg-[#5a5758] p-6 rounded-lg"
+                >
                     {/* Left Text Content */}
-                    <div className="lg:col-span-1 space-y-6 mt-10 lg:mt-22 lg:ml-30 text-center lg:text-left w-full lg:max-w-[400px]">
+                    <div className="space-y-6 text-center lg:text-left w-full lg:max-w-[400px]">
                         <div>
-                            <img
-                                className="w-[380px] h-[120px] object-contain mx-auto lg:mx-0"
+                            {/* <img
+                                className="w-[280px] h-[100px] object-contain mx-auto lg:mx-0"
                                 src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Logo.png?v=1743657001"
                                 alt="Brand Logo"
-                            />
+                            /> */}
+                            <h1 style={{ color: '#949597' }} className="text-white">Overlap Collection Hand Knotted</h1>
                         </div>
 
-                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white ">
-                            Where Time, Luxury and Artistry become one
+                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
+                            Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted knot by knot by skilled Indian craftsmen, sometimes taking months to complete. Each one is a testament to timeless artistry, cultural heritage, and the resilience of human craftsmanship
                         </p>
-                        <p style={{ color: '#949597', fontSize: 14 }} className="text-gray-300 text-base">
-                            A collection where distinction and unity converge, where the boundaries
-                            of form and colour blur into something uniquely whole.
+                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
+                            "India is famous for its hand-knotted carpets.  Where generations of weavers have perfected the skill. Composed of  wool, bamboo silk, or wool-silk, these carpets provide outstanding texture, durability, and visual depth. The use of natural pigments and detailed patterns
+                            These rugs transcend their function as mere floor coverings; they are durable works of art that infuse any room with warmth, sophistication, and personality
+                            "
                         </p>
                         <a
-                            className="graytxt inline-block mt-5 px-2 py-2 text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
+                            href="#"
+                            className="inline-block mt-4 px-4 py-2 text-white border border-white rounded hover:bg-white hover:text-black transition duration-300"
                         >
                             EXPLORE THE COLLECTION
                         </a>
                     </div>
 
-
-
                     {/* Right Images */}
                     <div className="lg:col-span-3 space-y-6 w-full">
                         <div>
                             <img
-                                className="w-full max-w-[60%] h-auto rounded-xl shadow-lg mx-auto"
+                                className="w-full max-w-3xl h-auto rounded-xl shadow-lg mx-auto"
                                 src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Creative_c87cbd1b-7253-4341-8fb1-6bea3f24f262.jpg?v=1743657060"
                                 alt="Main Feature"
                             />
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
-                            <a >
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <a href="#">
                                 <img
-                                    className="w-full h-[285px] object-cover rounded-md mx-auto"
+                                    className="w-full h-[285px] object-cover rounded-md"
                                     src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/1-min.png?v=1743659615"
                                     alt="Product 1"
                                 />
                             </a>
-                            <a >
+                            <a href="#">
                                 <img
-                                    className="w-full h-[285px] object-cover rounded-md mx-auto"
+                                    className="w-full h-[285px] object-cover rounded-md"
                                     src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2-min.png?v=1743659615"
                                     alt="Product 2"
                                 />
                             </a>
-                            <a >
+                            <a href="#">
                                 <img
-                                    className="w-full h-[285px] object-cover rounded-md mx-auto"
+                                    className="w-full h-[285px] object-cover rounded-md"
                                     src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3-min.png?v=1743659615"
                                     alt="Product 3"
                                 />
@@ -450,36 +453,37 @@ const Page = () => {
                     </div>
                 </div>
             </section>
+
             <section className="bg-black py-16 px-4">
-                <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-4 items-start">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
                     {/* Left Images */}
                     <div className="lg:col-span-3 space-y-6">
                         <div>
                             <img
-                                className="w-full max-w-[60%] h-[600px] object-cover rounded-xl shadow-lg mx-auto"
+                                className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-xl shadow-lg"
                                 src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Creative_d6abc0cc-8a5b-42e5-9569-331957f86ef6.jpg?v=1726142516"
                                 alt="Main Feature"
                             />
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <a >
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <a href="#">
                                 <img
-                                    className="w-full h-[275px] object-cover rounded-md mx-auto"
-                                    src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Geomiter.webp?v=1726143694"
+                                    className="w-full h-[250px] object-cover rounded-md"
+                                    src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Rosetwirl.webp?v=1726143694"
                                     alt="Product 1"
                                 />
                             </a>
-                            <a >
+                            <a href="#">
                                 <img
-                                    className="w-full h-[275px] object-cover rounded-md mx-auto"
-                                    src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Rosetwirl.webp?v=1726143694"
+                                    className="w-full h-[250px] object-cover rounded-md"
+                                    src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Twistscape.webp?v=1726143695"
                                     alt="Product 2"
                                 />
                             </a>
-                            <a >
+                            <a href="#">
                                 <img
-                                    className="w-full h-[275px] object-cover rounded-md mx-auto"
+                                    className="w-full h-[250px] object-cover rounded-md"
                                     src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Twistscape.webp?v=1726143695"
                                     alt="Product 3"
                                 />
@@ -488,28 +492,37 @@ const Page = () => {
                     </div>
 
                     {/* Right Text Content */}
-                    <div className="lg:col-span-1 space-y-6 text-left max-w-[80%] mx-auto mr-16">
+                    <div className="space-y-6 text-center lg:text-left w-full">
                         <div>
-                            <img
-                                className="w-[400px] h-[100px] object-contain mx-auto"
-                                src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Antonym_logo.png?v=1715860773"
-                                alt="Brand Logo"
-                            />
+                            {/* Optional logo */}
+                            {/* <img
+          className="w-[280px] h-[100px] object-contain mx-auto lg:mx-0"
+          src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Antonym_logo.png?v=1715860773"
+          alt="Brand Logo"
+        /> */}
+                            <h1 style={{ color: '#949597' }} className="text-white text-3xl font-semibold">
+                                ~ Hand Tufted ~
+                            </h1>
                         </div>
-                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white ">
-                            A rare beauty of opposites
+
+                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
+                            Experience the ultimate sense of sophistication combined with comfort by our hand-tufted carpet, which was carefully crafted with the help of skilled craftsmen from high-grade wool and viscose. Prepared with a tufting tool for accuracy as well as time efficiency, our carpet has the soft, resilient pile and smooth, even finish
                         </p>
-                        <p style={{ color: '#949597', fontSize: 14 }} className="text-gray-300 text-base">
-                            A new collection of nine distinct, thought-provoking pieces. Of dialogues between contrasts, in patterns, shapes, and textures. Hand tufted with the finest botanical silk and wool for a luxurious texture and an exquisite, untamed sheen.
+
+                        <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
+                            Hand-tufted carpets provide an ideal combination of art and affordability. The carpets, produced using a handheld tufting gun, can be produced quicker than their hand-knotted counterparts; however, they also maintain exquisite designs and high-quality materials such as wool and viscose. Ideal for tastefully designed interiors, hand-tufted carpets bring color, texture, and comfort to any environment, thereby making them a favorite among modern homes and commercial properties.
                         </p>
+
                         <a
-                            className="graytxt inline-block mt-5 px-2 py-2 text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
+                            href="#"
+                            className="inline-block mt-4 px-4 py-2 text-white border border-white rounded hover:bg-white hover:text-black transition duration-300"
                         >
                             EXPLORE THE COLLECTION
                         </a>
                     </div>
                 </div>
             </section>
+
             <div className="text-center px-4 py-10">
                 <div className="intro-title mb-8">
                     <h3
@@ -523,9 +536,9 @@ const Page = () => {
                 </div>
 
                 <div className="w-[60%] mx-auto p-6">
-                   <p className="graytxt sub text-xl mb-6 text-white">
-    The Story of the World&apos;s Largest Handmade carpet <br /> At the Grand Mosque Of Nur-Sultan, Kazakhstan
-</p>
+                    <p className="graytxt sub text-xl mb-6 text-white">
+                        The Story of the World&apos;s Largest Handmade carpet <br /> At the Grand Mosque Of Nur-Sultan, Kazakhstan
+                    </p>
                     <p className="graytxt text-white mb-6 text-xs">
                         In 2021, at a time when the world was in the throes of the pandemic, looking for every sign of hope, courage, and resilience, a mega-construction project was rapidly taking shape in the heart of Central Asia - a grand mosque, the largest ever built in the region.
                     </p>
@@ -608,7 +621,7 @@ const Page = () => {
                     ))}
                 </div>
             </section>
-       
+
 
         </div>
     );

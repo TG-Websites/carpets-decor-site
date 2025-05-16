@@ -65,7 +65,7 @@ function Footer() {
             </div>
         </div>
         <img
-            src="/images/logo4.png"
+            src="/images/logo5.png"
             style={{ width: 150, height: 150, objectFit: 'cover' }}
             alt="Logo"
             loading="eager"

@@ -11,16 +11,16 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
-  }
-  interface CarBoxProps {
+}
+interface CarBoxProps {
     title: string;
     iconColor: string;
     gradientFrom: string;
     gradientTo: string;
     text: string;
     extra?: string | React.ReactNode; // optional if not always present
-  }
-  
+}
+
 // Hero Section Component
 const HeroSection = () => (
     <section
@@ -33,10 +33,7 @@ const HeroSection = () => (
         <div className="container mx-auto text-center mt-26">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">About Us</h2>
             <p className="text-lg sm:text-xl mb-12">
-                We are passionate about creating high-quality, handcrafted carpets
-                that tell a story of tradition, artistry, and excellence. Our artisans
-                pour years of craftsmanship into every piece, ensuring that each carpet
-                is unique and built to last.
+                Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region.
             </p>
             <a
                 href="#contact"
@@ -163,11 +160,7 @@ const Page = () => {
                         About Carpets
                     </h2>
                     <p className="text-lg mb-8 text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                        At Hands Carpets, we specialize in creating bespoke carpets that
-                        transform your living spaces. Our expert artisans craft carpets that
-                        suit your unique style and preferences. With years of experience in
-                        the industry, we bring high-quality materials and impeccable
-                        craftsmanship to every project.
+                        The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
@@ -197,7 +190,7 @@ const Page = () => {
                             iconColor="text-indigo-500"
                             gradientFrom="from-red-600"
                             gradientTo="to-red-400"
-                            text="We believe in creating carpets that stand the test of time, combining traditional techniques with modern design to offer durability and elegance."
+                            text="Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history."
                             extra="Our skilled artisans craft each piece with passion, bringing comfort and beauty to every corner of your home."
                         />
                     </div>
