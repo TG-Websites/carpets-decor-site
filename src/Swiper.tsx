@@ -5,20 +5,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+interface Slide {
+    desktopSrc: string;
+    mobileSrc: string;
+    caption?: {
+        title: string;
+        subtitle: string;
+    };
+}
 
 const slides = [
     {
-        link: "/collections/antique-turkish-kilims",
+        // link: "/collections/antique-turkish-kilims",
         desktopSrc: "/images/sliderimg1.png",
         mobileSrc: "/images/sliderimg1.png",
     },
     {
-        link: "/collections/overlap",
+        // link: "/collections/overlap",
         desktopSrc: "/images/sliderimg2.png",
         mobileSrc: "/images/sliderimg2.png",
     },
     {
-        link: "/collections/persian-carpets-rugs",
+        // link: "/collections/persian-carpets-rugs",
         desktopSrc: "/images/sliderimg3.png",
         mobileSrc: "/images/sliderimg3.png",
     },
@@ -68,7 +76,8 @@ function SwiperComponent() {
                 loop
                 className="relative"
             >
-                {slides.map((slide, i) => (
+                {slides.map((slide: Slide, i) => (
+
                     <SwiperSlide key={i}>
                         <a >
                             <div className="relative w-full h-full">

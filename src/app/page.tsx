@@ -406,9 +406,9 @@ const Page = () => {
                             Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted knot by knot by skilled Indian craftsmen, sometimes taking months to complete. Each one is a testament to timeless artistry, cultural heritage, and the resilience of human craftsmanship
                         </p>
                         <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
-                            "India is famous for its hand-knotted carpets.  Where generations of weavers have perfected the skill. Composed of  wool, bamboo silk, or wool-silk, these carpets provide outstanding texture, durability, and visual depth. The use of natural pigments and detailed patterns
+                            &quot;India is famous for its hand-knotted carpets.  Where generations of weavers have perfected the skill. Composed of  wool, bamboo silk, or wool-silk, these carpets provide outstanding texture, durability, and visual depth. The use of natural pigments and detailed patterns
                             These rugs transcend their function as mere floor coverings; they are durable works of art that infuse any room with warmth, sophistication, and personality
-                            "
+                            &quot;
                         </p>
                         <a
                             href="#"
