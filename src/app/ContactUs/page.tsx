@@ -38,7 +38,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                         <h1 className="text-[32px] md:text-[48px] leading-[1.3] font-semibold graytxt">
                             Contact Us
                         </h1>
-                        <p className="text-[#56585E] text-base">
+                        <p className="text-white text-base">
                             Get in touch for custom carpets and decor information today!
                         </p>
                     </div>

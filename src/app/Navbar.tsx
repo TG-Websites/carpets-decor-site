@@ -9,7 +9,7 @@ function Navbar() {
                 <Link href="/">
                     <img
                         src="/images/logo5.png"
-                        style={{ width: 200, height: 100, objectFit: 'cover' }}
+                        style={{ width: 190, height: 70, objectFit: 'cover' }}
                         alt="Logo"
                         loading="eager"
                         className='pt-3'
@@ -17,7 +17,7 @@ function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 text-white text-xm font-medium">
+                <ul className="hidden md:flex space-x-6 text-white font-medium">
                     <li>
                         <Link href="/" className="hover:text-gray-300 transition">
                             Home
