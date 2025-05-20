@@ -6,8 +6,14 @@ import Link from 'next/link';
 const carouselImages = [
     'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/1_801b1baa-c9d5-4450-a930-0f425d8bc700.jpg?v=1743656464',
     'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2_5449037b-a2f2-4ca7-923f-affa46dd7c79.jpg?v=1743656465',
+];
+const carouselImages1 = [
     'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3_0d32da69-8cc8-4f0e-b581-10f9b1d4bacf.jpg?v=1743656465',
     'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/4_8ca3fdbd-9e0d-4ea2-8a15-a4fcd0b5246d.jpg?v=1743656464',
+];
+const carouselImages2 = [
+    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2_5449037b-a2f2-4ca7-923f-affa46dd7c79.jpg?v=1743656465',
+    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3_0d32da69-8cc8-4f0e-b581-10f9b1d4bacf.jpg?v=1743656465',
 ];
 const contactOptions = [
     {
@@ -21,12 +27,6 @@ const contactOptions = [
         text: "We offer complimentary\nconsultation to help you with\nyour special project.",
         link: "/pages/meeting-request#page-content-wrapper",
         button: "CONSULT US",
-    },
-    {
-        title: "Visit our store",
-        text: "Make a visit to our store in\nNew Delhi, Mumbai,\nHyderabad, Singapore and Dubai",
-        link: "/pages/contact-us-singapore",
-        button: "VISIT US",
     },
 ];
 const blogPosts = [
@@ -58,11 +58,20 @@ const Page = () => {
     const [index, setIndex] = useState(0);
 
     const nextSlide = () => setIndex((prev) => (prev + 1) % carouselImages.length);
+    const nextSlide2 = () => setIndex((prev) => (prev + 1) % carouselImages1.length);
+    const nextSlide3 = () => setIndex((prev) => (prev + 1) % carouselImages2.length);
 
 
     useEffect(() => {
         const interval = setInterval(nextSlide, 3000);
-        return () => clearInterval(interval);
+        const interval1 = setInterval(nextSlide2, 3000);
+        const interval2 = setInterval(nextSlide3, 3000);
+        return () => {
+            clearInterval(interval);
+            clearInterval(interval1);
+            clearInterval(interval2);
+        }
+      
     }, []);
 
     return (
@@ -75,8 +84,18 @@ const Page = () => {
             {/* Text Content */}
             <div className="mt-6 text-center px-4 sm:px-8">
                 <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
-                    Eco-friendly outdoor rugs are crafted from recycled materials like PET bottles, offering durability, UV resistance, and sustainability. Ideal for patios or gardens, they combine style with environmental responsibility—perfect for conscious, outdoor living.
+                    Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region. </p>
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+
+                    The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
                 </p>
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+
+                    Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history.
+                </p>
+
+
+
             </div>
 
             {/* Section Title */}
@@ -84,7 +103,7 @@ const Page = () => {
                 <div className="flex items-center justify-center w-11/12 mx-auto">
                     <div className="flex-1 h-px bg-gray-400"></div>
                     <h2 className="mx-4 text-2xl text-gray-400 uppercase font-normal whitespace-nowrap">
-                        EXPLORE OUR RUGS
+                        FEATURED
                     </h2>
                     <div className="flex-1 h-px bg-gray-400"></div>
                 </div>
@@ -92,10 +111,10 @@ const Page = () => {
 
 
             {/* Tabs */}
-            <ul className="store text-center flex justify-center space-x-4 mt-4">
+            {/* <ul className="store text-center flex justify-center space-x-4 mt-4">
                 <li className="tab-link current  px-4 py-2 border-b-1 border-black">BY STYLE</li>
                 <li className="tab-link px-4 py-2 border-b-2 border-transparent hover:border-black font-medium">BY COLLECTION</li>
-            </ul>
+            </ul> */}
 
             {/* Contemporary Section (Image Right) */}
             <div className="flex flex-col lg:flex-row items-center py-10 m-0 gap-6 px-4">
@@ -125,15 +144,15 @@ const Page = () => {
                 {/* Text Content */}
                 <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left py-5">
                     <div>
-                        <p style={{ fontSize: 17 }} className="text-white">CONTEMPORARY</p>
+                        <p style={{ fontSize: 17 }} className="text-white">Persian Rugs</p>
                         <div className="flex justify-center lg:justify-start">
                             <div className="w-17 mt-1 h-0.5 bg-white"></div>
                         </div>
                         <p style={{ color: '#a2a2a2' }} className="mt-4 text-gray-700 leading-relaxed">
-                            The bridge between past and <br />present, these home carpets <br />
-                            combine traditional carpet <br />design elements with <br />
-                            contemporary stylistics and <br />colours, evoking sensations that <br />
-                            are familiar yet altogether new.
+                            These exquisite home carpets serve <br /> as a refined link between tradition and modernity <br />
+                            combine traditional carpet ,<br /> seamlessly integrating classic design elements with  <br />
+                            contemporary stylistics and <br />contemporary styles and color palettes to evoke a <br />
+                            sense of familiarity while introducing a renewed aesthetic.
                         </p>
                         <a
                             className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
@@ -153,12 +172,12 @@ const Page = () => {
                 {/* Carousel Section */}
                 <div className="w-full lg:w-7/12 relative">
                     <img
-                        src={carouselImages[index]}
+                        src={carouselImages1[index]}
                         alt={`Slide ${index + 1}`}
                         className="rounded-lg w-full h-auto object-cover transition-all duration-500"
                     />
                     <button
-                        onClick={nextSlide}
+                        onClick={nextSlide2}
                         className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
                     >
                         ❮
@@ -166,7 +185,7 @@ const Page = () => {
 
 
                     <button
-                        onClick={nextSlide}
+                        onClick={nextSlide2}
                         className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
                     >
                         ❯
@@ -174,16 +193,16 @@ const Page = () => {
                 </div>
                 <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-right py-5">
                     <div>
-                        <p style={{ fontSize: 17, alignSelf: 'flex-end' }} className="text-white">MODERN</p>
+                        <p style={{ fontSize: 17, alignSelf: 'flex-end' }} className="text-white">Silk Carpets</p>
                         <div className="flex justify-center lg:justify-end">
                             <div className="w-15 mt-1 h-0.5 bg-white"></div>
                         </div>
 
                         <p className="graytxt mt-4 text-gray-700 leading-relaxed">
-                            Contemporary carpet designs,<br />that are current and modern,<br />
+                            Silk carpets are renowned for their fine craftsmanship,<br /> luxurious texture, and finely detailed patterns.<br />
                             reflecting new and diverse<br />
-                            thematic, stylistic and colour<br />
-                            orientation. The contemporary <br />rugs reflect geometrics,<br />organics, abstract art, pop art,<br />from the minimal to the bold and <br />vibrant. The geometric carpets <br />with fascinating patterns make <br />for a refreshing addition to your <br />home decor.
+                            They are soft but resilient, and possess a refined touch<br />
+                            . Silk carpets are not merely ornaments;  <br />they are long-lasting works of heritage and art.
                         </p>
                         <a
                             className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
@@ -198,12 +217,12 @@ const Page = () => {
                 {/* Carousel Section */}
                 <div className="w-full lg:w-7/12 relative">
                     <img
-                        src={carouselImages[index]}
+                        src={carouselImages2[index]}
                         alt={`Slide ${index + 1}`}
                         className="rounded-lg w-full h-auto object-cover transition-all duration-500"
                     />
                     <button
-                        onClick={nextSlide}
+                        onClick={nextSlide2}
                         className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
                     >
                         ❮
@@ -211,7 +230,7 @@ const Page = () => {
 
 
                     <button
-                        onClick={nextSlide}
+                        onClick={nextSlide2}
                         className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
                     >
                         ❯
@@ -222,21 +241,12 @@ const Page = () => {
                 {/* Text Content */}
                 <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left py-5">
                     <div>
-                        <p style={{ fontSize: 17 }} className="text-white">TRADITIONAL</p>
+                        <p style={{ fontSize: 17 }} className="text-white">Hand Knotted</p>
                         <div className="flex justify-center lg:justify-start">
                             <div className="w-17 mt-1 h-0.5 bg-white"></div>
                         </div>
                         <p className="graytxt mt-4 text-gray-700 leading-relaxed">
-                            Heralding age-old design <br />
-                            themes, these are handmade <br />
-                            Indian carpets with classic <br />
-                            patterns, telling stories with <br />
-                            traditional symbolism, motifs <br />
-                            and cohesive colour. A varied <br />
-                            range of carpet flooring in a <br />
-                            combination of themes, <br />
-                            materials and qualities to match <br />
-                            a plethora of styles.
+                            Hand-knotted rugs are the epitome of traditional craftsmanship.<br /> Each rug is individually knotted <br /> knot by knot by skilled Indian craftsmen, <br />sometimes taking months to complete. <br />Each one is a testament to timeless artistry, <br />cultural heritage, and the resilience of human craftsmanship.
                         </p>
                         <a
                             className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
@@ -267,27 +277,24 @@ const Page = () => {
                 </div>
             </section>
 
-            <div className="yt-video-container relative block text-center my-12">
+            {/* <div className="yt-video-container relative block text-center my-12">
                 <h2 className="graytxt text-3xl font-bold text-white" style={{ letterSpacing: '0.12em' }}>
                     HANDS AND THE BIRTH OF THE BEAUTIFUL
                 </h2>
                 <div className="w-16 h-0.5 mt-3 bg-[#a2a2a2] mx-auto mb-8"></div>
 
                 <div className="yt-video relative">
-                    {/* Image as background */}
                     <img
                         className="video-img w-full h-auto object-cover rounded-lg"
                         src="//handscarpets.com/cdn/shop/files/video-img_852697d9-9567-439d-b1ec-fbfeb6e21e02.jpg?v=1697088851"
                         alt="Handmade Carpet"
                     />
 
-                    {/* Video iframe container */}
                     <div className="main-video absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
                         <iframe
                             className="iframe rounded-lg"
                             width="100%"
                             height="680"
-                            // src="https://www.youtube.com/embed/4K8KdEpFH0s?si=O_KIlvMkkm41YEzt"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -295,7 +302,6 @@ const Page = () => {
                         ></iframe>
                     </div>
 
-                    {/* Play Button */}
                     <div className="video-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer opacity-75 hover:opacity-100 transition duration-300">
                         <img
                             className="video-btn-img w-16 h-16"
@@ -304,8 +310,8 @@ const Page = () => {
                         />
                     </div>
                 </div>
-            </div>
-            <div className="carousel-item relative w-full h-full">
+            </div> */}
+            {/* <div className="carousel-item relative w-full h-full">
                 <div className="relative flex items-center w-full">
                     <picture className="w-full">
                         <source
@@ -320,12 +326,11 @@ const Page = () => {
                         />
                     </picture>
 
-                    {/* Banner content */}
                     <div className="banner-content absolute inset-0 flex items-center justify-center">
                     </div>
                 </div>
-            </div>
-            <div className="yt-video2-container block py-12 px-4 md:px-20 bg-black">
+            </div> */}
+            {/* <div className="yt-video2-container block py-12 px-4 md:px-20 bg-black">
                 <div className="max-w-6xl mx-auto text-center">
                     <h3
                         className=" font-bold mb-4"
@@ -336,7 +341,6 @@ const Page = () => {
                     </h3>
                     <div className="w-16 h-0.5 bg-white mx-auto mt-2 mb-8 rounded-full"></div>
 
-                    {/* Divider under heading */}
                     <div className="w-16 h-1 bg-black mx-auto mb-8 rounded-full"></div>
 
                     <div
@@ -364,9 +368,8 @@ const Page = () => {
                         </p>
                     </div>
                 </div>
-            </div>
-            {/* Fixed-size responsive video */}
-            <div
+            </div> */}
+            {/* <div
                 className="w-full max-w-7xl mx-auto aspect-[16/9] rounded-xl overflow-hidden shadow-2xl"
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -379,8 +382,8 @@ const Page = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                 ></iframe>
-            </div>
-            <section className="bg-black py-12 px-4">
+            </div> */}
+            {/* <section className="bg-black py-12 px-4">
                 <div className="text-center pb-10">
                     <h3 style={{ letterSpacing: '0.1em' }} className="text-white text-4xl font-semibold">
                         FEATURED
@@ -391,14 +394,8 @@ const Page = () => {
                 <div
                     className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start bg-[#5a5758] p-6 rounded-lg"
                 >
-                    {/* Left Text Content */}
                     <div className="space-y-6 text-center lg:text-left w-full lg:max-w-[400px]">
                         <div>
-                            {/* <img
-                                className="w-[280px] h-[100px] object-contain mx-auto lg:mx-0"
-                                src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Logo.png?v=1743657001"
-                                alt="Brand Logo"
-                            /> */}
                             <h1 style={{ color: '#949597' }} className="text-white">Overlap Collection Hand Knotted</h1>
                         </div>
 
@@ -406,7 +403,7 @@ const Page = () => {
                             Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted knot by knot by skilled Indian craftsmen, sometimes taking months to complete. Each one is a testament to timeless artistry, cultural heritage, and the resilience of human craftsmanship
                         </p>
                         <p style={{ color: '#949597', fontSize: 14 }} className="text-white">
-                            &quot;India is famous for its hand-knotted carpets.  Where generations of weavers have perfected the skill. Composed of  wool, bamboo silk, or wool-silk, these carpets provide outstanding texture, durability, and visual depth. The use of natural pigments and detailed patterns
+                            LORE OUR RUG&quot;India is famous for its hand-knotted carpets.  Where generations of weavers have perfected the skill. Composed of  wool, bamboo silk, or wool-silk, these carpets provide outstanding texture, durability, and visual depth. The use of natural pigments and detailed patterns
                             These rugs transcend their function as mere floor coverings; they are durable works of art that infuse any room with warmth, sophistication, and personality
                             &quot;
                         </p>
@@ -418,7 +415,6 @@ const Page = () => {
                         </a>
                     </div>
 
-                    {/* Right Images */}
                     <div className="lg:col-span-3 space-y-6 w-full">
                         <div>
                             <img
@@ -452,11 +448,10 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className="bg-black py-16 px-4">
+            {/* <section className="bg-black py-16 px-4">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-                    {/* Left Images */}
                     <div className="lg:col-span-3 space-y-6">
                         <div>
                             <img
@@ -491,15 +486,9 @@ const Page = () => {
                         </div>
                     </div>
 
-                    {/* Right Text Content */}
                     <div className="space-y-6 text-center lg:text-left w-full">
                         <div>
-                            {/* Optional logo */}
-                            {/* <img
-          className="w-[280px] h-[100px] object-contain mx-auto lg:mx-0"
-          src="https://cdn.shopify.com/s/files/1/0755/3017/4762/files/Antonym_logo.png?v=1715860773"
-          alt="Brand Logo"
-        /> */}
+                          
                             <h1 style={{ color: '#949597' }} className="text-white text-3xl font-semibold">
                                 ~ Hand Tufted ~
                             </h1>
@@ -521,9 +510,9 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <div className="text-center px-4 py-10">
+            {/* <div className="text-center px-4 py-10">
                 <div className="intro-title mb-8">
                     <h3
                         className=" font-bold mb-4"
@@ -560,7 +549,7 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <section className="bg-gray-100 py-[27px] md:py-[36px]">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold uppercase">
@@ -600,7 +589,7 @@ const Page = () => {
             </section>
 
             <section className="bg-[#5a5758] py-8 px-4">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-400">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-400">
                     {contactOptions.map((option, index) => (
                         <div
                             key={index}
@@ -612,7 +601,7 @@ const Page = () => {
                             <p className="text-base text-gray-300 mb-9 whitespace-pre-line">
                                 {option.text}
                             </p>
-                            <a
+                            <a href='/ContactUs'
                                 className="text-gray-300 text-sm uppercase tracking-wide hover:underline"
                             >
                                 {option.button}
