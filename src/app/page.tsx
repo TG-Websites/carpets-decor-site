@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import SwiperComponent from '@/Swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 const carouselImages = [
     'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/1_801b1baa-c9d5-4450-a930-0f425d8bc700.jpg?v=1743656464',
@@ -54,14 +56,72 @@ const blogPosts = [
         link: "/blogs/blog/hands-launches-knotion-by-nika-zupanc-at-id-india-design-mumbai",
     },
 ];
+const ProductCard = ({ image, title, description }: ProductCardProps) => (
+    <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
+        <img src={image} alt={title} className="w-full h-72 object-cover" />
+        <div className="p-6">
+            <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+            <p className="text-gray-300 mb-6">{description}</p>
+            <a
+                href="/CardDetails"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
+            >
+                Shop Now
+            </a>
+        </div>
+    </div>
+);
+const products = [
+    {
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+        title: 'Silk Vintage Carpet',
+        description: 'A vintage silk carpet that adds elegance to any room.',
+    },
+    {
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GXwHz53377F1P8swEifWw9adKbVCJcSb9Q&s',
+        title: 'Traditional Wool Carpet',
+        description: 'Crafted with fine wool, perfect for a cozy ambiance.',
+    },
+    {
+        image:
+            'https://wallmantra.com/wp-content/uploads/presto-carpets-rugs-geometric-pattern-blue-mauve-tufted-area-carpet-32952737333414.jpg',
+        title: 'Geometric Pattern Carpet',
+        description: 'Bold patterns ideal for contemporary decor.',
+    },
+    {
+        image:
+            'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
+        title: 'Luxury Persian Carpet',
+        description: 'Intricate design with vibrant colors.',
+    },
+    {
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+        title: 'Handwoven Jute Rug',
+        description: 'Rustic eco-friendly jute with natural texture.',
+    },
+    {
+        image:
+            'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
+        title: 'Shaggy Area Carpet',
+        description: 'Ultra-soft rug that adds warmth.',
+    },
+    {
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+        title: 'Modern Abstract Carpet',
+        description: 'Perfect for bold, artistic interiors.',
+    },
+];
+
 const Page = () => {
     const [index, setIndex] = useState(0);
 
     const nextSlide = () => setIndex((prev) => (prev + 1) % carouselImages.length);
     const nextSlide2 = () => setIndex((prev) => (prev + 1) % carouselImages1.length);
     const nextSlide3 = () => setIndex((prev) => (prev + 1) % carouselImages2.length);
-
-
     useEffect(() => {
         const interval = setInterval(nextSlide, 3000);
         const interval1 = setInterval(nextSlide2, 3000);
@@ -71,13 +131,10 @@ const Page = () => {
             clearInterval(interval1);
             clearInterval(interval2);
         }
-      
     }, []);
-
     return (
         <div className="bg-black text-white">
             {/* Navbar */}
-
             {/* Slider Section */}
             <SwiperComponent />
 
@@ -131,8 +188,6 @@ const Page = () => {
                     >
                         ❮
                     </button>
-
-
                     <button
                         onClick={nextSlide}
                         className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
@@ -550,6 +605,47 @@ const Page = () => {
                     </div>
                 </div>
             </div> */}
+            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+                <div className="container mx-auto text-center px-4">
+                    <h2 className="text-4xl font-extrabold text-white mb-6">
+                        Explore Our Handcrafted Carpets
+                    </h2>
+                    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+                        Each carpet is a masterpiece, woven with care and tradition.
+                    </p>
+
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        navigation={true}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                            1280: { slidesPerView: 4 },
+                        }}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        {products.map((product, index) => (
+                            <SwiperSlide key={index}>
+                                <ProductCard {...product} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
+                        <p>
+                            Our handcrafted carpets are woven with the finest materials,
+                            ensuring top-tier quality and timeless durability. Each carpet is
+                            unique, crafted by skilled artisans who bring decades of tradition
+                            to every knot and weave.
+                        </p>
+                    </div>
+                </div>
+            </section>
             <section className="bg-gray-100 py-[27px] md:py-[36px]">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold uppercase">
