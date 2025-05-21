@@ -13,16 +13,17 @@ function Footer() {
     <footer className="bg-black text-gray-300 py-12">
       <div className="max-w-7xl mx-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
-          
+
           {/* Logo & Social Section */}
           <div className="sm:col-span-2 flex flex-col items-center sm:items-center">
             <img
               src="/images/logo1.png"
               alt="Logo"
               loading="eager"
-              className="w-[100px] h-[100px] object-cover"
+              className="w-[100px] h-[100px] object-cover ml-[-170px]"
             />
             <div>
+
               <h4 className="text-sm text-white font-semibold mb-2">FOLLOW US</h4>
               <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-white">
                 <a
@@ -106,9 +107,7 @@ function Footer() {
               <li><a href="#" className="hover:text-white transition">FAQs</a></li>
             </ul>
           </div>
-
         </div>
-
         {/* Footer Bottom */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
           © {new Date().getFullYear()} Hands Carpets & Rugs. All rights reserved.

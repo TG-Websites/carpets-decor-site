@@ -6,16 +6,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 const carouselImages = [
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/1_801b1baa-c9d5-4450-a930-0f425d8bc700.jpg?v=1743656464',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2_5449037b-a2f2-4ca7-923f-affa46dd7c79.jpg?v=1743656465',
+    '/images/gptslider1.png',
+    '/images/gptslider2.png',
 ];
 const carouselImages1 = [
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3_0d32da69-8cc8-4f0e-b581-10f9b1d4bacf.jpg?v=1743656465',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/4_8ca3fdbd-9e0d-4ea2-8a15-a4fcd0b5246d.jpg?v=1743656464',
+    '/images/gptslider3.png',
+    '/images/gptslider4.png',
 ];
 const carouselImages2 = [
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/2_5449037b-a2f2-4ca7-923f-affa46dd7c79.jpg?v=1743656465',
-    'https://cdn.shopify.com/s/files/1/0755/3017/4762/files/3_0d32da69-8cc8-4f0e-b581-10f9b1d4bacf.jpg?v=1743656465',
+    '/images/gptslider5.png',
+    '/images/gptslider6.png',
 ];
 const contactOptions = [
     {
@@ -60,7 +60,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
     <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
         <img src={image} alt={title} className="w-full h-72 object-cover" />
         <div className="p-6">
-            <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
             <p className="text-gray-300 mb-6">{description}</p>
             <a
                 href="/CardDetails"
@@ -74,46 +74,41 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 const products = [
     {
         image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-        title: 'Silk Vintage Carpet',
-        description: 'A vintage silk carpet that adds elegance to any room.',
+            '/images/shopslider.png',
+        title: 'Authentic Craftsmanship',
+        description: 'Every carpet is a masterpiece, handwoven by skilled artisans with decades of experience.',
     },
     {
         image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GXwHz53377F1P8swEifWw9adKbVCJcSb9Q&s',
-        title: 'Traditional Wool Carpet',
-        description: 'Crafted with fine wool, perfect for a cozy ambiance.',
+            '/images/shopslider1.png',
+        title: 'Premium Materials',
+        description: 'We use only the finest wool, silk, and natural dyes to create carpets that last generations.',
     },
     {
         image:
-            'https://wallmantra.com/wp-content/uploads/presto-carpets-rugs-geometric-pattern-blue-mauve-tufted-area-carpet-32952737333414.jpg',
-        title: 'Geometric Pattern Carpet',
-        description: 'Bold patterns ideal for contemporary decor.',
+            '/images/shopslider2.png',
+        title: 'Tailored to Your Space',
+        description: 'Custom sizes, colors, and designs available to match your unique taste and interiors perfectly.',
     },
     {
         image:
-            'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-        title: 'Luxury Persian Carpet',
-        description: 'Intricate design with vibrant colors.',
+            '/images/shopslider3.png',
+        title: 'Sustainable Process	',
+        description: 'Eco-friendly production methods that respect nature while creating stunning carpets.',
     },
     {
         image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-        title: 'Handwoven Jute Rug',
-        description: 'Rustic eco-friendly jute with natural texture.',
+            '/images/shopslider4.png',
+        title: 'Trusted by Thousands',
+        description: 'Join our family of satisfied clients worldwide who trust Hands Carpets for luxury and quality.',
     },
     {
         image:
-            'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-        title: 'Shaggy Area Carpet',
-        description: 'Ultra-soft rug that adds warmth.',
+            '/images/shopslider5.png',
+        title: 'Lifetime Support',
+        description: 'We are always here to help with care, maintenance, and future purchases to keep your carpets stunning.',
     },
-    {
-        image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-        title: 'Modern Abstract Carpet',
-        description: 'Perfect for bold, artistic interiors.',
-    },
+
 ];
 
 const Page = () => {
@@ -608,10 +603,10 @@ const Page = () => {
             <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="container mx-auto text-center px-4">
                     <h2 className="text-4xl font-extrabold text-white mb-6">
-                        Explore Our Handcrafted Carpets
+                        Why Choose Hands Carpets?
                     </h2>
                     <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Each carpet is a masterpiece, woven with care and tradition.
+                        Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
                     </p>
 
                     <Swiper
