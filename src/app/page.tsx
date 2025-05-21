@@ -5,6 +5,12 @@ import SwiperComponent from '@/Swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
+type ProductCardProps = {
+  image: string;
+  title: string;
+  description: string;
+};
+
 const carouselImages = [
     '/images/gptslider1.png',
     '/images/gptslider2.png',
