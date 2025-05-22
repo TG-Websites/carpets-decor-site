@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 
 export const metadata = {
-  title: 'Hand Craft',
-  description: 'This is hand craft.',
+  title: 'Carpet Decor',
+  description: 'This is Carpet Decor.',
   icons: {
     icon: '/favicon.png', // Make sure this file is placed in the /public folder
   },

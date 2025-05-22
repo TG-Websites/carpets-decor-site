@@ -609,7 +609,7 @@ const Page = () => {
             <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="container mx-auto text-center px-4">
                     <h2 className="text-4xl font-extrabold text-white mb-6">
-                        Why Choose Hands Carpets?
+                        Explore Carpet Decor ?
                     </h2>
                     <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
                         Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
