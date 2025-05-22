@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 type ProductCardProps = {
-  image: string;
-  title: string;
-  description: string;
+    image: string;
+    title: string;
+    description: string;
 };
 
 const carouselImages = [
@@ -81,38 +81,38 @@ const products = [
     {
         image:
             '/images/shopslider.png',
-        title: 'Authentic Craftsmanship',
-        description: 'Every carpet is a masterpiece, handwoven by skilled artisans with decades of experience.',
+        title: 'Hand Knotted',
+        description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
     },
     {
         image:
             '/images/shopslider1.png',
         title: 'Premium Materials',
-        description: 'We use only the finest wool, silk, and natural dyes to create carpets that last generations.',
+        description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting smoothness.',
     },
     {
         image:
             '/images/shopslider2.png',
-        title: 'Tailored to Your Space',
-        description: 'Custom sizes, colors, and designs available to match your unique taste and interiors perfectly.',
+        title: 'Hand Tufted',
+        description: 'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
     },
     {
         image:
             '/images/shopslider3.png',
-        title: 'Sustainable Process	',
-        description: 'Eco-friendly production methods that respect nature while creating stunning carpets.',
+        title: 'Indo Tibetan Rugs',
+        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
     },
     {
         image:
             '/images/shopslider4.png',
-        title: 'Trusted by Thousands',
-        description: 'Join our family of satisfied clients worldwide who trust Hands Carpets for luxury and quality.',
+        title: 'Handloom',
+        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
     },
     {
         image:
             '/images/shopslider5.png',
-        title: 'Lifetime Support',
-        description: 'We are always here to help with care, maintenance, and future purchases to keep your carpets stunning.',
+        title: 'Flatweave',
+        description: 'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
     },
 
 ];
