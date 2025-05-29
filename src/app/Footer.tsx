@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   FaTwitter,
   FaFacebookF,
@@ -11,76 +11,75 @@ import {
 function Footer() {
   return (
     <footer className="bg-black text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
 
           {/* Logo & Social Section */}
-          <div className="sm:col-span-2 flex flex-col items-center sm:items-center">
+          <div className="sm:col-span-2 flex flex-col items-center sm:items-start space-y-4 md:ml-8 lg:ml-45">
             <img
               src="/images/logo1.png"
               alt="Logo"
               loading="eager"
-              className="w-[100px] h-[100px] object-cover ml-[-170px]"
+              className="w-24 h-24 object-cover"
             />
-            <div>
 
-              <h4 className="text-sm text-white font-semibold mb-2">FOLLOW US</h4>
-              <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-white">
-                <a
-                  href="https://twitter.com/handscarpets"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="https://www.facebook.com/handscarpets/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                  aria-label="Facebook"
-                >
-                  <FaFacebookF />
-                </a>
-                <a
-                  href="https://in.pinterest.com/handscarpets/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                  aria-label="Pinterest"
-                >
-                  <FaPinterestP />
-                </a>
-                <a
-                  href="https://www.instagram.com/handscarpets/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCOtTXL-IvBsJ4EYAJVdC0_A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white hover:bg-gray-300 p-2 rounded-full text-black transition"
-                  aria-label="LinkedIn"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </div>
+            <h4 className="text-sm text-white font-semibold">FOLLOW US</h4>
+
+            <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-white">
+              <a
+                href="https://twitter.com/handscarpets"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://www.facebook.com/handscarpets/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://in.pinterest.com/handscarpets/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                aria-label="Pinterest"
+              >
+                <FaPinterestP />
+              </a>
+              <a
+                href="https://www.instagram.com/handscarpets/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCOtTXL-IvBsJ4EYAJVdC0_A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white hover:bg-gray-300 p-2 rounded-full text-black transition"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
             </div>
           </div>
 
@@ -108,6 +107,7 @@ function Footer() {
             </ul>
           </div>
         </div>
+
         {/* Footer Bottom */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
           © {new Date().getFullYear()} Hands Carpets & Rugs. All rights reserved.
