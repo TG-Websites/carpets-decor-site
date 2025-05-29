@@ -30,6 +30,26 @@ const slides = [
         desktopSrc: "/images/sliderimg3.png",
         mobileSrc: "/images/sliderimg3.png",
     },
+    {
+        // link: "/collections/persian-carpets-rugs",
+        desktopSrc: "/images/sliderimg4.png",
+        mobileSrc: "/images/sliderimg4.png",
+    },
+    {
+        // link: "/collections/persian-carpets-rugs",
+        desktopSrc: "/images/sliderimg5.png",
+        mobileSrc: "/images/sliderimg5.png",
+    },
+    {
+        // link: "/collections/persian-carpets-rugs",
+        desktopSrc: "/images/sliderimg6.png",
+        mobileSrc: "/images/sliderimg6.png",
+    },
+    {
+        // link: "/collections/persian-carpets-rugs",
+        desktopSrc: "/images/sliderimg7.png",
+        mobileSrc: "/images/sliderimg7.png",
+    },
     // {
     //     link: "/collections/knotion",
     //     desktopSrc: "//handscarpets.com/cdn/shop/files/Nika_Landing_page_Web_Banner.jpg?v=1726555523",
