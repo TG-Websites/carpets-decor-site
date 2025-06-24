@@ -7,42 +7,57 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { FaEye, FaBullseye, FaHandsHelping } from "react-icons/fa";
+
 interface ProductCardProps {
     image: string;
     title: string;
     description: string;
 }
-interface CarBoxProps {
+interface CardBoxProps {
     title: string;
+    icon: React.ReactNode;
     iconColor: string;
-    gradientFrom: string;
-    gradientTo: string;
     text: string;
-    extra?: string | React.ReactNode; // optional if not always present
+    extra: string;
 }
+
+
 
 // Hero Section Component
 const HeroSection = () => (
     <section
-        className="bg-cover bg-center py-16 min-h-[90vh] text-white"
+        className="relative bg-cover bg-center min-h-[90vh] text-white flex items-center"
         style={{
             backgroundImage:
                 'url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)',
         }}
     >
-        <div className="container mx-auto text-center mt-26">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">About Us</h2>
-            <p className="text-lg sm:text-xl mb-12">
-                Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region.
-            </p>
-            <a
-                href="#contact"
-                className="px-6 py-3 text-lg bg-yellow-500 hover:bg-yellow-600 text-black rounded-full font-semibold transition duration-300 ease-in-out"
-            >
-                Get in Touch
-            </a>
+        {/* 🔳 Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+        {/* 🔲 Foreground Content */}
+        <div className="relative z-10 w-full">
+            <div className="container mx-auto text-center px-4">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">About Us</h2>
+                    <p className="text-lg sm:text-xl mb-12 text-gray-200 leading-relaxed">
+                        Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not
+                        simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage,
+                        handmade by expert artisans employing time-honored techniques. Each rug holds the essence
+                        of its creator and the tale of a history-filled region.
+                    </p>
+                    <a
+                        href="#contact"
+                        className="inline-block mt-5 px-6 py-3 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
+                    >
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+
 );
 
 // Product Card Component
@@ -63,33 +78,24 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 );
 
 // CardBox Component (For Vision, Mission, Craftsmanship)
-const CardBox = ({ title, iconColor, gradientFrom, gradientTo, text, extra }: CarBoxProps) => (
-    <div
-        className={`bg-gray-800 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:bg-gradient-to-r ${gradientFrom} ${gradientTo} hover:rotate-3 hover:cursor-pointer`}
-    >
-        <div className="flex justify-center items-center mb-6">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-16 w-16 ${iconColor} hover:opacity-75 transition-colors duration-300`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 19l-7-7 7-7M5 12h14"
-                />
-            </svg>
+const CardBox: React.FC<CardBoxProps> = ({
+    title,
+    icon,
+    iconColor,
+    text,
+    extra,
+}) => {
+    return (
+        <div className="bg-gray-900 border border-white rounded-xl p-6 h-full transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-white/30">
+            <div className="flex justify-center mb-4">
+                <div className={`text-4xl ${iconColor}`}>{icon}</div>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2 text-center">{title}</h3>
+            <p className="text-gray-300 text-sm text-center leading-relaxed mb-2">{text}</p>
+            <p className="text-gray-400 text-xs text-center italic">{extra}</p>
         </div>
-        <h3 className="text-3xl font-semibold mb-4 text-gray-100">{title}</h3>
-        <p className="text-gray-300">{text}</p>
-        <div className="mt-6 text-gray-100 text-lg hidden hover:block opacity-90 transition-all duration-300">
-            <p>{extra}</p>
-        </div>
-    </div>
-);
+    );
+};
 
 // Main Page Component
 const Page = () => {
@@ -108,7 +114,7 @@ const Page = () => {
         },
         {
             image:
-                'https://wallmantra.com/wp-content/uploads/presto-carpets-rugs-geometric-pattern-blue-mauve-tufted-area-carpet-32952737333414.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
             title: 'Geometric Pattern Carpet',
             description: 'Bold patterns ideal for contemporary decor.',
         },
@@ -148,53 +154,49 @@ const Page = () => {
                 id="about"
                 className="bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16 px-4 lg:px-16 relative overflow-hidden"
             >
+                {/* Background Image */}
                 <div
-                    className="absolute inset-0 bg-cover bg-center opacity-50 transform translate-z-0"
+                    className="absolute inset-0 bg-cover bg-center opacity-40"
                     style={{
                         backgroundImage:
                             'url(https://source.unsplash.com/1600x900/?carpet,interior)',
                     }}
                 ></div>
+
+                {/* Content */}
                 <div className="relative max-w-7xl mx-auto text-center text-white z-10">
-                    <h2 className="text-6xl font-extrabold mb-6 text-gray-100">
-                        About Carpets
-                    </h2>
-                    <p className="text-lg mb-8 text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                        The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
+                    <h2 className="text-5xl text-white font-extrabold mb-6 drop-shadow-md">About Carpets</h2>
+                    <p className="text-lg mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                        The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns,
+                        reflect a strong connection to culture, craftsmanship, and community.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-                        {/* Vision */}
+                    {/* Cards Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                         <CardBox
                             title="Our Vision"
-                            iconColor="text-yellow-500"
-                            gradientFrom="from-purple-600"
-                            gradientTo="to-purple-400"
-                            text="To be the leading provider of high-quality, custom-designed carpets and decor that inspire creativity and comfort in homes worldwide."
-                            extra="Our goal is to elevate homes with unique and personal designs that stand the test of time."
+                            icon={<FaEye />}
+                            iconColor="text-white"
+                            text="To be the leading provider of high-quality, custom-designed carpets that inspire creativity."
+                            extra="We aim to elevate homes with timeless design."
                         />
-
-                        {/* Mission */}
                         <CardBox
                             title="Our Mission"
-                            iconColor="text-teal-500"
-                            gradientFrom="from-green-600"
-                            gradientTo="to-green-400"
-                            text="To deliver exceptional products that meet the unique design needs of our customers, while providing excellent customer service and lasting value."
-                            extra="Our dedication to quality and service is what sets us apart."
+                            icon={<FaBullseye />}
+                            iconColor="text-white"
+                            text="Deliver exceptional products and outstanding customer service."
+                            extra="Our commitment to excellence drives everything."
                         />
-
-                        {/* Craftsmanship */}
                         <CardBox
                             title="Our Craftsmanship"
-                            iconColor="text-indigo-500"
-                            gradientFrom="from-red-600"
-                            gradientTo="to-red-400"
-                            text="Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history."
-                            extra="Our skilled artisans craft each piece with passion, bringing comfort and beauty to every corner of your home."
+                            icon={<FaHandsHelping />}
+                            iconColor="text-white"
+                            text="Feel the warmth of tradition and the touch of heritage."
+                            extra="Handcrafted by skilled artisans with passion."
                         />
                     </div>
 
+                    {/* Footer Text */}
                     <div className="mt-12 text-center">
                         <p className="text-lg text-gray-400">
                             Every carpet we create is a masterpiece, crafted with passion,

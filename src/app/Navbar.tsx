@@ -9,7 +9,7 @@ function Navbar() {
                 <Link href="/">
                     <img
                         src="/images/logo5.png"
-                        style={{ width: 190, height: 70, objectFit: 'cover' }}
+                        style={{ width: 200, height: 75, objectFit: 'cover' }}
                         alt="Logo"
                         loading="eager"
                         className='pt-3'
@@ -33,11 +33,11 @@ function Navbar() {
                             Categories
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/Blog" className="hover:text-gray-300 transition">
                             Blog
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/ContactUs" className="hover:text-gray-300 transition">
                             Contact
@@ -81,11 +81,11 @@ function Navbar() {
                                 Categories
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/Blog" className="hover:text-gray-300 transition">
                                 Blog
                             </a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="/ContactUs" className="hover:text-gray-300 transition">
                                 Contact

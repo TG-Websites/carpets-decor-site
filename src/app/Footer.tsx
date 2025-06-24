@@ -87,11 +87,11 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Our Company</p>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition">The Story</a></li>
-              <li><a href="#" className="hover:text-white transition">Design Emotion</a></li>
-              <li><a href="#" className="hover:text-white transition">Projects</a></li>
-              <li><a href="#" className="hover:text-white transition">Videos</a></li>
-              <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="/AboutUs" className="hover:text-white transition">About</a></li>
+              <li><a href="/Services" className="hover:text-white transition">Categories</a></li>
+              {/* <li><a href="#" className="hover:text-white transition">Projects</a></li>
+              <li><a href="#" className="hover:text-white transition">Videos</a></li> */}
+              <li><a href="/PrivacyPolicy" className="hover:text-white transition">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -99,10 +99,10 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Customer Service</p>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition">Our Showrooms</a></li>
+              <li><a href="/ContactUs" className="hover:text-white transition">Contact Us</a></li>
+              {/* <li><a href="#" className="hover:text-white transition">Our Showrooms</a></li>
               <li><a href="#" className="hover:text-white transition">Custom Made</a></li>
-              <li><a href="#" className="hover:text-white transition">Carpet Maintenance</a></li>
+              <li><a href="#" className="hover:text-white transition">Carpet Maintenance</a></li> */}
               <li><a href="#" className="hover:text-white transition">FAQs</a></li>
             </ul>
           </div>

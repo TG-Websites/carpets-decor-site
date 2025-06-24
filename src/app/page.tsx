@@ -175,144 +175,145 @@ const Page = () => {
             </ul> */}
 
             {/* Contemporary Section (Image Right) */}
-            <div className="flex flex-col lg:flex-row items-center py-10 m-0 gap-6 px-4">
+            <div className="flex flex-col lg:flex-row items-center py-10 m-0 gap-8 px-4">
                 {/* Carousel Section */}
-                <div className="w-full lg:w-7/12 relative">
+                <div className="w-full lg:w-7/12 relative aspect-[16/9] overflow-hidden rounded-lg">
                     <img
                         src={carouselImages[index]}
                         alt={`Slide ${index + 1}`}
-                        className="rounded-lg w-full h-auto object-cover transition-all duration-500"
+                        className="w-full h-full object-cover transition-all duration-500"
                     />
                     <button
                         onClick={nextSlide}
-                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
+                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
                     >
                         ❮
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
                     >
                         ❯
                     </button>
                 </div>
 
                 {/* Text Content */}
-                <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left py-5">
-                    <div>
-                        <p style={{ fontSize: 17 }} className="text-white">Persian Rugs</p>
-                        <div className="flex justify-center lg:justify-start">
-                            <div className="w-17 mt-1 h-0.5 bg-white"></div>
-                        </div>
-                        <p style={{ color: '#a2a2a2' }} className="mt-4 text-gray-700 leading-relaxed">
-                            These exquisite home carpets serve <br /> as a refined link between tradition and modernity <br />
-                            combine traditional carpet ,<br /> seamlessly integrating classic design elements with  <br />
-                            contemporary stylistics and <br />contemporary styles and color palettes to evoke a <br />
-                            sense of familiarity while introducing a renewed aesthetic.
+                <div className="w-full lg:w-5/12 flex items-center justify-center text-center lg:text-left">
+                    <div className="max-w-md">
+                        <p className="text-white text-lg font-semibold mb-2">Persian Rugs</p>
+                        <div className="w-16 h-0.5 bg-white mx-auto lg:mx-0 mb-4"></div>
+                        <p className="text-gray-300 text-base leading-relaxed">
+                            These exquisite home carpets serve as a refined link between tradition and modernity.
+                            They combine traditional carpet craftsmanship with contemporary styles and color
+                            palettes to evoke a sense of familiarity while introducing a renewed aesthetic.
                         </p>
                         <a
-                            className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
+                            className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
+                            href="#"
                         >
                             EXPLORE THE COLLECTION
                         </a>
-
                     </div>
                 </div>
             </div>
+
+
+
 
             {/* Traditional Section (Text First, Image Right) */}
-            <div className="flex flex-col-reverse lg:flex-row-reverse items-center py-10 m-0 gap-6 px-4">
-                {/* Text Content */}
+            {/* Silk Carpets Section (Text First, Image Right) */}
+        <div className="flex flex-col lg:flex-row items-center py-12 gap-8 px-4">
+  {/* 📝 Text Section: left side on desktop, below image on mobile */}
+  <div className="w-full lg:w-5/12 flex justify-center lg:justify-start items-center text-center lg:text-left order-2 lg:order-1">
+    <div className="max-w-md w-full">
+      <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
+      <div className="flex justify-center lg:justify-start">
+        <div className="w-16 h-0.5 bg-white mb-4"></div>
+      </div>
+      <p className="text-gray-300 leading-relaxed text-base">
+        Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.
+        They are soft yet resilient and possess a refined touch. Silk carpets are not merely ornaments; they are
+        long-lasting works of heritage and art.
+      </p>
+      <a
+        className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
+        href="#"
+      >
+        EXPLORE THE COLLECTION
+      </a>
+    </div>
+  </div>
+
+  {/* 🖼️ Image Section: right side on desktop, top on mobile */}
+  <div className="w-full lg:w-7/12 relative aspect-video lg:aspect-[16/9] overflow-hidden rounded-lg order-1 lg:order-2">
+    <img
+      src={carouselImages1[index]}
+      alt={`Slide ${index + 1}`}
+      className="w-full h-full object-cover transition-all duration-500"
+    />
+    <button
+      onClick={nextSlide2}
+      className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
+    >
+      ❮
+    </button>
+    <button
+      onClick={nextSlide2}
+      className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
+    >
+      ❯
+    </button>
+  </div>
+</div>
 
 
-                {/* Carousel Section */}
-                <div className="w-full lg:w-7/12 relative">
-                    <img
-                        src={carouselImages1[index]}
-                        alt={`Slide ${index + 1}`}
-                        className="rounded-lg w-full h-auto object-cover transition-all duration-500"
-                    />
-                    <button
-                        onClick={nextSlide2}
-                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
-                    >
-                        ❮
-                    </button>
-
-
-                    <button
-                        onClick={nextSlide2}
-                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
-                    >
-                        ❯
-                    </button>
-                </div>
-                <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-right py-5">
-                    <div>
-                        <p style={{ fontSize: 17, alignSelf: 'flex-end' }} className="text-white">Silk Carpets</p>
-                        <div className="flex justify-center lg:justify-end">
-                            <div className="w-15 mt-1 h-0.5 bg-white"></div>
-                        </div>
-
-                        <p className="graytxt mt-4 text-gray-700 leading-relaxed">
-                            Silk carpets are renowned for their fine craftsmanship,<br /> luxurious texture, and finely detailed patterns.<br />
-                            reflecting new and diverse<br />
-                            They are soft but resilient, and possess a refined touch<br />
-                            . Silk carpets are not merely ornaments;  <br />they are long-lasting works of heritage and art.
-                        </p>
-                        <a
-                            className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
-                        >
-                            EXPLORE THE COLLECTION
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-col lg:flex-row items-center py-10 m-0 gap-6 px-4">
-                {/* Carousel Section */}
-                <div className="w-full lg:w-7/12 relative">
+            {/* Hand-Knotted Section (Image Left, Text Right) */}
+            <div className="flex flex-col lg:flex-row items-center py-12 gap-8 px-4">
+                {/* Image Section */}
+                <div className="w-full lg:w-7/12 relative aspect-video lg:aspect-[16/9] overflow-hidden rounded-lg">
                     <img
                         src={carouselImages2[index]}
                         alt={`Slide ${index + 1}`}
-                        className="rounded-lg w-full h-auto object-cover transition-all duration-500"
+                        className="w-full h-full object-cover transition-all duration-500"
                     />
                     <button
                         onClick={nextSlide2}
-                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
+                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
                     >
                         ❮
                     </button>
-
-
                     <button
                         onClick={nextSlide2}
-                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300"
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
                     >
                         ❯
                     </button>
-
                 </div>
 
-                {/* Text Content */}
-                <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left py-5">
-                    <div>
-                        <p style={{ fontSize: 17 }} className="text-white">Hand Knotted</p>
+                {/* Text Section */}
+                <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left">
+                    <div className="max-w-md">
+                        <p className="text-white text-lg font-semibold mb-2">Hand Knotted</p>
                         <div className="flex justify-center lg:justify-start">
-                            <div className="w-17 mt-1 h-0.5 bg-white"></div>
+                            <div className="w-16 h-0.5 bg-white mb-4"></div>
                         </div>
-                        <p className="graytxt mt-4 text-gray-700 leading-relaxed">
-                            Hand-knotted rugs are the epitome of traditional craftsmanship.<br /> Each rug is individually knotted <br /> knot by knot by skilled Indian craftsmen, <br />sometimes taking months to complete. <br />Each one is a testament to timeless artistry, <br />cultural heritage, and the resilience of human craftsmanship.
+                        <p className="text-gray-300 leading-relaxed text-base">
+                            Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted by skilled Indian craftsmen, sometimes taking months to complete. Each piece is a testament to timeless artistry and the resilience of human craftsmanship.
                         </p>
                         <a
-                            className="graytxt inline-block mt-5 px-2 py-1 bg-black text-white border border-white rounded transition hover:bg-gray-200 hover:text-black"
+                            className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
+                            href="#"
                         >
                             EXPLORE THE COLLECTION
                         </a>
-
                     </div>
                 </div>
             </div>
+
+
+
+
+
             <section
                 className="block-design flex items-center justify-center text-center"
                 style={{
@@ -647,7 +648,7 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-gray-100 py-[27px] md:py-[36px]">
+            {/* <section className="bg-gray-100 py-[27px] md:py-[36px]">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold uppercase">
                         READ OUR STORIES
@@ -683,7 +684,7 @@ const Page = () => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             <section className="bg-[#5a5758] py-8 px-4">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-400">
@@ -692,14 +693,15 @@ const Page = () => {
                             key={index}
                             className="relative text-center px-4 md:px-16 py-8 md:py-4"
                         >
-                            <h2 className="text-lg text-gray-300 mb-12 relative inline-block after:content-[''] after:block after:w-16 after:h-px after:bg-gray-300 after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2">
+                            <h2 className="text-lg text-white mb-12 relative inline-block after:content-[''] after:block after:w-16 after:h-px after:bg-white after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2">
                                 {option.title}
                             </h2>
                             <p className="text-base text-gray-300 mb-9 whitespace-pre-line">
                                 {option.text}
                             </p>
-                            <a href='/ContactUs'
-                                className="text-gray-300 text-sm uppercase tracking-wide hover:underline"
+                            <a
+                                href={option.link}
+                                className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
                             >
                                 {option.button}
                             </a>
@@ -707,6 +709,7 @@ const Page = () => {
                     ))}
                 </div>
             </section>
+
 
 
         </div>
