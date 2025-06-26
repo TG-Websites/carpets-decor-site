@@ -7,7 +7,8 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { FaEye, FaBullseye, FaHandsHelping } from "react-icons/fa";
+import { FaEye, FaBullseye, FaHandsHelping, FaFemale, FaLeaf } from 'react-icons/fa';
+
 
 interface ProductCardProps {
     image: string;
@@ -142,61 +143,65 @@ const Page = () => {
 
             {/* About Section */}
             <section
-                id="about"
-                className="bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16 px-4 lg:px-16 relative overflow-hidden"
-            >
-                {/* Background Image */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center opacity-40"
-                    style={{
-                        backgroundImage:
-                            'url(https://source.unsplash.com/1600x900/?carpet,interior)',
-                    }}
-                ></div>
+  id="about"
+  className="bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16 px-4 lg:px-16 relative overflow-hidden"
+>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-40"
+    style={{
+      backgroundImage: 'url(https://source.unsplash.com/1600x900/?carpet,interior)',
+    }}
+  ></div>
 
-                {/* Content */}
-                <div className="relative max-w-7xl mx-auto text-center text-white z-10">
-                    <h2 className="text-5xl text-white font-extrabold mb-6 drop-shadow-md">About Carpets</h2>
-                    <p className="text-lg mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                        The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns,
-                        reflect a strong connection to culture, craftsmanship, and community.
-                    </p>
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto text-center text-white z-10">
+    <h2 className="text-5xl text-white font-extrabold mb-6 drop-shadow-md">About Us</h2>
 
-                    {/* Cards Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <CardBox
-                            title="Our Vision"
-                            icon={<FaEye />}
-                            iconColor="text-white"
-                            text="To be the leading provider of high-quality, custom-designed carpets that inspire creativity."
-                            extra="We aim to elevate homes with timeless design."
-                        />
-                        <CardBox
-                            title="Our Mission"
-                            icon={<FaBullseye />}
-                            iconColor="text-white"
-                            text="Deliver exceptional products and outstanding customer service."
-                            extra="Our commitment to excellence drives everything."
-                        />
-                        <CardBox
-                            title="Our Craftsmanship"
-                            icon={<FaHandsHelping />}
-                            iconColor="text-white"
-                            text="Feel the warmth of tradition and the touch of heritage."
-                            extra="Handcrafted by skilled artisans with passion."
-                        />
-                    </div>
+    <p className="text-lg mb-12 text-gray-300 leading-relaxed max-w-4xl mx-auto">
+      At the heart of our journey lies a purpose far greater than business — it’s about preserving a legacy, empowering communities, and celebrating the art of handmade excellence.
+      <br /><br />
+      We are a collective of passionate creators, storytellers, and change-makers working hand in hand with local artisans across India, many of whom have inherited their skills from generations of master weavers and craftsmen. Every piece we create is a living thread in the fabric of history — woven with care, tradition, and the soul of the artisan who made it.
+      <br /><br />
+      Our work goes beyond design. We are deeply committed to empowering women, especially in rural areas, by providing fair wages, training opportunities, and a platform to showcase their talents. Through our initiatives, women are not only earning a livelihood but gaining confidence and independence.
+      <br /><br />
+      Sustainability is at our core. We consciously use natural materials, traditional techniques, and low-impact processes to ensure that our art leaves a positive imprint on the planet. Our mission is to promote slow, mindful production that respects both people and nature.
+    </p>
 
-                    {/* Footer Text */}
-                    <div className="mt-12 text-center">
-                        <p className="text-lg text-gray-400">
-                            Every carpet we create is a masterpiece, crafted with passion,
-                            precision, and a commitment to making your home feel truly
-                            special.
-                        </p>
-                    </div>
-                </div>
-            </section>
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <CardBox
+        title="Empowering Artisans"
+        icon={<FaHandsHelping />}
+        iconColor="text-white"
+        text="Working with generations of weavers to preserve skills and heritage."
+        extra="Each rug carries their story and spirit."
+      />
+      <CardBox
+        title="Women-Led Workforce"
+        icon={<FaFemale />}
+        iconColor="text-white"
+        text="We train and support rural women, offering fair wages and dignity."
+        extra="Enabling financial independence and confidence."
+      />
+      <CardBox
+        title="Eco-Conscious Craft"
+        icon={<FaLeaf />}
+        iconColor="text-white"
+        text="We prioritize natural dyes, sustainable materials, and low-impact methods."
+        extra="Every rug is kind to people and the planet."
+      />
+    </div>
+
+    {/* Footer Text */}
+    <div className="mt-12 text-center">
+      <p className="text-lg text-gray-400">
+        We invite you to be a part of this journey — to value what’s handmade,
+        to support communities, and to carry forward stories worth telling.
+      </p>
+    </div>
+  </div>
+</section>
 
 
 

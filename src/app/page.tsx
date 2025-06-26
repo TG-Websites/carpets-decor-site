@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import SwiperComponent from '@/Swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Link from 'next/link';
+
 type ProductCardProps = {
     image: string;
     title: string;
@@ -72,7 +72,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
                 href="/CardDetails"
                 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
             >
-               Explore More
+                Explore More
             </a>
         </div>
     </div>
@@ -227,49 +227,49 @@ const Page = () => {
 
             {/* Traditional Section (Text First, Image Right) */}
             {/* Silk Carpets Section (Text First, Image Right) */}
-        <div className="flex flex-col lg:flex-row items-center py-12 gap-8 px-4">
-  {/* 📝 Text Section: left side on desktop, below image on mobile */}
-  <div className="w-full lg:w-5/12 flex justify-center lg:justify-start items-center text-center lg:text-left order-2 lg:order-1">
-    <div className="max-w-md w-full">
-      <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
-      <div className="flex justify-center lg:justify-start">
-        <div className="w-16 h-0.5 bg-white mb-4"></div>
-      </div>
-      <p className="text-gray-300 leading-relaxed text-base">
-        Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.
-        They are soft yet resilient and possess a refined touch. Silk carpets are not merely ornaments; they are
-        long-lasting works of heritage and art.
-      </p>
-      <a
-        className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-        href="#"
-      >
-        EXPLORE THE COLLECTION
-      </a>
-    </div>
-  </div>
+            <div className="flex flex-col lg:flex-row items-center py-12 gap-8 px-4">
+                {/* 📝 Text Section: left side on desktop, below image on mobile */}
+                <div className="w-full lg:w-5/12 flex justify-center lg:justify-start items-center text-center lg:text-left order-2 lg:order-1">
+                    <div className="max-w-md w-full">
+                        <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="w-16 h-0.5 bg-white mb-4"></div>
+                        </div>
+                        <p className="text-gray-300 leading-relaxed text-base">
+                            Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.
+                            They are soft yet resilient and possess a refined touch. Silk carpets are not merely ornaments; they are
+                            long-lasting works of heritage and art.
+                        </p>
+                        <a
+                            className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
+                            href="#"
+                        >
+                            EXPLORE THE COLLECTION
+                        </a>
+                    </div>
+                </div>
 
-  {/* 🖼️ Image Section: right side on desktop, top on mobile */}
-  <div className="w-full lg:w-7/12 relative aspect-video lg:aspect-[16/9] overflow-hidden rounded-lg order-1 lg:order-2">
-    <img
-      src={carouselImages1[index]}
-      alt={`Slide ${index + 1}`}
-      className="w-full h-full object-cover transition-all duration-500"
-    />
-    <button
-      onClick={nextSlide2}
-      className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
-    >
-      ❮
-    </button>
-    <button
-      onClick={nextSlide2}
-      className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
-    >
-      ❯
-    </button>
-  </div>
-</div>
+                {/* 🖼️ Image Section: right side on desktop, top on mobile */}
+                <div className="w-full lg:w-7/12 relative aspect-video lg:aspect-[16/9] overflow-hidden rounded-lg order-1 lg:order-2">
+                    <img
+                        src={carouselImages1[index]}
+                        alt={`Slide ${index + 1}`}
+                        className="w-full h-full object-cover transition-all duration-500"
+                    />
+                    <button
+                        onClick={nextSlide2}
+                        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
+                    >
+                        ❮
+                    </button>
+                    <button
+                        onClick={nextSlide2}
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300"
+                    >
+                        ❯
+                    </button>
+                </div>
+            </div>
 
 
             {/* Hand-Knotted Section (Image Left, Text Right) */}
@@ -322,12 +322,11 @@ const Page = () => {
             <section
                 className="block-design flex items-center justify-center text-center"
                 style={{
-                    backgroundImage:
-                         "url('https://cdn.shopify.com/s/files/1/0755/3017/4762/files/parallax-image.jpg?v=1690189653')",
-                        // "url('/images/parallax')",
+                    backgroundImage: "url('/images/parallaximg.png')",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundAttachment: "fixed",
+                    backgroundSize: "contain", // ✅ added to fix zoom/crop
                     minHeight: "730px",
                     paddingTop: "90px",
                     paddingBottom: "90px",
@@ -339,6 +338,7 @@ const Page = () => {
                     </h2>
                 </div>
             </section>
+
 
             {/* <div className="yt-video-container relative block text-center my-12">
                 <h2 className="graytxt text-3xl font-bold text-white" style={{ letterSpacing: '0.12em' }}>

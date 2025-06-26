@@ -17,8 +17,8 @@ interface Slide {
 const slides = [
     {
         // link: "/collections/antique-turkish-kilims",
-        desktopSrc: "/images/sliderimg1.png",
-        mobileSrc: "/images/sliderimg1.png",
+        desktopSrc: "/images/sliderimg8.png",
+        mobileSrc: "/images/sliderimg8.png",
     },
     {
         // link: "/collections/overlap",
