@@ -58,17 +58,18 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
     <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
         <img src={image} alt={title} className="w-full h-72 object-cover" />
         <div className="p-6">
-            <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
             <p className="text-gray-300 mb-6">{description}</p>
             <a
                 href="/CardDetails"
                 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
             >
-                Shop Now
+                Explore More
             </a>
         </div>
     </div>
 );
+
 
 // CardBox Component (For Vision, Mission, Craftsmanship)
 const CardBox: React.FC<CardBoxProps> = ({
@@ -92,50 +93,92 @@ const CardBox: React.FC<CardBoxProps> = ({
 
 // Main Page Component
 const Page = () => {
+    // const products = [
+    //     {
+    //         image:
+    //             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+    //         title: 'Silk Vintage Carpet',
+    //         description: 'A vintage silk carpet that adds elegance to any room.',
+    //     },
+    //     {
+    //         image:
+    //             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GXwHz53377F1P8swEifWw9adKbVCJcSb9Q&s',
+    //         title: 'Traditional Wool Carpet',
+    //         description: 'Crafted with fine wool, perfect for a cozy ambiance.',
+    //     },
+    //     {
+    //         image:
+    //             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+    //         title: 'Geometric Pattern Carpet',
+    //         description: 'Bold patterns ideal for contemporary decor.',
+    //     },
+    //     {
+    //         image:
+    //             'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
+    //         title: 'Luxury Persian Carpet',
+    //         description: 'Intricate design with vibrant colors.',
+    //     },
+    //     {
+    //         image:
+    //             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+    //         title: 'Handwoven Jute Rug',
+    //         description: 'Rustic eco-friendly jute with natural texture.',
+    //     },
+    //     {
+    //         image:
+    //             'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
+    //         title: 'Shaggy Area Carpet',
+    //         description: 'Ultra-soft rug that adds warmth.',
+    //     },
+    //     {
+    //         image:
+    //             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
+    //         title: 'Modern Abstract Carpet',
+    //         description: 'Perfect for bold, artistic interiors.',
+    //     },
+    // ];
+
+
+
     const products = [
-        {
-            image:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-            title: 'Silk Vintage Carpet',
-            description: 'A vintage silk carpet that adds elegance to any room.',
-        },
-        {
-            image:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GXwHz53377F1P8swEifWw9adKbVCJcSb9Q&s',
-            title: 'Traditional Wool Carpet',
-            description: 'Crafted with fine wool, perfect for a cozy ambiance.',
-        },
-        {
-            image:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-            title: 'Geometric Pattern Carpet',
-            description: 'Bold patterns ideal for contemporary decor.',
-        },
-        {
-            image:
-                'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-            title: 'Luxury Persian Carpet',
-            description: 'Intricate design with vibrant colors.',
-        },
-        {
-            image:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-            title: 'Handwoven Jute Rug',
-            description: 'Rustic eco-friendly jute with natural texture.',
-        },
-        {
-            image:
-                'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-            title: 'Shaggy Area Carpet',
-            description: 'Ultra-soft rug that adds warmth.',
-        },
-        {
-            image:
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-            title: 'Modern Abstract Carpet',
-            description: 'Perfect for bold, artistic interiors.',
-        },
-    ];
+    {
+        image:
+            '/images/shopslider.png',
+        title: 'Hand Knotted',
+        description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+    },
+    {
+        image:
+            '/images/shopslider1.png',
+        title: 'Premium Materials',
+        description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
+    },
+    {
+        image:
+            '/images/shopslider2.png',
+        title: 'Hand Tufted',
+        description: 'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
+    },
+    {
+        image:
+            '/images/shopslider3.png',
+        title: 'Indo Tibetan Rugs',
+        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+    },
+    {
+        image:
+            '/images/shopslider4.png',
+        title: 'Handloom',
+        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+    },
+    {
+        image:
+            '/images/shopslider5.png',
+        title: 'Flatweave',
+        description: 'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
+    },
+
+];
 
     return (
         <div className="bg-black">
