@@ -164,7 +164,7 @@ const page = () => {
                         Explore Carpet Decor
                     </h2>
                     <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
+                        Elevate your space with the finest craftsmanship and materials. Here&paos;s why Hands Carpets is the ultimate choice.
                     </p>
 
                     {/* 🔳 4 Cards Per Row */}

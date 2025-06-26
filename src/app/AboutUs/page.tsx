@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { FaEye, FaBullseye, FaHandsHelping, FaFemale, FaLeaf } from 'react-icons/fa';
+import { FaHandsHelping, FaFemale, FaLeaf } from 'react-icons/fa';
 
 
 interface ProductCardProps {
@@ -38,7 +38,7 @@ const HeroSection = () => (
   <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-8 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
     <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">About Us</h2>
     <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
-      Our handcrafted rugs are more than just decor — they're living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
+      Our handcrafted rugs are more than just decor — they&paos;re living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
     </p>
     <a
       href="#contact"

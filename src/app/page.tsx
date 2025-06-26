@@ -37,31 +37,31 @@ const contactOptions = [
         button: "CONSULT US",
     },
 ];
-const blogPosts = [
-    {
-        title: "Hands Overlap. The convergence of forms, hues, and textures.",
-        image:
-            "https://handscarpets.com/cdn/shop/articles/Overlap_blog_cover_1.jpg?v=1742559481",
-        alt: "Hands Overlap. The convergence of forms, hues, and textures.",
-        link: "/blogs/blog/hands-overlap-the-convergence-of-forms-hues-and-textures",
-    },
-    {
-        title: "History Woven by Hands – the new Persian Collection",
-        image:
-            "https://handscarpets.com/cdn/shop/articles/Persian_Collection_5_Final_without_shadow.jpg?v=1736244384",
-        alt: "History Woven by Hands – the new Persian Collection",
-        link: "/blogs/blog/history-woven-by-hands-the-new-persian-collection-1",
-    },
-    {
-        title:
-            "Hands Launches 'KNOTION by Nika Zupanc' at ID India Design Mumbai",
-        image:
-            "https://handscarpets.com/cdn/shop/articles/blog-first_image.jpg?v=1728286772",
-        alt:
-            "Hands Launches 'KNOTION by Nika Zupanc' at ID India Design Mumbai",
-        link: "/blogs/blog/hands-launches-knotion-by-nika-zupanc-at-id-india-design-mumbai",
-    },
-];
+// const blogPosts = [
+//     {
+//         title: "Hands Overlap. The convergence of forms, hues, and textures.",
+//         image:
+//             "https://handscarpets.com/cdn/shop/articles/Overlap_blog_cover_1.jpg?v=1742559481",
+//         alt: "Hands Overlap. The convergence of forms, hues, and textures.",
+//         link: "/blogs/blog/hands-overlap-the-convergence-of-forms-hues-and-textures",
+//     },
+//     {
+//         title: "History Woven by Hands – the new Persian Collection",
+//         image:
+//             "https://handscarpets.com/cdn/shop/articles/Persian_Collection_5_Final_without_shadow.jpg?v=1736244384",
+//         alt: "History Woven by Hands – the new Persian Collection",
+//         link: "/blogs/blog/history-woven-by-hands-the-new-persian-collection-1",
+//     },
+//     {
+//         title:
+//             "Hands Launches 'KNOTION by Nika Zupanc' at ID India Design Mumbai",
+//         image:
+//             "https://handscarpets.com/cdn/shop/articles/blog-first_image.jpg?v=1728286772",
+//         alt:
+//             "Hands Launches 'KNOTION by Nika Zupanc' at ID India Design Mumbai",
+//         link: "/blogs/blog/hands-launches-knotion-by-nika-zupanc-at-id-india-design-mumbai",
+//     },
+// ];
 const ProductCard = ({ image, title, description }: ProductCardProps) => (
     <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
         <img src={image} alt={title} className="w-full h-72 object-cover" />

@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
       Privacy Policy
     </h1>
     <p className="text-gray-300 text-lg">
-      We value your privacy. Here's how Hands Carpets collects, protects, and uses your information.
+      We value your privacy. Here&apos;s how Hands Carpets collects, protects, and uses your information.
     </p>
   </div>
 </section>
