@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import SwiperComponent from '@/Swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// import Link from 'next/link';
 
 type ProductCardProps = {
     image: string;
@@ -214,7 +215,7 @@ const Page = () => {
                         </p>
                         <a
                             className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                            href="#"
+                            href="/CardDetails"
                         >
                             EXPLORE THE COLLECTION
                         </a>
@@ -242,7 +243,7 @@ const Page = () => {
                         </p>
                         <a
                             className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                            href="#"
+                            href="/CardDetails"
                         >
                             EXPLORE THE COLLECTION
                         </a>
@@ -307,7 +308,7 @@ const Page = () => {
                         </p>
                         <a
                             className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                            href="#"
+                            href="/CardDetails"
                         >
                             EXPLORE THE COLLECTION
                         </a>
@@ -619,7 +620,7 @@ const Page = () => {
                         Explore Carpet Decor ?
                     </h2>
                     <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
+                        Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
                     </p>
 
                     <Swiper
@@ -654,6 +655,8 @@ const Page = () => {
                     </div>
                 </div>
             </section>
+
+
             {/* <section className="bg-gray-100 py-[27px] md:py-[36px]">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold uppercase">

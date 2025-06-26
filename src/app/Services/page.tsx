@@ -97,7 +97,7 @@ const page = () => {
                     </p>
 
                     <a
-                        href="#contact"
+                        href="/ContactUs#contact"
                         className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
                     >
                         Get a Free Consultation
@@ -164,7 +164,7 @@ const page = () => {
                         Explore Carpet Decor
                     </h2>
                     <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Elevate your space with the finest craftsmanship and materials. Here&paos;s why Hands Carpets is the ultimate choice.
+                        Elevate your space with the finest craftsmanship and materials. Here&paos;s why Carpets is the ultimate choice.
                     </p>
 
                     {/* 🔳 4 Cards Per Row */}
@@ -195,7 +195,7 @@ const page = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Hand Carpet Services</h2>
                         <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                            At Hands Carpets, we craft timeless, hand-woven masterpieces tailored to your space. Discover our premium services below.
+                            At Carpets, we craft timeless, hand-woven masterpieces tailored to your space. Discover our premium services below.
                         </p>
                     </div>
 
@@ -248,9 +248,9 @@ const page = () => {
             {/* <section className="py-20 bg-gray-950">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Hands Carpets?</h2>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Carpets?</h2>
                         <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                            Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
+                            Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
                         </p>
                     </div>
 
@@ -286,7 +286,7 @@ const page = () => {
                             },
                             {
                                 title: "Trusted by Thousands",
-                                desc: "Join our family of satisfied clients worldwide who trust Hands Carpets for luxury and quality.",
+                                desc: "Join our family of satisfied clients worldwide who trust Carpets for luxury and quality.",
                                 icon: (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                 ),

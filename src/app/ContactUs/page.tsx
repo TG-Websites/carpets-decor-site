@@ -23,7 +23,7 @@ function Page() {
 
   const whatsappMessage = `Hello, my name is ${name}. My email is ${email}. My phone number is ${phone}. I wanted to say: ${message}`;
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  const targetPhone = '919632888771'; // WhatsApp requires country code without "+"
+  const targetPhone = '919354715556'; // WhatsApp requires country code without "+"
   const whatsappURL = `https://wa.me/${targetPhone}?text=${encodedMessage}`;
 
   window.open(whatsappURL, '_blank');
@@ -61,7 +61,7 @@ function Page() {
 
 
       {/* Contact Section */}
-      <section className="bg-black text-gray-300 py-16">
+      <section id="contact" className="bg-black text-gray-300 py-16">
   <div className="max-w-7xl mx-auto px-4">
     {/* Title */}
     <div className="text-center max-w-xl mx-auto mb-12">
@@ -123,7 +123,7 @@ function Page() {
               type="submit"
               className="bg-white text-black px-6 py-2 rounded hover:bg-gray-800 transition w-full"
             >
-              SEND
+              SUBMIT
             </button>
           </form>
         </div>
@@ -138,21 +138,20 @@ function Page() {
                 ADDRESS
               </h2>
               <p className="text-gray-300 text-sm">
-                123 Carpet Street, Design District,<br />
-                New Delhi, India - 110001
+               L-20 Central Mall, RPS City. Sector 88 Faridabad
               </p>
             </div>
             <div>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 PHONE
               </h2>
-              <p className="text-gray-300 text-sm">+91 1234567890</p>
+              <p className="text-gray-300 text-sm">+91 9354715556</p>
             </div>
             <div>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-indigo-400 text-sm">info@handscarpets.com</a>
+              <a className="text-indigo-400 text-sm">amit198026@gmail.com</a>
             </div>
           </div>
         </div>

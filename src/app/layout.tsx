@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Carpet Decor',
   description: 'This is Carpet Decor.',
   icons: {
-    icon: '/favicon.png', // Make sure this file is placed in the /public folder
+    icon: '/fabicon3.png', // Make sure this file is placed in the /public folder
   },
 }
 

@@ -91,7 +91,7 @@ function Footer() {
               <li><a href="/Services" className="hover:text-white transition">Categories</a></li>
               {/* <li><a href="#" className="hover:text-white transition">Projects</a></li>
               <li><a href="#" className="hover:text-white transition">Videos</a></li> */}
-              <li><a href="/PrivacyPolicy" className="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="/AboutUs#why" className="hover:text-white transition">Why Carpets Decor?</a></li>
             </ul>
           </div>
 
@@ -103,14 +103,14 @@ function Footer() {
               {/* <li><a href="#" className="hover:text-white transition">Our Showrooms</a></li>
               <li><a href="#" className="hover:text-white transition">Custom Made</a></li>
               <li><a href="#" className="hover:text-white transition">Carpet Maintenance</a></li> */}
-              <li><a href="#" className="hover:text-white transition">FAQs</a></li>
+              <li><a href="/PrivacyPolicy" className="hover:text-white transition">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Hands Carpets & Rugs. All rights reserved.
+          © {new Date().getFullYear()} Carpets & Rugs. All rights reserved.
         </div>
       </div>
     </footer>

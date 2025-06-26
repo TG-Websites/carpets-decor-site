@@ -7,8 +7,9 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { FaHandsHelping, FaFemale, FaLeaf } from 'react-icons/fa';
+import { FaHandsHelping, FaLeaf } from 'react-icons/fa';
 
+import { FaHandHoldingHeart, FaUserFriends, FaRegGem, FaGlobe, FaHeart } from 'react-icons/fa';
 
 interface ProductCardProps {
     image: string;
@@ -41,7 +42,7 @@ const HeroSection = () => (
       Our handcrafted rugs are more than just decor — they&paos;re living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
     </p>
     <a
-      href="#contact"
+      href="/ContactUs#contact"
       className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
     >
       Get in Touch
@@ -142,151 +143,124 @@ const Page = () => {
             <HeroSection />
 
             {/* About Section */}
-            <section
-  id="about"
-  className="bg-gradient-to-r from-gray-900 via-black to-gray-900 py-16 px-4 lg:px-16 relative overflow-hidden"
->
-  {/* Background Image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center opacity-40"
-    style={{
-      backgroundImage: 'url(https://source.unsplash.com/1600x900/?carpet,interior)',
-    }}
-  ></div>
+  {/* About Text Section */}
+{/* About Description Section (Homepage Style) */}
+<div className="mt-10 text-center px-4 sm:px-8 md:px-16 lg:px-24">
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    At the heart of our journey lies a purpose far greater than business — it’s about preserving a legacy, empowering communities, and celebrating the art of handmade excellence rooted in generations of tradition.
+  </p>
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    We are a collective of passionate creators and storytellers, working hand in hand with artisans across India — many of whom have inherited their craft through generations. Every piece we offer is a living thread in the fabric of history, woven with tradition, care, and soul.
+  </p>
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    We invite you to join this journey — to cherish what’s handmade, support communities, and carry forward the timeless stories that deserve to be told.
+  </p>
+</div>
 
-  {/* Content */}
-  <div className="relative max-w-7xl mx-auto text-center text-white z-10">
-    <h2 className="text-5xl text-white font-extrabold mb-6 drop-shadow-md">About Us</h2>
 
-    <p className="text-lg mb-12 text-gray-300 leading-relaxed max-w-4xl mx-auto">
-      At the heart of our journey lies a purpose far greater than business — it’s about preserving a legacy, empowering communities, and celebrating the art of handmade excellence.
-      <br /><br />
-      We are a collective of passionate creators, storytellers, and change-makers working hand in hand with local artisans across India, many of whom have inherited their skills from generations of master weavers and craftsmen. Every piece we create is a living thread in the fabric of history — woven with care, tradition, and the soul of the artisan who made it.
-      <br /><br />
-      Our work goes beyond design. We are deeply committed to empowering women, especially in rural areas, by providing fair wages, training opportunities, and a platform to showcase their talents. Through our initiatives, women are not only earning a livelihood but gaining confidence and independence.
-      <br /><br />
-      Sustainability is at our core. We consciously use natural materials, traditional techniques, and low-impact processes to ensure that our art leaves a positive imprint on the planet. Our mission is to promote slow, mindful production that respects both people and nature.
-    </p>
+{/* Divider Title Section */}
+<div className="section-title text-center mt-12">
+  <div className="flex items-center justify-center w-11/12 mx-auto">
+    <div className="flex-1 h-px bg-gray-600"></div>
+    <h2 className="mx-4 text-2xl text-gray-400 uppercase font-normal whitespace-nowrap">
+      OUR COMMITMENTS
+    </h2>
+    <div className="flex-1 h-px bg-gray-600"></div>
+  </div>
+</div>
 
-    {/* Cards Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <CardBox
-        title="Empowering Artisans"
-        icon={<FaHandsHelping />}
-        iconColor="text-white"
-        text="Working with generations of weavers to preserve skills and heritage."
-        extra="Each rug carries their story and spirit."
-      />
-      <CardBox
-        title="Women-Led Workforce"
-        icon={<FaFemale />}
-        iconColor="text-white"
-        text="We train and support rural women, offering fair wages and dignity."
-        extra="Enabling financial independence and confidence."
-      />
-      <CardBox
-        title="Eco-Conscious Craft"
-        icon={<FaLeaf />}
-        iconColor="text-white"
-        text="We prioritize natural dyes, sustainable materials, and low-impact methods."
-        extra="Every rug is kind to people and the planet."
-      />
-    </div>
 
-    {/* Footer Text */}
-    <div className="mt-12 text-center">
-      <p className="text-lg text-gray-400">
-        We invite you to be a part of this journey — to value what’s handmade,
-        to support communities, and to carry forward stories worth telling.
-      </p>
-    </div>
+{/* Commitments Card Section */}
+<section className="bg-gradient-to-r from-gray-900 via-black to-gray-900 py-12 px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <CardBox
+      title="Empowering Artisans"
+      icon={<FaHandsHelping />}
+      iconColor="text-white"
+      text="Working with generations of weavers to preserve skills and heritage."
+      extra="Each rug carries their story and spirit."
+    />
+    <CardBox
+      title="Women-Led Workforce"
+      icon={<FaUserFriends />}
+      iconColor="text-white"
+      text="We train and support rural women, offering fair wages and dignity."
+      extra="Enabling financial independence and confidence."
+    />
+    <CardBox
+      title="Eco-Conscious Craft"
+      icon={<FaLeaf />}
+      iconColor="text-white"
+      text="We prioritize natural dyes, sustainable materials, and low-impact methods."
+      extra="Every rug is kind to people and the planet."
+    />
   </div>
 </section>
 
 
 
-<section className="py-20 bg-gray-950">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Hands Carpets?</h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                            Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
-                        </p>
-                    </div>
 
-                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-                        {[
-                            {
-                                title: "Authentic Craftsmanship",
-                                desc: "Every carpet is a masterpiece, handwoven by skilled artisans with decades of experience.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 9l3 3-3 3M5 9l3 3-3 3m7-3h7a2 2 0 012 2v6a2 2 0 01-2 2h-7M4 7h6a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2z" />
-                                ),
-                            },
-                            {
-                                title: "Premium Materials",
-                                desc: "We use only the finest wool, silk, and natural dyes to create carpets that last generations.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.5 9.5l-5.5-5.5-4.5 4.5 5.5 5.5a5.5 5.5 0 11-8-7.9A5.5 5.5 0 0117.1 5.7l2.4 2.4-4.5 4.5-2.4-2.4a5.5 5.5 0 00-7.8 7.8l5.5-5.5z" />
-                                ),
-                            },
-                            {
-                                title: "Tailored to Your Space",
-                                desc: "Custom sizes, colors, and designs available to match your unique taste and interiors perfectly.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7 7h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z" />
-                                ),
-                            },
-                            {
-                                title: "Sustainable Process",
-                                desc: "Eco-friendly production methods that respect nature while creating stunning carpets.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 9l9-7 9 7v7l-9 7-9-7V9z" />
-                                ),
-                            },
-                            {
-                                title: "Trusted by Thousands",
-                                desc: "Join our family of satisfied clients worldwide who trust Hands Carpets for luxury and quality.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                ),
-                            },
-                            {
-                                title: "Lifetime Support",
-                                desc: "We are always here to help with care, maintenance, and future purchases to keep your carpets stunning.",
-                                icon: (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 20l-8-8h6V4h4v8h6l-8 8z" />
-                                ),
-                            },
-                        ].map((item, i) => (
-                            <div
-                                key={i}
-                                className="group flex items-start space-x-6 p-8 bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out"
-                            >
-                                <div className="flex-shrink-0">
-                                    <div
-                                        className={`w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-[#f4d57f] text-[#f4d57f] transition-all duration-500 group-hover:rotate-12 group-hover:scale-105`}
-                                    >
-                                        <svg
-                                            className="w-8 h-8"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            {item.icon}
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-semibold text-white mb-3">{item.title}</h4>
-                                    <p className="text-gray-400">{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+<section id = "why" className="py-20 bg-gray-950">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Carpets Decor?</h2>
+      <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+        Discover the difference with Carpets Decor — where every thread carries purpose, legacy, and handmade excellence.
+      </p>
+    </div>
+
+    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Preserving Legacy",
+          desc: "Our carpets are woven by artisans who inherit generations of weaving knowledge, preserving cultural traditions.",
+          icon: <FaRegGem className="text-3xl text-[#f4d57f]" />,
+        },
+        {
+          title: "Empowering Women",
+          desc: "We prioritize rural women’s employment, offering fair wages, training, and confidence through dignified work.",
+          icon: <FaUserFriends className="text-3xl text-[#f4d57f]" />,
+        },
+        {
+          title: "Handmade Excellence",
+          desc: "Every rug is shaped by hand, heart, and heritage — making each piece unique and soulful.",
+          icon: <FaHandHoldingHeart className="text-3xl text-[#f4d57f]" />,
+        },
+        {
+          title: "Sustainable Materials",
+          desc: "We use natural dyes and eco-friendly processes to create carpets that are kind to the Earth and safe for your home.",
+          icon: <FaLeaf className="text-3xl text-[#f4d57f]" />,
+        },
+        {
+          title: "Ethical Production",
+          desc: "We work directly with artisans, ensuring transparency, fair treatment, and responsible sourcing.",
+          icon: <FaGlobe className="text-3xl text-[#f4d57f]" />,
+        },
+        {
+          title: "Purposeful Living",
+          desc: "When you choose our carpets, you support communities, preserve art, and bring meaningful beauty into your space.",
+          icon: <FaHeart className="text-3xl text-[#f4d57f]" />,
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="group flex items-start space-x-6 p-8 bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-[#f4d57f] text-[#f4d57f] transition-all duration-500 group-hover:rotate-12 group-hover:scale-105">
+              {item.icon}
+            </div>
+          </div>
+          <div>
+            <h4 className="text-2xl font-semibold text-white mb-3">{item.title}</h4>
+            <p className="text-gray-400">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
 
