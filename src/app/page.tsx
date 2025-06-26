@@ -27,13 +27,13 @@ const contactOptions = [
     {
         title: "Contact us",
         text: "Our team is happy to assist you\nfor any query that you may have\non our rugs.",
-        link: "/pages/contact-us-new-delhi",
+        link: "/ContactUs",
         button: "GET IN TOUCH",
     },
     {
         title: "Book an appointment",
         text: "We offer complimentary\nconsultation to help you with\nyour special project.",
-        link: "/pages/meeting-request#page-content-wrapper",
+        link: "/ContactUs",
         button: "CONSULT US",
     },
 ];
@@ -72,7 +72,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
                 href="/CardDetails"
                 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
             >
-                Shop Now
+               Explore More
             </a>
         </div>
     </div>
@@ -88,7 +88,7 @@ const products = [
         image:
             '/images/shopslider1.png',
         title: 'Premium Materials',
-        description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting smoothness.',
+        description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
     },
     {
         image:
@@ -133,6 +133,11 @@ const Page = () => {
             clearInterval(interval2);
         }
     }, []);
+
+
+
+
+
     return (
         <div className="bg-black text-white">
             {/* Navbar */}
@@ -318,7 +323,8 @@ const Page = () => {
                 className="block-design flex items-center justify-center text-center"
                 style={{
                     backgroundImage:
-                        "url('https://cdn.shopify.com/s/files/1/0755/3017/4762/files/parallax-image.jpg?v=1690189653')",
+                         "url('https://cdn.shopify.com/s/files/1/0755/3017/4762/files/parallax-image.jpg?v=1690189653')",
+                        // "url('/images/parallax')",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundAttachment: "fixed",

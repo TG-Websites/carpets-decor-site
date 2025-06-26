@@ -27,36 +27,27 @@ interface CardBoxProps {
 // Hero Section Component
 const HeroSection = () => (
     <section
-        className="relative bg-cover bg-center min-h-[90vh] text-white flex items-center"
-        style={{
-            backgroundImage:
-                'url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)',
-        }}
+  className="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center text-white"
+  style={{
+    backgroundImage:
+      "url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)",
+  }}
+>
+  {/* 🔳 Glassmorphism Content Box */}
+  <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-8 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">About Us</h2>
+    <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
+      Our handcrafted rugs are more than just decor — they're living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
+    </p>
+    <a
+      href="#contact"
+      className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
     >
-        {/* 🔳 Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-0"></div>
+      Get in Touch
+    </a>
+  </div>
+</section>
 
-        {/* 🔲 Foreground Content */}
-        <div className="relative z-10 w-full">
-            <div className="container mx-auto text-center px-4">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">About Us</h2>
-                    <p className="text-lg sm:text-xl mb-12 text-gray-200 leading-relaxed">
-                        Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not
-                        simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage,
-                        handmade by expert artisans employing time-honored techniques. Each rug holds the essence
-                        of its creator and the tale of a history-filled region.
-                    </p>
-                    <a
-                        href="#contact"
-                        className="inline-block mt-5 px-6 py-3 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                    >
-                        Get in Touch
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
 );
 
@@ -206,6 +197,97 @@ const Page = () => {
                     </div>
                 </div>
             </section>
+
+
+
+<section className="py-20 bg-gray-950">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Hands Carpets?</h2>
+                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                            Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                        {[
+                            {
+                                title: "Authentic Craftsmanship",
+                                desc: "Every carpet is a masterpiece, handwoven by skilled artisans with decades of experience.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 9l3 3-3 3M5 9l3 3-3 3m7-3h7a2 2 0 012 2v6a2 2 0 01-2 2h-7M4 7h6a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2z" />
+                                ),
+                            },
+                            {
+                                title: "Premium Materials",
+                                desc: "We use only the finest wool, silk, and natural dyes to create carpets that last generations.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.5 9.5l-5.5-5.5-4.5 4.5 5.5 5.5a5.5 5.5 0 11-8-7.9A5.5 5.5 0 0117.1 5.7l2.4 2.4-4.5 4.5-2.4-2.4a5.5 5.5 0 00-7.8 7.8l5.5-5.5z" />
+                                ),
+                            },
+                            {
+                                title: "Tailored to Your Space",
+                                desc: "Custom sizes, colors, and designs available to match your unique taste and interiors perfectly.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7 7h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z" />
+                                ),
+                            },
+                            {
+                                title: "Sustainable Process",
+                                desc: "Eco-friendly production methods that respect nature while creating stunning carpets.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 9l9-7 9 7v7l-9 7-9-7V9z" />
+                                ),
+                            },
+                            {
+                                title: "Trusted by Thousands",
+                                desc: "Join our family of satisfied clients worldwide who trust Hands Carpets for luxury and quality.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                ),
+                            },
+                            {
+                                title: "Lifetime Support",
+                                desc: "We are always here to help with care, maintenance, and future purchases to keep your carpets stunning.",
+                                icon: (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 20l-8-8h6V4h4v8h6l-8 8z" />
+                                ),
+                            },
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="group flex items-start space-x-6 p-8 bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out"
+                            >
+                                <div className="flex-shrink-0">
+                                    <div
+                                        className={`w-16 h-16 flex items-center justify-center rounded-full bg-transparent border-2 border-[#f4d57f] text-[#f4d57f] transition-all duration-500 group-hover:rotate-12 group-hover:scale-105`}
+                                    >
+                                        <svg
+                                            className="w-8 h-8"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            {item.icon}
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 className="text-2xl font-semibold text-white mb-3">{item.title}</h4>
+                                    <p className="text-gray-400">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
 
             {/* Swiper Product Carousel Section */}
             <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">

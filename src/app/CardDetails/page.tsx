@@ -11,7 +11,7 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
-  }
+}
 const page = () => {
     const products = [
         {
@@ -92,7 +92,7 @@ const page = () => {
         },
         {
             image:
-                'https://wallmantra.com/wp-content/uploads/presto-carpets-rugs-geometric-pattern-blue-mauve-tufted-area-carpet-32952737333414.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
             title: 'Geometric Pattern Carpet',
             description: 'Bold patterns ideal for contemporary decor.',
         },
@@ -122,7 +122,7 @@ const page = () => {
         },
     ];
 
-    const ProductCard = ({ image, title, description }:ProductCardProps) => (
+    const ProductCard = ({ image, title, description }: ProductCardProps) => (
         <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
             <img src={image} alt={title} className="w-full h-72 object-cover" />
             <div className="p-6">
@@ -137,60 +137,65 @@ const page = () => {
             </div>
         </div>
     );
-    
+
     return (
         <div>
             <section
-                className="relative h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+                className="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center text-white"
                 style={{
-                    backgroundImage: "url('https://www.little-persia.com/cdn/shop/files/folded_persian_rugs.jpg?v=1683033018&width=3200')",
+                    backgroundImage:
+                        "url('https://www.little-persia.com/cdn/shop/files/folded_persian_rugs.jpg?v=1683033018&width=3200')",
                 }}
             >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-white/30"></div>
-                {/* Content */}
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-                        Explore Our <br /> Handcrafted Carpets
-                    </h1>
-                    <p className="text-lg md:text-2xl text-white mb-8 max-w-2xl mx-auto">
+                {/* 🔳 Glassmorphism Content Box */}
+                <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-8 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                        Explore Our Handcrafted Carpets
+                    </h2>
+                    <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
                         Elevate your space with timeless designs, rich textures, and artisanal craftsmanship.
                     </p>
-                    <div className="flex justify-center gap-4">
-                        <button className="bg-black text-white font-medium py-3 px-6 rounded-full hover:bg-white hover:text-black transition-colors duration-300">
-                            Shop Collection
-                        </button>
-                    </div>
+                    <a
+                        href="#collection"
+                        className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
+                    >
+                        Shop Collection
+                    </a>
                 </div>
             </section>
-            <div className="px-4 sm:px-6 lg:px-12 py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                    {products.map((product, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 m-2"
-                        >
-                            <div className="flex justify-center p-2">
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-48 h-64 object-cover rounded-lg transition-all duration-300 transform hover:scale-105"
-                                />
-                            </div>
-                            <div className="text-center px-2">
-                                <h3 className="text-xl font-semibold text-gray-800">{product.name}</h3>
-                                <div className="text-sm text-gray-600">
-                                    <span className="block">Size (Feet):</span>
-                                    <span>{product.sizes}</span>
-                                </div>
-                            </div>
-                            <div className="text-center pb-4">
-                                <span className="text-lg font-semibold text-gray-900">{product.priceRange}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+
+      <div className="px-4 sm:px-6 lg:px-12 py-12">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+    {products.map((product, index) => (
+      <div
+        key={index}
+        className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+      >
+        {/* 🖼️ Image */}
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-60 object-cover"
+        />
+
+        {/* 📄 Content */}
+        <div className="p-4 text-center space-y-2">
+          <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
+
+          <div className="text-sm text-gray-600">
+            <p className="font-medium">Size (Feet):</p>
+            <p>{product.sizes}</p>
+          </div>
+
+          <p className="text-lg font-bold text-gray-900 mt-2">{product.priceRange}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
             <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="container mx-auto text-center px-4">
                     {/* Heading */}

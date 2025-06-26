@@ -1,37 +1,195 @@
 import React from 'react'
 
+type ProductCardProps = {
+    image: string;
+    title: string;
+    description: string;
+};
+
+const ProductCard = ({ image, title, description }: ProductCardProps) => (
+    <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform relative">
+        <img src={image} alt={title} className="w-full h-72 object-cover" />
+        <div className="p-6 pb-20"> {/* Ensure space for button */}
+            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+            <p className="text-gray-300">{description}</p>
+        </div>
+        <a
+            href="/CardDetails"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
+        >
+            Explore More
+        </a>
+    </div>
+);
+
+
+const products = [
+  {
+    image: '/images/shopslider.png',
+    title: 'Hand Knotted',
+    description:
+      'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+  },
+  {
+    image: '/images/shopslider1.png',
+    title: 'Premium Materials',
+    description:
+      'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
+  },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Hand Tufted',
+    description:
+      'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Indo Tibetan Rugs',
+    description:
+      'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Handloom',
+    description:
+      'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+  },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Flatweave',
+    description:
+      'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Modern Abstract',
+    description:
+      'Add a touch of contemporary flair with bold abstract patterns that make a statement in any room.',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Vintage Persian',
+    description:
+      'Classic Persian-inspired designs with a distressed finish — perfect for timeless, elegant interiors.',
+  },
+];
+
+
+
 const page = () => {
     return (
         <div>
             <section
-                className="relative h-screen bg-cover bg-center"
+                className="relative min-h-[60vh] bg-cover bg-center flex items-center justify-center text-white"
                 style={{
                     backgroundImage:
-                        `url("https://cdn.shopify.com/s/files/1/0755/3017/4762/files/GRID_3.jpg?v=1712752378")`,
+                        'url("https://cdn.shopify.com/s/files/1/0755/3017/4762/files/GRID_3.jpg?v=1712752378")',
                 }}
             >
-                {/* Black overlay */}
-                <div className="absolute inset-0 bg-black/50"></div>
+                {/* 💠 Glassmorphism Content Box */}
+                <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-10 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
+                    <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                        Crafting Tradition, Weaving Excellence
+                    </h1>
 
-                {/* Content */}
-                <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
-                    <div className="space-y-6 max-w-3xl">
-                        <h1 className="text-4xl text-white sm:text-5xl lg:text-6xl font-bold drop-shadow-lg">
-                            Crafting Tradition, Weaving Excellence
-                        </h1>
+                    <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
+                        Discover the art of handmade carpets crafted with precision and passion.
+                    </p>
 
-                        <p className="text-lg sm:text-xl text-gray-200">
-                            Discover the art of handmade carpets crafted with precision and passion.
-                        </p>
+                    <a
+                        href="#contact"
+                        className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
+                    >
+                        Get a Free Consultation
+                    </a>
+                </div>
+            </section>
 
+
+            {/* <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+                <div className="container mx-auto text-center">
+                    <h2 className="text-4xl font-extrabold text-white mb-6">
+                        Our Premium Handcrafted Carpet Services
+                    </h2>
+                    <p className="text-lg text-gray-300 mb-12 max-w-4xl mx-auto">
+                        Discover the range of services we offer to enhance your living space with bespoke, hand-made carpets. From personalized designs to expert crafting, we provide a service that's as unique as your home.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <img
+                                src="https://handscarpets.com/cdn/shop/files/Modern_mobile_e6b46c69-a1d0-4b7e-bd79-2a36d5915de7.jpg?v=1717758272"
+                                alt="Custom Carpet Design"
+                                className="w-full h-56 object-cover mb-6 rounded-xl"
+                            />
+                            <h3 className="text-2xl font-semibold text-white mb-3">Design Consultation</h3>
+                            <p className="text-lg text-gray-300">
+                                Create a unique carpet that reflects your personal style, with our custom design services.
+                            </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <img
+                                src="https://image.made-in-china.com/2f0j00USkcruPlgDqo/Wool-Material-Custom-Pattern-High-End-Cheap-Price-Hotel-Carpet.webp"
+                                alt="Premium Materials"
+                                className="w-full h-56 object-cover mb-6 rounded-xl"
+                            />
+                            <h3 className="text-2xl font-semibold text-white mb-3">Premium Materials</h3>
+                            <p className="text-lg text-gray-300">
+                                We use only the finest materials, ensuring your carpet is durable, comfortable, and luxurious.
+                            </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInnj2kwOIvD40Uuk-ET6F10MFdRxb2Cojgw&s"
+                                alt="Expert Crafting"
+                                className="w-full h-56 object-cover mb-6 rounded-xl"
+                            />
+                            <h3 className="text-2xl font-semibold text-white mb-3">Expert Crafting</h3>
+                            <p className="text-lg text-gray-300">
+                                Our skilled artisans put great attention to detail in every piece, ensuring the highest quality craftsmanship.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="mt-12">
                         <button className="px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105">
                             Get a Free Consultation
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
 
             <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+                <div className="container mx-auto text-center px-4">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                        Explore Carpet Decor
+                    </h2>
+                    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+                        Elevate your space with the finest craftsmanship and materials. Here’s why Hands Carpets is the ultimate choice.
+                    </p>
+
+                    {/* 🔳 4 Cards Per Row */}
+                    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                        {products.map((product, index) => (
+                            <ProductCard key={index} {...product} />
+                        ))}
+                    </div>
+
+                    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
+                        <p>
+                            Our handcrafted carpets are woven with the finest materials,
+                            ensuring top-tier quality and timeless durability. Each carpet is
+                            unique, crafted by skilled artisans who bring decades of tradition
+                            to every knot and weave.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section className="pb-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="max-w-7xl mx-auto px-6">
                     {/* Section Heading */}
                     <div className="text-center mb-16">
@@ -87,7 +245,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="py-20 bg-gray-950">
+            {/* <section className="py-20 bg-gray-950">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Why Choose Hands Carpets?</h2>
@@ -168,60 +326,10 @@ const page = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
 
-            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-                <div className="container mx-auto text-center">
-                    <h2 className="text-4xl font-extrabold text-white mb-6">
-                        Our Premium Handcrafted Carpet Services
-                    </h2>
-                    <p className="text-lg text-gray-300 mb-12 max-w-4xl mx-auto">
-                        Discover the range of services we offer to enhance your living space with bespoke, hand-made carpets. From personalized designs to expert crafting, we provide a service that's as unique as your home.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
-                            <img
-                                src="https://handscarpets.com/cdn/shop/files/Modern_mobile_e6b46c69-a1d0-4b7e-bd79-2a36d5915de7.jpg?v=1717758272"
-                                alt="Custom Carpet Design"
-                                className="w-full h-56 object-cover mb-6 rounded-xl"
-                            />
-                            <h3 className="text-2xl font-semibold text-white mb-3">Design Consultation</h3>
-                            <p className="text-lg text-gray-300">
-                                Create a unique carpet that reflects your personal style, with our custom design services.
-                            </p>
-                        </div>
-                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
-                            <img
-                                src="https://image.made-in-china.com/2f0j00USkcruPlgDqo/Wool-Material-Custom-Pattern-High-End-Cheap-Price-Hotel-Carpet.webp"
-                                alt="Premium Materials"
-                                className="w-full h-56 object-cover mb-6 rounded-xl"
-                            />
-                            <h3 className="text-2xl font-semibold text-white mb-3">Premium Materials</h3>
-                            <p className="text-lg text-gray-300">
-                                We use only the finest materials, ensuring your carpet is durable, comfortable, and luxurious.
-                            </p>
-                        </div>
-                        <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300">
-                            <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInnj2kwOIvD40Uuk-ET6F10MFdRxb2Cojgw&s"
-                                alt="Expert Crafting"
-                                className="w-full h-56 object-cover mb-6 rounded-xl"
-                            />
-                            <h3 className="text-2xl font-semibold text-white mb-3">Expert Crafting</h3>
-                            <p className="text-lg text-gray-300">
-                                Our skilled artisans put great attention to detail in every piece, ensuring the highest quality craftsmanship.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="mt-12">
-                        <button className="px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105">
-                            Get a Free Consultation
-                        </button>
-                    </div>
-                </div>
-            </section>
 
         </div>
     )

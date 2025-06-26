@@ -20,7 +20,7 @@ function Footer() {
               src="/images/logo1.png"
               alt="Logo"
               loading="eager"
-              className="w-24 h-24 object-cover"
+              className="w-40 h-40"
             />
 
             <h4 className="text-sm text-white font-semibold">FOLLOW US</h4>

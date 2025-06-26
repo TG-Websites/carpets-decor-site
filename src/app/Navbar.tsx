@@ -8,11 +8,11 @@ function Navbar() {
                 {/* Logo with margin-top */}
                 <Link href="/">
                     <img
-                        src="/images/logo5.png"
-                        style={{ width: 200, height: 75, objectFit: 'cover' }}
+                        src="/images/logo6.png"
+                        style={{ width: 240, height:85, objectFit: 'cover' }}
                         alt="Logo"
                         loading="eager"
-                        className='pt-3'
+                        className='pt-1'
                     />
                 </Link>
 
