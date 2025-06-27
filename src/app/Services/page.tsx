@@ -282,7 +282,7 @@ const page = () => {
                         Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
                     </p>
 
-                    
+                   
                     <div
                         className="
         grid
@@ -311,8 +311,7 @@ const page = () => {
             </section> */}
 
 
-
-            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
   <div className="max-w-[1600px] mx-auto px-4">
     <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 text-center">
       Explore Carpet Decor
@@ -321,12 +320,15 @@ const page = () => {
       Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
     </p>
 
-    {/* ✅ UNIVERSAL AUTO-FIT GRID */}
+    {/* ✅ FIXED COLUMNS RESPONSIVE GRID */}
     <div
       className="
         grid
         gap-8
-        [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
       "
     >
       {products.map((product, index) => (
@@ -344,9 +346,6 @@ const page = () => {
     </div>
   </div>
 </section>
-
-
-
 
 
 
