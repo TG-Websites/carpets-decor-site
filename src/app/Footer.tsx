@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  FaTwitter,
+  // FaTwitter,
   FaFacebookF,
   FaPinterestP,
   FaInstagram,
-  FaYoutube,
+  // FaYoutube,
   FaLinkedinIn
 } from 'react-icons/fa';
 
@@ -26,7 +26,7 @@ function Footer() {
             <h4 className="text-sm text-white font-semibold">FOLLOW US</h4>
 
             <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-white">
-              <a
+              {/* <a
                 href="https://twitter.com/handscarpets"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,12 +34,12 @@ function Footer() {
                 aria-label="Twitter"
               >
                 <FaTwitter />
-              </a>
+              </a> */}
               <a
                 href="https://www.facebook.com/handscarpets/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
@@ -48,7 +48,7 @@ function Footer() {
                 href="https://in.pinterest.com/handscarpets/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
                 aria-label="Pinterest"
               >
                 <FaPinterestP />
@@ -57,12 +57,12 @@ function Footer() {
                 href="https://www.instagram.com/handscarpets/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
+                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
-              <a
+              {/* <a
                 href="https://www.youtube.com/channel/UCOtTXL-IvBsJ4EYAJVdC0_A"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,12 +70,12 @@ function Footer() {
                 aria-label="YouTube"
               >
                 <FaYoutube />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white hover:bg-gray-300 p-2 rounded-full text-black transition"
+                className="bg-white hover:bg-gray-300 p-2 rounded-full text-black transition text-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn />

@@ -25,10 +25,9 @@ interface ProductCardProps {
         className="
       group 
       w-full 
-      sm:w-[18rem] 
-      md:w-[20rem] 
+
       min-h-[420px]         /* ⬅️ Minimum height ensured, but not too tall */
-      perspective 
+     
       mx-auto
     "
     >
