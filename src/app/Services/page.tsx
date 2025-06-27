@@ -10,6 +10,7 @@ interface ProductCardProps {
     origin: string;
     durability: string;
 }
+
  const ProductCard = ({
     image,
     title,
@@ -272,7 +273,7 @@ const page = () => {
             </section> */}
 
 
-            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+            {/* <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="max-w-[1600px] mx-auto px-4">
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 text-center">
                         Explore Carpet Decor
@@ -281,7 +282,7 @@ const page = () => {
                         Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
                     </p>
 
-                    {/* ✅ RESPONSIVE GRID */}
+                    
                     <div
                         className="
         grid
@@ -307,7 +308,43 @@ const page = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+
+            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+  <div className="max-w-[1600px] mx-auto px-4">
+    <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 text-center">
+      Explore Carpet Decor
+    </h2>
+    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto text-center">
+      Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
+    </p>
+
+    {/* ✅ UNIVERSAL AUTO-FIT GRID */}
+    <div
+      className="
+        grid
+        gap-8
+        [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]
+      "
+    >
+      {products.map((product, index) => (
+        <ProductCard key={index} {...product} />
+      ))}
+    </div>
+
+    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
+      <p>
+        Our handcrafted carpets are woven with the finest materials,
+        ensuring top-tier quality and timeless durability. Each carpet is
+        unique, crafted by skilled artisans who bring decades of tradition
+        to every knot and weave.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
 
