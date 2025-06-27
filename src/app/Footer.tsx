@@ -45,7 +45,7 @@ function Footer() {
                 <FaFacebookF />
               </a>
               <a
-                href="https://www.linkedin.com/in/shubhra-gupta-"
+                href="https://www.pinterest.com/carpetsdecor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-black hover:bg-gray-700 p-3 rounded-full transition text-2xl"
