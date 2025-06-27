@@ -36,28 +36,28 @@ function Footer() {
                 <FaTwitter />
               </a> */}
               <a
-                href="https://www.facebook.com/handscarpets/"
+                href="https://www.facebook.com/carpets.decor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
+                className="bg-black hover:bg-gray-700 p-3 rounded-full transition text-2xl"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
               <a
-                href="https://in.pinterest.com/handscarpets/"
+                href="https://www.linkedin.com/in/shubhra-gupta-"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
+                className="bg-black hover:bg-gray-700 p-3 rounded-full transition text-2xl"
                 aria-label="Pinterest"
               >
                 <FaPinterestP />
               </a>
               <a
-                href="https://www.instagram.com/handscarpets/"
+                href="https://www.instagram.com/carpets.decor/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
+                className="bg-black hover:bg-gray-700 p-3 rounded-full transition text-2xl"
                 aria-label="Instagram"
               >
                 <FaInstagram />
@@ -72,7 +72,7 @@ function Footer() {
                 <FaYoutube />
               </a> */}
              <a
-  href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/"
+  href="https://www.linkedin.com/company/carpets-decor"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-black hover:bg-gray-700 p-3 rounded-full text-white transition text-2xl"
