@@ -28,46 +28,83 @@ interface CardBoxProps {
 
 // Hero Section Component
 const HeroSection = () => (
-    <section
-  className="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center text-white"
-  style={{
-    backgroundImage:
-      "url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)",
-  }}
->
-  {/* 🔳 Glassmorphism Content Box */}
-  <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-8 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">About Us</h2>
-    <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
-      Our handcrafted rugs are more than just decor — they&paos;re living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
-    </p>
-    <a
-      href="/ContactUs#contact"
-      className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
-    >
-      Get in Touch
-    </a>
-  </div>
-</section>
+  <section
+    className="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center text-white px-4 sm:px-6 md:px-8"
+    style={{
+      backgroundImage:
+        "url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)",
+    }}
+  >
+    {/* 🔳 Glassmorphism Content Box */}
+    <div className="relative z-10 w-full max-w-3xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">About Us</h2>
+      <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
+        Our handcrafted rugs are more than just decor — they’re living traditions. Woven by expert artisans, each piece tells a story of culture, patience, and timeless artistry.
+      </p>
+      <a
+        href="/ContactUs#contact"
+        className="inline-block mt-6 px-6 py-3 bg-black text-white border border-white rounded hover:bg-white hover:text-black transition"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </section>
 
+
+
+//   <section
+//   className="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center px-4"
+//   style={{
+//     backgroundImage:
+//       "url(https://www.envogueindia.com/images/infrastructure/rugs-carpets-page-top-banner21.jpg)",
+//   }}
+// >
+//   {/* Radial Gradient Overlay */}
+//   <div
+//     className="absolute inset-0"
+//     style={{
+//       background:
+//         "radial-gradient(circle at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0.25) 70%, rgba(0,0,0,0) 100%)",
+//     }}
+//   ></div>
+
+//   <div className="relative z-10 w-full max-w-3xl text-center px-6 py-12 sm:py-16">
+//     <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">About Us</h2>
+//     <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
+//       Our handcrafted rugs are more than just decor — they’re living traditions.
+//       Each piece tells a story of culture, patience, and timeless artistry.
+//     </p>
+//     <a
+//       href="/ContactUs#contact"
+//       className="inline-block mt-6 px-6 py-3 bg-white text-black rounded hover:bg-black hover:text-white border border-white transition"
+//     >
+//       Get in Touch
+//     </a>
+//   </div>
+// </section>
 
 );
 
+
 // Product Card Component
 const ProductCard = ({ image, title, description }: ProductCardProps) => (
-    <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
-        <img src={image} alt={title} className="w-full h-72 object-cover" />
-        <div className="p-6">
-            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-            <p className="text-gray-300 mb-6">{description}</p>
-            <a
-                href="/CardDetails"
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
-            >
-                Explore More
-            </a>
-        </div>
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
+
+    <div className="flex flex-col flex-1 justify-between p-6">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
+
+      <a
+        href="/CardDetails"
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
 
 

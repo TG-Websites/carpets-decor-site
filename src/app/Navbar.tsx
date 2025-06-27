@@ -9,7 +9,7 @@ function Navbar() {
                 <Link href="/">
                     <img
                         src="/images/logo6.png"
-                        style={{ width: 240, height:85, objectFit: 'cover' }}
+                        style={{ width: 240, height: 85, objectFit: 'cover' }}
                         alt="Logo"
                         loading="eager"
                         className='pt-1'
@@ -17,33 +17,41 @@ function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 text-white font-medium">
+                <ul className="hidden md:flex space-x-6 text-white font-semibold">
                     <li>
-                        <Link href="/" className="hover:text-gray-300 transition">
+                        <Link
+                            href="/"
+                            className="hover:text-gray-300 transition text-lg py-6 inline-block"
+                        >
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/AboutUs" className="hover:text-gray-300 transition">
+                        <Link
+                            href="/AboutUs"
+                            className="hover:text-gray-300 transition text-lg py-6 inline-block"
+                        >
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="/Services" className="hover:text-gray-300 transition">
+                        <Link
+                            href="/Services"
+                            className="hover:text-gray-300 transition text-lg py-6 inline-block"
+                        >
                             Categories
                         </Link>
                     </li>
-                    {/* <li>
-                        <Link href="/Blog" className="hover:text-gray-300 transition">
-                            Blog
-                        </Link>
-                    </li> */}
                     <li>
-                        <Link href="/ContactUs" className="hover:text-gray-300 transition">
+                        <Link
+                            href="/ContactUs"
+                            className="hover:text-gray-300 transition text-lg py-6 inline-block"
+                        >
                             Contact
                         </Link>
                     </li>
                 </ul>
+
 
                 {/* Mobile Menu Toggle */}
                 <details className="md:hidden relative">

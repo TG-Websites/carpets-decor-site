@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
               <span className="font-semibold text-[#f4d57f]">Email:</span>{' '}
               <a href="mailto:info@handscarpets.com" className="text-indigo-400 underline">
 
-                Amit198026@gmail.com
+               shubhra@carpetsdecor.com
               </a>
             </li>
             <li>

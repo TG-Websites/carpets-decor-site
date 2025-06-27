@@ -151,7 +151,7 @@ function Page() {
                     <h2 className="title-font font-semibold text-white tracking-widest text-xs">
                       EMAIL
                     </h2>
-                    <a className="text-indigo-400 text-sm">amit198026@gmail.com</a>
+                    <a className="text-indigo-400 text-sm">shubhra@carpetsdecor.com</a>
                   </div>
                 </div>
               </div>

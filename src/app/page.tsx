@@ -64,20 +64,26 @@ const contactOptions = [
 //     },
 // ];
 const ProductCard = ({ image, title, description }: ProductCardProps) => (
-    <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
-        <img src={image} alt={title} className="w-full h-72 object-cover" />
-        <div className="p-6">
-            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-            <p className="text-gray-300 mb-6">{description}</p>
-            <a
-                href="/CardDetails"
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
-            >
-                Explore More
-            </a>
-        </div>
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
+
+    <div className="flex flex-col flex-1 justify-between p-6">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
+
+      <a
+        href="/CardDetails"
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
+
+
 const products = [
     {
         image:
@@ -206,8 +212,10 @@ const Page = () => {
                 {/* Text Content */}
                 <div className="w-full lg:w-5/12 flex items-center justify-center text-center lg:text-left">
                     <div className="max-w-md">
-                        <p className="text-white text-lg font-semibold mb-2">Persian Rugs</p>
-                        <div className="w-16 h-0.5 bg-white mx-auto lg:mx-0 mb-4"></div>
+                        <div className="inline-block mb-4">
+                            <p className="text-white text-lg font-semibold mb-2">Persian Rugs</p>
+                            <div className="w-full h-0.5 bg-white"></div>
+                        </div>
                         <p className="text-gray-300 text-base leading-relaxed">
                             These exquisite home carpets serve as a refined link between tradition and modernity.
                             They combine traditional carpet craftsmanship with contemporary styles and color
@@ -221,6 +229,7 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
+
             </div>
 
 
@@ -232,9 +241,9 @@ const Page = () => {
                 {/* 📝 Text Section: left side on desktop, below image on mobile */}
                 <div className="w-full lg:w-5/12 flex justify-center lg:justify-start items-center text-center lg:text-left order-2 lg:order-1">
                     <div className="max-w-md w-full">
-                        <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
-                        <div className="flex justify-center lg:justify-start">
-                            <div className="w-16 h-0.5 bg-white mb-4"></div>
+                        <div className="inline-block mb-4">
+                            <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
+                            <div className="w-full h-0.5 bg-white"></div>
                         </div>
                         <p className="text-gray-300 leading-relaxed text-base">
                             Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.
@@ -249,6 +258,7 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
+
 
                 {/* 🖼️ Image Section: right side on desktop, top on mobile */}
                 <div className="w-full lg:w-7/12 relative aspect-video lg:aspect-[16/9] overflow-hidden rounded-lg order-1 lg:order-2">
@@ -299,9 +309,9 @@ const Page = () => {
                 {/* Text Section */}
                 <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left">
                     <div className="max-w-md">
-                        <p className="text-white text-lg font-semibold mb-2">Hand Knotted</p>
-                        <div className="flex justify-center lg:justify-start">
-                            <div className="w-16 h-0.5 bg-white mb-4"></div>
+                        <div className="inline-block mb-4">
+                            <p className="text-white text-lg font-semibold mb-2">Hand Knotted</p>
+                            <div className="w-full h-0.5 bg-white"></div>
                         </div>
                         <p className="text-gray-300 leading-relaxed text-base">
                             Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted by skilled Indian craftsmen, sometimes taking months to complete. Each piece is a testament to timeless artistry and the resilience of human craftsmanship.
@@ -314,6 +324,7 @@ const Page = () => {
                         </a>
                     </div>
                 </div>
+
             </div>
 
 

@@ -163,20 +163,24 @@ const page = () => {
 
 ];
 
-    const ProductCard = ({ image, title, description }: ProductCardProps) => (
-    <div className="bg-gray-800 h-130 shadow-lg rounded-lg overflow-hidden transition-transform transform">
-        <img src={image} alt={title} className="w-full h-72 object-cover" />
-        <div className="p-6">
-            <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-            <p className="text-gray-300 mb-6">{description}</p>
-            <a
-                href="/CardDetails"
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300 transform hover:scale-105"
-            >
-                Explore More
-            </a>
-        </div>
+  const ProductCard = ({ image, title, description }: ProductCardProps) => (
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
+
+    <div className="flex flex-col flex-1 justify-between p-6">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
+
+      <a
+        href="/CardDetails"
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
 
 
