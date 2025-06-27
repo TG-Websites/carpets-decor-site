@@ -25,7 +25,8 @@ function Footer() {
 
             <h4 className="text-sm text-white font-semibold">FOLLOW US</h4>
 
-            <div className="flex flex-wrap justify-center sm:justify-start gap-3 text-white">
+            <div className="flex flex-wrap justify-start gap-3 text-white">
+
               {/* <a
                 href="https://twitter.com/handscarpets"
                 target="_blank"
@@ -75,11 +76,12 @@ function Footer() {
                 href="https://www.linkedin.com/company/hands-carpets-&-rugs---india/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white hover:bg-gray-300 p-2 rounded-full text-black transition text-2xl"
+                className="bg-black hover:bg-gray-700 p-3 rounded-full text-white transition text-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn />
               </a>
+
             </div>
           </div>
 
