@@ -26,7 +26,7 @@ interface ProductCardProps {
       w-full 
       sm:w-[18rem] 
       md:w-[20rem] 
-      min-h-[400px]         /* ⬅️ Minimum height ensured, but not too tall */
+      min-h-[420px]         /* ⬅️ Minimum height ensured, but not too tall */
       perspective 
       mx-auto
     "
