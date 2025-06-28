@@ -4,185 +4,261 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
-    usage: string;
-    material: string;
-    care: string;
-    origin: string;
-    durability: string;
+  
 }
 
- const ProductCard = ({
-    image,
-    title,
-    description,
-    usage,
-    material,
-    care,
-    origin,
-    durability,
-}: ProductCardProps) => (
-    <div
-        className="
-      group 
-      w-full 
+const ProductCard = ({ image, title, description }: ProductCardProps) => (
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-      min-h-[420px]         /* ⬅️ Minimum height ensured, but not too tall */
-     
-      mx-auto
-    "
-    >
-        <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+    <div className="flex flex-col flex-1 justify-between p-6 text-center">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
 
-            {/* Front Side */}
-            <div
-                className="
-          absolute w-full h-full 
-          rounded-lg overflow-hidden bg-gray-800 shadow-lg backface-hidden
-          flex flex-col justify-between
-        "
-            >
-                <img src={image} alt={title} className="w-full h-48 object-cover" />
-                <div className="p-6 flex flex-col flex-grow justify-between text-center">
-                    <div>
-                        <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-                        <p className="text-gray-300 mb-6">{description}</p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Back Side */}
-            <div
-                className="
-          absolute w-full h-full 
-          rounded-lg overflow-hidden bg-gray-700 text-white 
-          flex flex-col justify-between 
-          p-6 rotate-y-180 backface-hidden
-        "
-            >
-                <div>
-                    <h3 className="text-xl font-bold text-white mb-2 text-center">{title}</h3>
-                    <p className="text-gray-300 mb-4 text-center">{description}</p>
-                    <div className="flex justify-center">
-                        <div className="space-y-1 text-left max-w-[220px]">
-                            <p>
-                                <span className="font-semibold text-white">Usage:</span> {usage}
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Material:</span> {material}
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Care:</span> {care}
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Origin:</span> {origin}
-                            </p>
-                            <p>
-                                <span className="font-semibold text-white">Durability:</span> {durability}
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <a
-                    href="/ContactUs#contact"
-                    className="
-            mt-4 inline-flex self-center 
-            px-8 py-3 bg-black text-white rounded-lg 
-            hover:bg-white hover:text-black border border-white 
-            transition-all duration-300 transform hover:scale-105 text-center
-          "
-                >
-                    Purchase Now
-                </a>
-            </div>
-        </div>
+      <a
+        href="/CardDetails"
+        className="mt-4 inline-flex self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
 
 
 
+
 const products = [
-    {
-        image: "/images/shopslider.png",
-        title: "Hand Knotted",
-        description: "Hand-knotted rugs reflect timeless craftsmanship and heritage, adding elegance and warmth to your space.",
-        usage: "Living rooms, bedrooms",
-        material: "100% Wool",
-        care: "Professional cleaning recommended",
-        origin: "India",
-        durability: "15+ years",
-    },
-    {
-        image: "/images/shopslider1.png",
-        title: "Premium Materials",
-        description: "Crafted from premium materials, this rug blends luxury, comfort, and enduring quality seamlessly.",
-        usage: "Dining areas",
-        material: "Wool & Viscose",
-        care: "Vacuum regularly",
-        origin: "Turkey",
-        durability: "10+ years",
-    },
-    {
-        image: "/images/shopslider2.png",
-        title: "Indo Tibetan Rugs",
-        description: "A fusion of Indian weaving and Tibetan art, featuring beautiful natural and geometric motifs.",
-        usage: "Prayer rooms",
-        material: "Silk & Wool",
-        care: "Hand wash only",
-        origin: "Nepal",
-        durability: "20+ years",
-    },
-    {
-        image: "/images/shopslider3.png",
-        title: "Flatweave",
-        description: "Lightweight and reversible, this flatweave rug is perfect for high-traffic and casual spaces.",
-        usage: "Outdoor patios",
-        material: "Cotton",
-        care: "Machine washable",
-        origin: "India",
-        durability: "5+ years",
-    },
-    {
-        image: "/images/shopslider4.png",
-        title: "Modern Abstract",
-        description: "Bold, artistic patterns make a contemporary statement in any modern living space.",
-        usage: "Modern interiors",
-        material: "Wool",
-        care: "Spot clean",
-        origin: "Iran",
-        durability: "12+ years",
-    },
-    {
-        image: "/images/shopslider5.png",
-        title: "Vintage Persian",
-        description: "Classic Persian-inspired designs with a distressed finish create timeless sophistication.",
-        usage: "Luxury spaces",
-        material: "Wool",
-        care: "Professional cleaning",
-        origin: "Persia",
-        durability: "25+ years",
-    },
-    {
-        image: "/images/shopslider.png",
-        title: "Rustic Charm",
-        description: "Earthy textures and rich tones add warmth and character to your décor effortlessly.",
-        usage: "Cabin decor",
-        material: "Jute",
-        care: "Dry clean only",
-        origin: "Bangladesh",
-        durability: "8+ years",
-    },
-    {
-        image: "/images/shopslider4.png",
-        title: "Minimalist Lines",
-        description: "Simple, elegant lines blend seamlessly into minimalist and modern interiors.",
-        usage: "Offices",
-        material: "Cotton blend",
-        care: "Vacuum weekly",
-        origin: "Pakistan",
-        durability: "10+ years",
-    },
+  {
+    image: '/images/shopslider.png',
+    title: 'Hand Knotted',
+    description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+  },
+  {
+    image: '/images/shopslider1.png',
+    title: 'Premium Materials',
+    description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
+  },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Hand Tufted',
+    description: 'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Indo Tibetan Rugs',
+    description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Handloom',
+    description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
+  },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Flatweave',
+    description: 'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
+  },
+  {
+    image: '/images/shopslider1.png',
+    title: 'Modern Geometry',
+    description: 'Bold geometric patterns crafted with premium fibers for contemporary interiors.',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Classic Persian',
+    description: 'Traditional Persian designs with intricate motifs and vibrant colors.',
+  },
 ];
+
+
+
+
+// interface ProductCardProps {
+//     image: string;
+//     title: string;
+//     description: string;
+//     usage: string;
+//     material: string;
+//     care: string;
+//     origin: string;
+//     durability: string;
+// }
+
+//  const ProductCard = ({
+//     image,
+//     title,
+//     description,
+//     usage,
+//     material,
+//     care,
+//     origin,
+//     durability,
+// }: ProductCardProps) => (
+//     <div
+//         className="
+//       group 
+//       w-full 
+
+//       min-h-[420px]         /* ⬅️ Minimum height ensured, but not too tall */
+     
+//       mx-auto
+//     "
+//     >
+//         <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+
+//             {/* Front Side */}
+//             <div
+//                 className="
+//           absolute w-full h-full 
+//           rounded-lg overflow-hidden bg-gray-800 shadow-lg backface-hidden
+//           flex flex-col justify-between
+//         "
+//             >
+//                 <img src={image} alt={title} className="w-full h-48 object-cover" />
+//                 <div className="p-6 flex flex-col flex-grow justify-between text-center">
+//                     <div>
+//                         <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+//                         <p className="text-gray-300 mb-6">{description}</p>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {/* Back Side */}
+//             <div
+//                 className="
+//           absolute w-full h-full 
+//           rounded-lg overflow-hidden bg-gray-700 text-white 
+//           flex flex-col justify-between 
+//           p-6 rotate-y-180 backface-hidden
+//         "
+//             >
+//                 <div>
+//                     <h3 className="text-xl font-bold text-white mb-2 text-center">{title}</h3>
+//                     <p className="text-gray-300 mb-4 text-center">{description}</p>
+//                     <div className="flex justify-center">
+//                         <div className="space-y-1 text-left max-w-[220px]">
+//                             <p>
+//                                 <span className="font-semibold text-white">Usage:</span> {usage}
+//                             </p>
+//                             <p>
+//                                 <span className="font-semibold text-white">Material:</span> {material}
+//                             </p>
+//                             <p>
+//                                 <span className="font-semibold text-white">Care:</span> {care}
+//                             </p>
+//                             <p>
+//                                 <span className="font-semibold text-white">Origin:</span> {origin}
+//                             </p>
+//                             <p>
+//                                 <span className="font-semibold text-white">Durability:</span> {durability}
+//                             </p>
+//                         </div>
+//                     </div>
+
+//                 </div>
+//                 <a
+//                     href="/ContactUs#contact"
+//                     className="
+//             mt-4 inline-flex self-center 
+//             px-8 py-3 bg-black text-white rounded-sm 
+//             hover:bg-white hover:text-black border border-white 
+//             transition-all duration-300 transform hover:scale-105 text-center
+//           "
+//                 >
+//                     Purchase Now
+//                 </a>
+//             </div>
+//         </div>
+//     </div>
+// );
+
+
+
+// const products = [
+//     {
+//         image: "/images/shopslider.png",
+//         title: "Hand Knotted",
+//         description: "Hand-knotted rugs reflect timeless craftsmanship and heritage, adding elegance and warmth to your space.",
+//         usage: "Living rooms, bedrooms",
+//         material: "100% Wool",
+//         care: "Professional cleaning recommended",
+//         origin: "India",
+//         durability: "15+ years",
+//     },
+//     {
+//         image: "/images/shopslider1.png",
+//         title: "Premium Materials",
+//         description: "Crafted from premium materials, this rug blends luxury, comfort, and enduring quality seamlessly.",
+//         usage: "Dining areas",
+//         material: "Wool & Viscose",
+//         care: "Vacuum regularly",
+//         origin: "Turkey",
+//         durability: "10+ years",
+//     },
+//     {
+//         image: "/images/shopslider2.png",
+//         title: "Indo Tibetan Rugs",
+//         description: "A fusion of Indian weaving and Tibetan art, featuring beautiful natural and geometric motifs.",
+//         usage: "Prayer rooms",
+//         material: "Silk & Wool",
+//         care: "Hand wash only",
+//         origin: "Nepal",
+//         durability: "20+ years",
+//     },
+//     {
+//         image: "/images/shopslider3.png",
+//         title: "Flatweave",
+//         description: "Lightweight and reversible, this flatweave rug is perfect for high-traffic and casual spaces.",
+//         usage: "Outdoor patios",
+//         material: "Cotton",
+//         care: "Machine washable",
+//         origin: "India",
+//         durability: "5+ years",
+//     },
+//     {
+//         image: "/images/shopslider4.png",
+//         title: "Modern Abstract",
+//         description: "Bold, artistic patterns make a contemporary statement in any modern living space.",
+//         usage: "Modern interiors",
+//         material: "Wool",
+//         care: "Spot clean",
+//         origin: "Iran",
+//         durability: "12+ years",
+//     },
+//     {
+//         image: "/images/shopslider5.png",
+//         title: "Vintage Persian",
+//         description: "Classic Persian-inspired designs with a distressed finish create timeless sophistication.",
+//         usage: "Luxury spaces",
+//         material: "Wool",
+//         care: "Professional cleaning",
+//         origin: "Persia",
+//         durability: "25+ years",
+//     },
+//     {
+//         image: "/images/shopslider.png",
+//         title: "Rustic Charm",
+//         description: "Earthy textures and rich tones add warmth and character to your décor effortlessly.",
+//         usage: "Cabin decor",
+//         material: "Jute",
+//         care: "Dry clean only",
+//         origin: "Bangladesh",
+//         durability: "8+ years",
+//     },
+//     {
+//         image: "/images/shopslider4.png",
+//         title: "Minimalist Lines",
+//         description: "Simple, elegant lines blend seamlessly into minimalist and modern interiors.",
+//         usage: "Offices",
+//         material: "Cotton blend",
+//         care: "Vacuum weekly",
+//         origin: "Pakistan",
+//         durability: "10+ years",
+//     },
+// ];
 
 
 
@@ -310,8 +386,8 @@ const page = () => {
             </section> */}
 
 
-<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-  <div className="max-w-[1600px] mx-auto px-4">
+{/*<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+   <div className="max-w-[1600px] mx-auto px-4">
     <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 text-center">
       Explore Carpet Decor
     </h2>
@@ -319,7 +395,7 @@ const page = () => {
       Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
     </p>
 
-    {/* ✅ FIXED COLUMNS RESPONSIVE GRID */}
+   
     <div
       className="
         grid
@@ -344,7 +420,48 @@ const page = () => {
       </p>
     </div>
   </div>
+</section> */}
+
+
+
+<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+  <div className="max-w-[1600px] mx-auto px-4">
+    {/* Heading */}
+    <h2 className="text-4xl font-extrabold text-white mb-6 text-center">
+      Explore Carpet Decor
+    </h2>
+    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto text-center">
+      Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
+    </p>
+
+    {/* Grid */}
+    <div
+      className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        gap-8
+      "
+    >
+      {products.map((product, index) => (
+        <ProductCard key={index} {...product} />
+      ))}
+    </div>
+
+    {/* Footer Text */}
+    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
+      <p>
+        Our handcrafted carpets are woven with the finest materials,
+        ensuring top-tier quality and timeless durability. Each carpet is
+        unique, crafted by skilled artisans who bring decades of tradition
+        to every knot and weave.
+      </p>
+    </div>
+  </div>
 </section>
+
 
 
 

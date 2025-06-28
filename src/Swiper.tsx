@@ -1,55 +1,49 @@
 'use client';
 
-import React, { } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
 interface Slide {
-    desktopSrc: string;
-    mobileSrc: string;
-    caption?: {
-        title: string;
-        subtitle: string;
-    };
+  desktopSrc: string;
+  mobileSrc: string;
+  caption?: {
+    title: string;
+    subtitle: string;
+  };
 }
 
 const slides = [
-    {
-        // link: "/collections/antique-turkish-kilims",
-        desktopSrc: "/images/sliderimg8.png",
-        mobileSrc: "/images/sliderimg8.png",
-    },
-    {
-        // link: "/collections/overlap",
-        desktopSrc: "/images/sliderimg2.png",
-        mobileSrc: "/images/sliderimg2.png",
-    },
-    {
-        // link: "/collections/persian-carpets-rugs",
-        desktopSrc: "/images/sliderimg3.png",
-        mobileSrc: "/images/sliderimg3.png",
-    },
-    {
-        // link: "/collections/persian-carpets-rugs",
-        desktopSrc: "/images/sliderimg4.png",
-        mobileSrc: "/images/sliderimg4.png",
-    },
-    {
-        // link: "/collections/persian-carpets-rugs",
-        desktopSrc: "/images/sliderimg5.png",
-        mobileSrc: "/images/sliderimg5.png",
-    },
-    {
-        // link: "/collections/persian-carpets-rugs",
-        desktopSrc: "/images/sliderimg6.png",
-        mobileSrc: "/images/sliderimg6.png",
-    },
-    {
-        // link: "/collections/persian-carpets-rugs",
-        desktopSrc: "/images/sliderimg7.png",
-        mobileSrc: "/images/sliderimg7.png",
-    },
+  {
+    desktopSrc: "/images/sliderimg8.png",
+    mobileSrc: "/images/sliderimg8.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg2.png",
+    mobileSrc: "/images/sliderimg2.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg3.png",
+    mobileSrc: "/images/sliderimg3.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg4.png",
+    mobileSrc: "/images/sliderimg4.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg5.png",
+    mobileSrc: "/images/sliderimg5.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg6.png",
+    mobileSrc: "/images/sliderimg6.png",
+  },
+  {
+    desktopSrc: "/images/sliderimg7.png",
+    mobileSrc: "/images/sliderimg7.png",
+  },
     // {
     //     link: "/collections/knotion",
     //     desktopSrc: "//handscarpets.com/cdn/shop/files/Nika_Landing_page_Web_Banner.jpg?v=1726555523",
@@ -86,44 +80,60 @@ const slides = [
 
 
 function SwiperComponent() {
+  return (
+    <div>
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation
+        autoplay={{ delay: 4000 }}
+        loop
+        className="relative"
+      >
+        {slides.map((slide: Slide, i) => (
+          <SwiperSlide key={i}>
+            <a>
+              <div className="relative w-full h-full">
+                <picture>
+                  <source media="(min-width: 769px)" srcSet={slide.desktopSrc} />
+                  <img
+                    src={slide.mobileSrc}
+                    alt=""
+                    className="w-full h-auto object-cover"
+                    loading="eager"
+                  />
+                </picture>
 
-    return (
-        <div>
-            <Swiper
-                modules={[Navigation, Autoplay]}
-                navigation
-                autoplay={{ delay: 4000 }}
-                loop
-                className="relative"
-            >
-                {slides.map((slide: Slide, i) => (
+                {slide.caption && (
+                  <div className="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
+                    <h3 className="text-2xl md:text-4xl font-bold">{slide.caption.title}</h3>
+                    <h4 className="text-xl md:text-2xl">{slide.caption.subtitle}</h4>
+                  </div>
+                )}
+              </div>
+            </a>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-                    <SwiperSlide key={i}>
-                        <a >
-                            <div className="relative w-full h-full">
-                                <picture>
-                                    <source media="(min-width: 769px)" srcSet={slide.desktopSrc} />
-                                    <img
-                                        src={slide.mobileSrc}
-                                        alt=""
-                                        className="w-full h-auto object-cover"
-                                        loading="eager"
-                                    />
-                                </picture>
-
-                                {slide.caption && (
-                                    <div className="absolute top-1/2 left-8 transform -translate-y-1/2 text-white">
-                                        <h3 className="text-2xl md:text-4xl font-bold">{slide.caption.title}</h3>
-                                        <h4 className="text-xl md:text-2xl">{slide.caption.subtitle}</h4>
-                                    </div>
-                                )}
-                            </div>
-                        </a>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-    )
+      {/* 👇 Arrows fixed viewport center */}
+      <style jsx global>{`
+        .swiper-button-prev,
+        .swiper-button-next {
+          position: fixed;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          z-index: 20;
+        }
+        .swiper-button-prev {
+          left: 20px;
+        }
+        .swiper-button-next {
+          right: 20px;
+        }
+      `}</style>
+    </div>
+  );
 }
 
-export default SwiperComponent
+export default SwiperComponent;

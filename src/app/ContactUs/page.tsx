@@ -64,8 +64,8 @@ function Page() {
       <section id="contact" className="bg-black text-gray-300 py-16">
         <div className="max-w-7xl mx-auto px-4">
           {/* Title */}
-          <div className="text-center max-w-xl mx-auto mb-12">
-            <h1 className="text-[32px] text-white md:text-[48px] leading-[1.3] font-semibold graytxt">
+          <div className="text-center max-w-xl mx-auto mb-16">
+            <h1 className="text-[32px] text-white md:text-[48px] leading-[1.3] font-semibold graytxt mb-6">
               Contact Us
             </h1>
             <p className="text-white text-base">

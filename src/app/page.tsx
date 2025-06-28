@@ -24,6 +24,9 @@ const carouselImages2 = [
     '/images/gptslider5.png',
     '/images/gptslider6.png',
 ];
+
+
+
 const contactOptions = [
     {
         title: "Contact us",
@@ -75,7 +78,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 
       <a
         href="/CardDetails"
-        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
       >
         Explore More
       </a>
