@@ -116,12 +116,10 @@ function SwiperComponent() {
       </Swiper>
 
       {/* 👇 Arrows fixed viewport center */}
-      <style jsx global>{`
+      {/* <style jsx global>{`
         .swiper-button-prev,
         .swiper-button-next {
-          position: fixed;
-          top: 50%;
-          transform: translateY(-50%);
+        
           color: white;
           z-index: 20;
         }
@@ -131,7 +129,7 @@ function SwiperComponent() {
         .swiper-button-next {
           right: 20px;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 }
