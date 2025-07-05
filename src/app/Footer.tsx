@@ -1,117 +1,104 @@
 import React from 'react';
 import {
-  // FaTwitter,
   FaFacebookF,
   FaPinterestP,
   FaInstagram,
-  // FaYoutube,
-  FaLinkedinIn
+  FaLinkedinIn,
 } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer className="bg-black text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left">
-
-          {/* Logo & Social Section */}
-          <div className="sm:col-span-2 flex flex-col items-center sm:items-start space-y-4 md:ml-8 lg:ml-45">
+    <footer className="bg-black text-gray-300 pt-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center sm:text-left">
+          {/* Logo Section */}
+          <div className="flex flex-col items-center sm:items-start space-y-4">
             <img
               src="/images/logo1.png"
               alt="Logo"
               loading="eager"
-              className="w-40 h-40"
+              className="w-36 h-36"
             />
-
-            <h4 className="text-sm text-white font-semibold">FOLLOW US</h4>
-
-            <div className="flex flex-wrap justify-center sm:justify-start gap-1 text-white">
-              {/* <a
-                href="https://twitter.com/handscarpets"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </a> */}
-              <a
-                href="https://www.facebook.com/carpets.decor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://www.pinterest.com/carpetsdecor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
-                aria-label="Pinterest"
-              >
-                <FaPinterestP />
-              </a>
-              <a
-                href="https://www.instagram.com/carpets.decor/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition text-2xl"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              {/* <a
-                href="https://www.youtube.com/channel/UCOtTXL-IvBsJ4EYAJVdC0_A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-700 p-2 rounded-full transition"
-                aria-label="YouTube"
-              >
-                <FaYoutube />
-              </a> */}
-             <a
-  href="https://www.linkedin.com/company/carpets-decor"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-black hover:bg-gray-700 p-2 rounded-full text-white transition text-2xl"
-  aria-label="LinkedIn"
->
-  <FaLinkedinIn />
-</a>
-
-            </div>
           </div>
 
-          {/* Company Links */}
+          {/* Our Company */}
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Our Company</p>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="/AboutUs" className="hover:text-white transition">About</a></li>
               <li><a href="/Services" className="hover:text-white transition">Categories</a></li>
-              {/* <li><a href="#" className="hover:text-white transition">Projects</a></li>
-              <li><a href="#" className="hover:text-white transition">Videos</a></li> */}
               <li><a href="/AboutUs#why" className="hover:text-white transition">Why Carpets Decor?</a></li>
             </ul>
           </div>
 
-          {/* Customer Service Links */}
+          {/* Customer Service */}
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Customer Service</p>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="/ContactUs" className="hover:text-white transition">Contact Us</a></li>
-              {/* <li><a href="#" className="hover:text-white transition">Our Showrooms</a></li>
-              <li><a href="#" className="hover:text-white transition">Custom Made</a></li>
-              <li><a href="#" className="hover:text-white transition">Carpet Maintenance</a></li> */}
               <li><a href="/PrivacyPolicy" className="hover:text-white transition">Privacy Policy</a></li>
             </ul>
           </div>
-        </div>
 
-        {/* Footer Bottom */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Carpets & Rugs. All rights reserved.
+          {/* Address */}
+          <div>
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Contact Info</p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              L-20 Central Mall, RPS City.<br/>
+              Sector 88 Faridabad<br/>
+              Phone: +91 9354715556<br/>
+              Email: shubhra@carpetsdecor.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Full-width border and bottom area */}
+      <div className="w-full border-t border-gray-700 mt-8">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-500 text-center md:text-left">
+            © {new Date().getFullYear()} Carpets & Rugs. All rights reserved.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-1">
+            <a
+              href="https://www.facebook.com/carpets.decor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-gray-700 p-2 rounded-full transition text-xl"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.pinterest.com/carpetsdecor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-gray-700 p-2 rounded-full transition text-xl"
+              aria-label="Pinterest"
+            >
+              <FaPinterestP />
+            </a>
+            <a
+              href="https://www.instagram.com/carpets.decor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-gray-700 p-2 rounded-full transition text-xl"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/carpets-decor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-gray-700 p-2 rounded-full transition text-xl"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
