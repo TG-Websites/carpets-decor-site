@@ -66,11 +66,13 @@ const contactOptions = [
 //         link: "/blogs/blog/hands-launches-knotion-by-nika-zupanc-at-id-india-design-mumbai",
 //     },
 // ];
+
+
 const ProductCard = ({ image, title, description }: ProductCardProps) => (
   <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
     <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-    <div className="flex flex-col flex-1 justify-between p-6">
+    <div className="flex flex-col flex-1 justify-between p-6 text-center">
       <div>
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
         <p className="text-gray-300">{description}</p>
@@ -78,7 +80,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 
       <a
         href="/CardDetails"
-        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
+        className="mt-4 inline-flex self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
       >
         Explore More
       </a>
@@ -87,44 +89,24 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 );
 
 
-const products = [
-    {
-        image:
-            '/images/shopslider.png',
-        title: 'Hand Knotted',
-        description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
-    },
-    // {
-    //     image:
-    //         '/images/shopslider1.png',
-    //     title: 'Premium Materials',
-    //     description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
-    // },
-    {
-        image:
-            '/images/shopslider2.png',
-        title: 'Hand Tufted',
-        description: 'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
-    },
-    {
-        image:
-            '/images/shopslider3.png',
-        title: 'Indo Tibetan Rugs',
-        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
-    },
-    {
-        image:
-            '/images/shopslider4.png',
-        title: 'Handloom',
-        description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
-    },
-    {
-        image:
-            '/images/shopslider5.png',
-        title: 'Flatweave',
-        description: 'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
-    },
 
+
+const products = [
+  {
+    image: '/images/gptslider1.png',
+    title: 'Persian Rugs',
+    description: 'Traditional Persian designs with intricate motifs and rich colors that bring timeless elegance to any space.',
+  },
+  {
+    image: '/images/gptslider4.png',
+    title: 'Silk Carpets',
+    description: 'Luxurious silk carpets renowned for their soft texture, shimmering finish, and exquisite craftsmanship.',
+  },
+  {
+    image: '/images/gptslider5.png',
+    title: 'Hand Knotted',
+    description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+  },
 ];
 
 const Page = () => {
@@ -155,8 +137,8 @@ const Page = () => {
             <SwiperComponent />
 
             {/* Text Content */}
-            <div className="mt-6 text-center px-4 sm:px-8">
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+            <div className="mt-6 text-left px-4 sm:px-8">
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed ">
                     Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region. </p>
                 <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
 
@@ -215,9 +197,9 @@ const Page = () => {
                 {/* Text Content */}
                 <div className="w-full lg:w-5/12 flex items-center justify-center text-center lg:text-left">
                     <div className="max-w-md">
-                        <div className="inline-block mb-4">
-                            <p className="text-white text-lg font-semibold mb-2">Persian Rugs</p>
-                            <div className="w-full h-0.5 bg-white"></div>
+                        <div className="inline-block mb-0">
+                            <p className="text-white text-lg font-semibold mb-0">Persian Rugs</p>
+                            {/* <div className="w-full h-0.5 bg-white"></div> */}
                         </div>
                         <p className="text-gray-300 text-base leading-relaxed">
                             These exquisite home carpets serve as a refined link between tradition and modernity.
@@ -244,9 +226,9 @@ const Page = () => {
                 {/* 📝 Text Section: left side on desktop, below image on mobile */}
                 <div className="w-full lg:w-5/12 flex justify-center lg:justify-start items-center text-center lg:text-left order-2 lg:order-1">
                     <div className="max-w-md w-full">
-                        <div className="inline-block mb-4">
-                            <p className="text-white text-lg font-semibold mb-2">Silk Carpets</p>
-                            <div className="w-full h-0.5 bg-white"></div>
+                        <div className="inline-block mb-0">
+                            <p className="text-white text-lg font-semibold mb-0">Silk Carpets</p>
+                            {/* <div className="w-full h-0.5 bg-white"></div> */}
                         </div>
                         <p className="text-gray-300 leading-relaxed text-base">
                             Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.
@@ -312,9 +294,9 @@ const Page = () => {
                 {/* Text Section */}
                 <div className="w-full lg:w-5/12 flex justify-center items-center text-center lg:text-left">
                     <div className="max-w-md">
-                        <div className="inline-block mb-4">
-                            <p className="text-white text-lg font-semibold mb-2">Hand Knotted</p>
-                            <div className="w-full h-0.5 bg-white"></div>
+                        <div className="inline-block mb-0">
+                            <p className="text-white text-lg font-semibold mb-0">Hand Knotted</p>
+                            {/* <div className="w-full h-0.5 bg-white"></div> */}
                         </div>
                         <p className="text-gray-300 leading-relaxed text-base">
                             Hand-knotted rugs are the epitome of traditional craftsmanship. Each rug is individually knotted by skilled Indian craftsmen, sometimes taking months to complete. Each piece is a testament to timeless artistry and the resilience of human craftsmanship.
@@ -628,7 +610,7 @@ const Page = () => {
                     </div>
                 </div>
             </div> */}
-            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+            {/* <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="container mx-auto text-center px-4">
                     <h2 className="text-4xl font-extrabold text-white mb-6">
                         Explore Carpet Decor ?
@@ -668,7 +650,47 @@ const Page = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
+<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+  <div className="max-w-[1600px] mx-auto px-4">
+    {/* Heading */}
+    <h2 className="text-4xl font-extrabold text-white mb-6 text-center">
+      Explore Carpet Decor
+    </h2>
+    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto text-center">
+      Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
+    </p>
+
+    {/* Grid */}
+  <div
+  className="
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-3
+    gap-8
+    max-w-6xl
+    mx-auto
+  "
+>
+  {products.map((product, index) => (
+    <ProductCard key={index} {...product} />
+  ))}
+</div>
+
+
+    {/* Footer Text */}
+    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
+      <p>
+        Our handcrafted carpets are woven with the finest materials,
+        ensuring top-tier quality and timeless durability. Each carpet is
+        unique, crafted by skilled artisans who bring decades of tradition
+        to every knot and weave.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
             {/* <section className="bg-gray-100 py-[27px] md:py-[36px]">
@@ -716,9 +738,12 @@ const Page = () => {
                             key={index}
                             className="relative text-center px-4 md:px-16 py-8 md:py-4"
                         >
-                            <h2 className="text-lg text-white mb-12 relative inline-block after:content-[''] after:block after:w-16 after:h-px after:bg-white after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2">
+                            <h2
+                                className="text-lg text-white mb-2 relative inline-block after:hidden"
+                            >
                                 {option.title}
                             </h2>
+
                             <p className="text-base text-gray-300 mb-9 whitespace-pre-line">
                                 {option.text}
                             </p>

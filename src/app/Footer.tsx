@@ -17,7 +17,7 @@ function Footer() {
               src="/images/logo1.png"
               alt="Logo"
               loading="eager"
-              className="w-36 h-36"
+              className="w-45 h-45"
             />
           </div>
 

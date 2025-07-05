@@ -32,46 +32,22 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
 
 const products = [
   {
-    image: '/images/shopslider.png',
+    image: '/images/gptslider1.png',
+    title: 'Persian Rugs',
+    description: 'Traditional Persian designs with intricate motifs and rich colors that bring timeless elegance to any space.',
+  },
+  {
+    image: '/images/gptslider4.png',
+    title: 'Silk Carpets',
+    description: 'Luxurious silk carpets renowned for their soft texture, shimmering finish, and exquisite craftsmanship.',
+  },
+  {
+    image: '/images/gptslider5.png',
     title: 'Hand Knotted',
     description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
   },
-  {
-    image: '/images/vintage carpet.webp',
-    title: 'Vintage Overdyed',
-    description: 'Unique overdyed rugs combining vintage character with modern aesthetics—each piece tells its own story.',
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Hand Tufted',
-    description: 'Indo-Tibetan rugs fuse Indian weaving and Tibetan art, showcasing Buddhist, natural, and geometric designs.',
-  },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Indo Tibetan Rugs',
-    description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Handloom',
-    description: 'Artisan-made wool or viscose rugs with soft texture and elegant patterns—perfect for modern spaces.',
-  },
-  {
-    image: '/images/shopslider5.png',
-    title: 'Flatweave',
-    description: 'Flatweave rugs are lightweight, durable, reversible, and ideal for casual or high-traffic spaces.',
-  },
-  {
-    image: '/images/natural jute.jpeg',
-    title: 'Natural Jute',
-    description: 'Eco-friendly jute rugs with earthy textures, adding organic warmth and rustic charm to any room.',
-  },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Classic Persian',
-    description: 'Traditional Persian designs with intricate motifs and vibrant colors.',
-  },
 ];
+
 
 
 
@@ -436,20 +412,22 @@ const page = () => {
     </p>
 
     {/* Grid */}
-    <div
-      className="
-        grid
-        grid-cols-1
-        sm:grid-cols-2
-        md:grid-cols-3
-        lg:grid-cols-4
-        gap-8
-      "
-    >
-      {products.map((product, index) => (
-        <ProductCard key={index} {...product} />
-      ))}
-    </div>
+  <div
+  className="
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-3
+    gap-8
+    max-w-6xl
+    mx-auto
+  "
+>
+  {products.map((product, index) => (
+    <ProductCard key={index} {...product} />
+  ))}
+</div>
+
 
     {/* Footer Text */}
     <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
