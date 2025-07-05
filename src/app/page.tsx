@@ -94,12 +94,12 @@ const products = [
         title: 'Hand Knotted',
         description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
     },
-    {
-        image:
-            '/images/shopslider1.png',
-        title: 'Premium Materials',
-        description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
-    },
+    // {
+    //     image:
+    //         '/images/shopslider1.png',
+    //     title: 'Premium Materials',
+    //     description: 'Our hand-tufted carpet, made with premium wool and viscose, blends elegance, comfort, and lasting.',
+    // },
     {
         image:
             '/images/shopslider2.png',

@@ -17,7 +17,7 @@ function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-6 text-white font-semibold">
+                <ul className="hidden md:flex space-x-6 text-white font-semibold uppercase">
                     <li>
                         <Link
                             href="/"
@@ -73,7 +73,7 @@ function Navbar() {
                     </summary>
 
                     {/* Dropdown Menu */}
-                    <ul className="absolute right-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md p-4 space-y-4 z-50">
+                    <ul className="absolute right-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md p-4 space-y-4 z-50 uppercase">
                         <li>
                             <Link href="/" className="hover:text-gray-300 transition">
                                 Home
