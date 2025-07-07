@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import SwiperComponent from '@/Swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 // import Link from 'next/link';
 
 type ProductCardProps = {
