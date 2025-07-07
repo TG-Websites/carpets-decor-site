@@ -349,7 +349,7 @@ export default function Page() {
                 {/* 🔳 Glassmorphism Content Box */}
                 <div className="relative z-10 w-full max-w-3xl mx-4 sm:mx-auto px-6 py-8 bg-white/5 backdrop-blur-sm rounded-xl shadow-md border border-white/20 text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-                        Explore Our Handcrafted Carpets
+                        Explore Our Persian Rugs
                     </h2>
                     <p className="text-base sm:text-lg text-gray-100 leading-relaxed">
                         Elevate your space with timeless designs, rich textures, and artisanal craftsmanship.
