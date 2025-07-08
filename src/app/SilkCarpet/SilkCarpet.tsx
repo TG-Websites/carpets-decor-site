@@ -26,10 +26,20 @@ interface FlippableProductCardProps {
   origin: string;
 }
 
+interface FlippableProductCardProps {
+  image: string;
+  title: string;
+  description: string;
+  usage: string;
+  material: string;
+  care: string;
+  origin: string;
+}
+
 const FlippableProductCard = ({
   image,
   title,
- 
+
   usage,
   material,
   care,
@@ -42,7 +52,7 @@ const FlippableProductCard = ({
       <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         
-        
+       
       </div>
 
       {/* Back */}
@@ -267,12 +277,12 @@ const products = [
 
 
 const CardList =  [
-  {
-    image: '/images/shopslider5.png',
-    title: 'Silk Carpets',
-    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
-    link: '/SilkCarpet',
-  },
+//   {
+//     image: '/images/shopslider5.png',
+//     title: 'Silk Carpets',
+//     description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+//     link: '/SilkCarpet',
+//   },
   {
     image: '/images/shopslider2.png',
     title: 'Hand Knotted',
@@ -303,12 +313,12 @@ const CardList =  [
     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
     link: '/Flatweave',
   },
-//   {
-//     image: '/images/shopslider2.png',
-//     title: 'Outdoor Rugs',
-//     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-//     link: '/OutdoorRugs',
-//   },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
@@ -335,12 +345,12 @@ export default function Page() {
     return (
         <div>
            <ProductHero
-  name="Persian Rugs"
-  description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
+  name="Silk Carpets"
+  description="Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns."
 />
 
 
-      <div className="relative">
+       <div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 

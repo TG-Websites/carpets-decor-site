@@ -10,6 +10,7 @@ type ProductCardProps = {
     image: string;
     title: string;
     description: string;
+    link: string;
 };
 
 const carouselImages = [
@@ -68,67 +69,71 @@ const contactOptions = [
 // ];
 
 
-const ProductCard = ({ image, title, description }: ProductCardProps) => (
-    <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
-        <img src={image} alt={title} className="w-full h-64 object-cover" />
+const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-        <div className="flex flex-col flex-1 justify-between p-6">
-            <div>
-                <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-                <p className="text-gray-300">{description}</p>
-            </div>
+    <div className="flex flex-col flex-1 justify-between p-6">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
 
-            <a
-                href="/CardDetails"
-                className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
-            >
-                Explore More
-            </a>
-        </div>
+      <a
+        href={link}
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
 
-
-
-
 const products = [
-
-      {
-    image: '/images/shopslider1.png',
+  {
+    image: '/images/shopslider5.png',
     title: 'Silk Carpets',
-    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns. '
+    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+    link: '/SilkCarpet',
   },
   {
     image: '/images/shopslider2.png',
     title: 'Hand Knotted',
-    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.'
+    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+    link: '/HandKnotted',
   },
   {
     image: '/images/shopslider3.png',
     title: 'Hand Tufted',
-    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.'
+    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+    link: '/HandTuffed',
   },
   {
     image: '/images/shopslider4.png',
     title: 'Indo Nepali Rugs',
-    description: 'A blend of Indian weaving and Tibetan art, combining simplicity with elegant design.'
+    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+    link: '/IndoNepali',
   },
   {
     image: '/images/shopslider5.png',
     title: 'Handloom',
-    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.'
+    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+    link: '/Handloom',
   },
   {
     image: '/images/shopslider4.png',
     title: 'Flatweave',
-    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.'
+    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+    link: '/Flatweave',
   },
   {
     image: '/images/shopslider2.png',
     title: 'Outdoor Rugs',
-    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.'
-  }
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
+
 
 const Page = () => {
     const [index, setIndex] = useState(0);
@@ -258,7 +263,7 @@ const Page = () => {
                         </p>
                         <a
                             className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                            href="/CardDetails"
+                            href="SilkCarpet"
                         >
                             EXPLORE THE COLLECTION
                         </a>
@@ -324,7 +329,7 @@ const Page = () => {
                         </p>
                         <a
                             className="inline-block mt-5 px-4 py-2 bg-black text-white border border-white rounded transition hover:bg-white hover:text-black"
-                            href="/CardDetails"
+                            href="/HandKnotted"
                         >
                             EXPLORE THE COLLECTION
                         </a>

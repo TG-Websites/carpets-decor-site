@@ -17,53 +17,52 @@ interface ProductCardProps {
 
 
 interface FlippableProductCardProps {
-  image: string;
-  title: string;
-  description: string;
-  usage: string;
-  material: string;
-  care: string;
-  origin: string;
+    image: string;
+    title: string;
+    description: string;
+    usage: string;
+    material: string;
+    care: string;
+    origin: string;
 }
 
 const FlippableProductCard = ({
-  image,
-  title,
- 
-  usage,
-  material,
-  care,
-  origin,
+    image,
+    title,
+   
+    usage,
+    material,
+    care,
+    origin,
 }: FlippableProductCardProps) => (
-  <div className="group w-full h-[320px] perspective">
-    <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
-      
-      {/* Front */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
-        
-        
-      </div>
+    <div className="group w-full h-[320px] perspective">
+        <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
 
-      {/* Back */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
-            <div className="flex justify-center">
-              <div className="space-y-1 text-left max-w-[220px]">
-                <p><span className="font-semibold">Usage:</span> {usage}</p>
-                <p><span className="font-semibold">Material:</span> {material}</p>
-                <p><span className="font-semibold">Care:</span> {care}</p>
-                <p><span className="font-semibold">Origin:</span> {origin}</p>
-              </div>
+            {/* Front */}
+            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
+                <img src={image} alt={title} className="w-full h-full object-cover" />
+
             </div>
-          </div>
-        </div>
-      </div>
 
+            {/* Back */}
+            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+                <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
+                        <div className="flex justify-center">
+                            <div className="space-y-1 text-left max-w-[220px]">
+                                <p><span className="font-semibold">Usage:</span> {usage}</p>
+                                <p><span className="font-semibold">Material:</span> {material}</p>
+                                <p><span className="font-semibold">Care:</span> {care}</p>
+                                <p><span className="font-semibold">Origin:</span> {origin}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
 );
 
 
@@ -79,7 +78,7 @@ const products = [
         material: "Wool and Silk",
         care: "Vacuum regularly",
         origin: "India",
-       
+
     },
     {
         name: "MESHARA Silver",
@@ -89,7 +88,7 @@ const products = [
         material: "Pure Wool",
         care: "Dry clean only",
         origin: "India",
-        
+
     },
     {
         name: "MESHARA Gold",
@@ -99,7 +98,7 @@ const products = [
         material: "Silk blend",
         care: "Spot clean",
         origin: "India",
-      
+
     },
     {
         name: "MERGIS Ecru",
@@ -109,7 +108,7 @@ const products = [
         material: "Wool",
         care: "Vacuum gently",
         origin: "India",
-        
+
     },
     {
         name: "LATTICE Mocha",
@@ -119,7 +118,7 @@ const products = [
         material: "Cotton blend",
         care: "Dry clean",
         origin: "India",
-       
+
     },
     {
         name: "VERNA Grey Blue",
@@ -129,7 +128,7 @@ const products = [
         material: "Wool",
         care: "Vacuum weekly",
         origin: "India",
-        
+
     },
     {
         name: "JORD Grey",
@@ -139,7 +138,7 @@ const products = [
         material: "Silk blend",
         care: "Dry clean only",
         origin: "India",
-       
+
     },
     {
         name: "MIRAGE Sand",
@@ -149,7 +148,7 @@ const products = [
         material: "Cotton",
         care: "Spot clean",
         origin: "India",
-       
+
     },
 ];
 
@@ -266,81 +265,80 @@ const products = [
 // ];
 
 
-const CardList =  [
-  {
-    image: '/images/shopslider5.png',
-    title: 'Silk Carpets',
-    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
-    link: '/SilkCarpet',
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Hand Knotted',
-    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
-    link: '/HandKnotted',
-  },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Hand Tufted',
-    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
-    link: '/HandTuffed',
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Indo Nepali Rugs',
-    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
-    link: '/IndoNepali',
-  },
-  {
-    image: '/images/shopslider5.png',
-    title: 'Handloom',
-    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
-    link: '/Handloom',
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Flatweave',
-    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
-    link: '/Flatweave',
-  },
-//   {
-//     image: '/images/shopslider2.png',
-//     title: 'Outdoor Rugs',
-//     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-//     link: '/OutdoorRugs',
-//   },
+const CardList = [
+    {
+        image: '/images/shopslider5.png',
+        title: 'Silk Carpets',
+        description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+        link: '/SilkCarpet',
+    },
+    //   {
+    //     image: '/images/shopslider2.png',
+    //     title: 'Hand Knotted',
+    //     description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+    //     link: '/HandKnotted',
+    //   },
+    {
+        image: '/images/shopslider3.png',
+        title: 'Hand Tufted',
+        description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+        link: '/HandTuffed',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Indo Nepali Rugs',
+        description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+        link: '/IndoNepali',
+    },
+    {
+        image: '/images/shopslider5.png',
+        title: 'Handloom',
+        description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+        link: '/Handloom',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Flatweave',
+        description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+        link: '/Flatweave',
+    },
+    {
+        image: '/images/shopslider2.png',
+        title: 'Outdoor Rugs',
+        description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+        link: '/OutdoorRugs',
+    },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
-  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
-    <img src={image} alt={title} className="w-full h-64 object-cover" />
+    <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+        <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-    <div className="flex flex-col flex-1 justify-between p-6">
-      <div>
-        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-gray-300">{description}</p>
-      </div>
+        <div className="flex flex-col flex-1 justify-between p-6">
+            <div>
+                <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+                <p className="text-gray-300">{description}</p>
+            </div>
 
-      <a
-        href={link}
-        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
-      >
-        Explore More
-      </a>
+            <a
+                href={link}
+                className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+            >
+                Explore More
+            </a>
+        </div>
     </div>
-  </div>
 );
 
 export default function Page() {
     return (
         <div>
-           <ProductHero
-  name="Persian Rugs"
-  description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
-/>
+            <ProductHero
+                name="Hand Knotted"
+                description="Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage."
+            />
 
-
-      <div className="relative">
+<div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 
@@ -370,7 +368,6 @@ export default function Page() {
     </div>
   </div>
 </div>
-
 
 
 

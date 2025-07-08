@@ -42,7 +42,7 @@ const FlippableProductCard = ({
       <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         
-        
+       
       </div>
 
       {/* Back */}
@@ -279,12 +279,12 @@ const CardList =  [
     description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
     link: '/HandKnotted',
   },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Hand Tufted',
-    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
-    link: '/HandTuffed',
-  },
+//   {
+//     image: '/images/shopslider3.png',
+//     title: 'Hand Tufted',
+//     description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+//     link: '/HandTuffed',
+//   },
   {
     image: '/images/shopslider4.png',
     title: 'Indo Nepali Rugs',
@@ -303,12 +303,12 @@ const CardList =  [
     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
     link: '/Flatweave',
   },
-//   {
-//     image: '/images/shopslider2.png',
-//     title: 'Outdoor Rugs',
-//     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-//     link: '/OutdoorRugs',
-//   },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
@@ -335,12 +335,12 @@ export default function Page() {
     return (
         <div>
            <ProductHero
-  name="Persian Rugs"
-  description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
+  name="Hand Tuffed"
+  description="Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish."
 />
 
 
-      <div className="relative">
+       <div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 

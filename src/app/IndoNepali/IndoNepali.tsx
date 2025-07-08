@@ -29,7 +29,7 @@ interface FlippableProductCardProps {
 const FlippableProductCard = ({
   image,
   title,
- 
+  
   usage,
   material,
   care,
@@ -42,7 +42,7 @@ const FlippableProductCard = ({
       <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         
-        
+       
       </div>
 
       {/* Back */}
@@ -285,12 +285,12 @@ const CardList =  [
     description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
     link: '/HandTuffed',
   },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Indo Nepali Rugs',
-    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
-    link: '/IndoNepali',
-  },
+//   {
+//     image: '/images/shopslider4.png',
+//     title: 'Indo Nepali Rugs',
+//     description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+//     link: '/IndoNepali',
+//   },
   {
     image: '/images/shopslider5.png',
     title: 'Handloom',
@@ -303,12 +303,12 @@ const CardList =  [
     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
     link: '/Flatweave',
   },
-//   {
-//     image: '/images/shopslider2.png',
-//     title: 'Outdoor Rugs',
-//     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-//     link: '/OutdoorRugs',
-//   },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
@@ -334,13 +334,13 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 export default function Page() {
     return (
         <div>
-           <ProductHero
-  name="Persian Rugs"
-  description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
+            <ProductHero
+  name="Indo Nepali"
+  description="A blend of Indian weaving and Nepali art, combining simplicity with elegant design."
 />
 
 
-      <div className="relative">
+       <div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 

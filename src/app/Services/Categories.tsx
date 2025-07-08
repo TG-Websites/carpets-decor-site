@@ -4,22 +4,23 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
+    link: string;
   
 }
 
-const ProductCard = ({ image, title, description }: ProductCardProps) => (
+const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
   <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
     <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-    <div className="flex flex-col flex-1 justify-between p-6 text-center">
+    <div className="flex flex-col flex-1 justify-between p-6">
       <div>
-        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <h3 className="text-xl font-bold text-white text-center mb-3">{title}</h3>
+        <p className="text-gray-300 text-center">{description}</p>
       </div>
 
       <a
-        href="/CardDetails"
-        className="mt-4 inline-flex self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
+        href={link}
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
       >
         Explore More
       </a>
@@ -27,24 +28,48 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
   </div>
 );
 
-
-
-
 const products = [
   {
-    image: '/images/gptslider1.png',
-    title: 'Persian Rugs',
-    description: 'Traditional Persian designs with intricate motifs and rich colors that bring timeless elegance to any space.',
-  },
-  {
-    image: '/images/gptslider4.png',
+    image: '/images/shopslider5.png',
     title: 'Silk Carpets',
-    description: 'Luxurious silk carpets renowned for their soft texture, shimmering finish, and exquisite craftsmanship.',
+    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+    link: '/SilkCarpet',
   },
   {
-    image: '/images/gptslider5.png',
+    image: '/images/shopslider2.png',
     title: 'Hand Knotted',
-    description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+    link: '/HandKnotted',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Hand Tufted',
+    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+    link: '/HandTuffed',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Indo Nepali Rugs',
+    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+    link: '/IndoNepali',
+  },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Handloom',
+    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+    link: '/Handloom',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Flatweave',
+    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+    link: '/Flatweave',
+  },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
   },
 ];
 
@@ -401,8 +426,8 @@ const page = () => {
 
 
 
-<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-  <div className="max-w-[1600px] mx-auto px-4">
+<section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black w-full">
+  <div className="w-full max-w-screen-2xl mx-auto px-4">
     {/* Heading */}
     <h2 className="text-4xl font-extrabold text-white mb-6 text-center">
       Explore Carpet Decor
@@ -412,22 +437,21 @@ const page = () => {
     </p>
 
     {/* Grid */}
-  <div
-  className="
-    grid
-    grid-cols-1
-    sm:grid-cols-2
-    md:grid-cols-3
-    gap-8
-    max-w-6xl
-    mx-auto
-  "
->
-  {products.map((product, index) => (
-    <ProductCard key={index} {...product} />
-  ))}
-</div>
-
+    <div
+      className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        gap-8
+        w-full
+      "
+    >
+      {products.map((product, index) => (
+        <ProductCard key={index} {...product} />
+      ))}
+    </div>
 
     {/* Footer Text */}
     <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
@@ -440,6 +464,8 @@ const page = () => {
     </div>
   </div>
 </section>
+
+
 
 
 

@@ -11,72 +11,65 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
+    link: string;
 }
 
 
 interface FlippableProductCardProps {
-  image: string;
-  title: string;
-  description: string;
-  usage: string;
-  material: string;
-  care: string;
-  origin: string;
+    image: string;
+    title: string;
+    description: string;
+    usage: string;
+    material: string;
+    care: string;
+    origin: string;
 }
 
 const FlippableProductCard = ({
-  image,
-  title,
-  description,
-  usage,
-  material,
-  care,
-  origin,
+    image,
+    title,
+   
+    usage,
+    material,
+    care,
+    origin,
 }: FlippableProductCardProps) => (
-  <div className="group w-full h-[320px]"> {/* Fixed height */}
-    <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
-      {/* Front */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden flex flex-col">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
-        <div className="p-4 flex flex-col flex-1 justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">{title}</h3>
-            <p
-              className="text-gray-600 text-sm text-center"
-              style={{
-                display: '-webkit-box',
-                WebkitLineClamp: 3,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-              }}
-            >
-              {description}
-            </p>
-          </div>
-          <div className="h-4"></div> {/* Reserve space */}
-        </div>
-      </div>
+    <div className="group w-full h-[320px] perspective">
+        <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
 
-      {/* Back */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
-            <div className="flex justify-center">
-              <div className="space-y-1 text-left max-w-[220px]">
-                <p><span className="font-semibold">Usage:</span> {usage}</p>
-                <p><span className="font-semibold">Material:</span> {material}</p>
-                <p><span className="font-semibold">Care:</span> {care}</p>
-                <p><span className="font-semibold">Origin:</span> {origin}</p>
-              </div>
+            {/* Front */}
+            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
+                <img src={image} alt={title} className="w-full h-full object-cover" />
+
+                {/* Overlay with message */}
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white text-sm font-medium bg-white/20 px-4 py-1 rounded-md backdrop-blur-sm border border-white/30">
+                        Hover to see details
+                    </span>
+                </div>
             </div>
-          </div>
-          <div className="flex-grow"></div>
+
+            {/* Back */}
+            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+                <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
+                        <div className="flex justify-center">
+                            <div className="space-y-1 text-left max-w-[220px]">
+                                <p><span className="font-semibold">Usage:</span> {usage}</p>
+                                <p><span className="font-semibold">Material:</span> {material}</p>
+                                <p><span className="font-semibold">Care:</span> {care}</p>
+                                <p><span className="font-semibold">Origin:</span> {origin}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
 );
+
 
 
 
@@ -90,7 +83,7 @@ const products = [
         material: "Wool and Silk",
         care: "Vacuum regularly",
         origin: "India",
-       
+
     },
     {
         name: "MESHARA Silver",
@@ -100,7 +93,7 @@ const products = [
         material: "Pure Wool",
         care: "Dry clean only",
         origin: "India",
-        
+
     },
     {
         name: "MESHARA Gold",
@@ -110,7 +103,7 @@ const products = [
         material: "Silk blend",
         care: "Spot clean",
         origin: "India",
-      
+
     },
     {
         name: "MERGIS Ecru",
@@ -120,7 +113,7 @@ const products = [
         material: "Wool",
         care: "Vacuum gently",
         origin: "India",
-        
+
     },
     {
         name: "LATTICE Mocha",
@@ -130,7 +123,7 @@ const products = [
         material: "Cotton blend",
         care: "Dry clean",
         origin: "India",
-       
+
     },
     {
         name: "VERNA Grey Blue",
@@ -140,7 +133,7 @@ const products = [
         material: "Wool",
         care: "Vacuum weekly",
         origin: "India",
-        
+
     },
     {
         name: "JORD Grey",
@@ -150,7 +143,7 @@ const products = [
         material: "Silk blend",
         care: "Dry clean only",
         origin: "India",
-       
+
     },
     {
         name: "MIRAGE Sand",
@@ -160,7 +153,7 @@ const products = [
         material: "Cotton",
         care: "Spot clean",
         origin: "India",
-       
+
     },
 ];
 
@@ -277,46 +270,52 @@ const products = [
 // ];
 
 
-const CardList =  [
-
-      {
-    image: '/images/shopslider1.png',
-    title: 'Silk Carpets',
-    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns. '
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Hand Knotted',
-    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.'
-  },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Hand Tufted',
-    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.'
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Indo Nepali Rugs',
-    description: 'A blend of Indian weaving and Tibetan art, combining simplicity with elegant design.'
-  },
-  {
-    image: '/images/shopslider5.png',
-    title: 'Handloom',
-    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.'
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Flatweave',
-    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.'
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Outdoor Rugs',
-    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.'
-  }
+const CardList = [
+    {
+        image: '/images/shopslider5.png',
+        title: 'Silk Carpets',
+        description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+        link: '/SilkCarpet',
+    },
+    {
+        image: '/images/shopslider2.png',
+        title: 'Hand Knotted',
+        description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+        link: '/HandKnotted',
+    },
+    {
+        image: '/images/shopslider3.png',
+        title: 'Hand Tufted',
+        description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+        link: '/HandTuffed',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Indo Nepali Rugs',
+        description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+        link: '/IndoNepali',
+    },
+    {
+        image: '/images/shopslider5.png',
+        title: 'Handloom',
+        description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+        link: '/HandLoom',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Flatweave',
+        description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+        link: '/Flatweave',
+    },
+    {
+        image: '/images/shopslider2.png',
+        title: 'Outdoor Rugs',
+        description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+        link: '/OutdoorRugs',
+    },
 ];
 
-const ProductCard = ({ image, title, description }: ProductCardProps) => (
+const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
     <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
         <img src={image} alt={title} className="w-full h-64 object-cover" />
 
@@ -327,7 +326,7 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
             </div>
 
             <a
-                href="/CardDetails"
+                href={link}
                 className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
             >
                 Explore More
@@ -363,30 +362,34 @@ export default function Page() {
                 </div>
             </section>
 
-       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-  <div
-    className="
-      grid
-      gap-8
-      grid-cols-1
-      sm:grid-cols-2
-      md:grid-cols-3
-      lg:grid-cols-4
-    "
-  >
-    {products.map((product, index) => (
-      <FlippableProductCard
-        key={index}
-        image={product.image}
-        title={product.name}
-        description={product.description}
-        usage={product.usage}
-        material={product.material}
-        care={product.care}
-        origin={product.origin}
-       
-      />
-    ))}
+           <div className="relative">
+  {/* 🔳 Vertical text inside section – stylish and theme-matching */}
+  <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
+    <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 
+      bg-gradient-to-b from-black via-gray-900 to-black text-white 
+      px-2 py-3 rounded-l-md shadow-md border-l border-white/20
+      backdrop-blur-sm"
+    >
+      {'H\no\nv\ne\nr\n\nT\no\n\nS\ne\ne\n\nD\ne\nt\na\ni\nl\ns'}
+    </div>
+  </div>
+
+  {/* 💠 Cards section */}
+  <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {products.map((product, index) => (
+        <FlippableProductCard
+          key={index}
+          image={product.image}
+          title={product.name}
+          description={product.description}
+          usage={product.usage}
+          material={product.material}
+          care={product.care}
+          origin={product.origin}
+        />
+      ))}
+    </div>
   </div>
 </div>
 

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
@@ -15,6 +15,7 @@ interface ProductCardProps {
     image: string;
     title: string;
     description: string;
+    link: string;
 }
 interface CardBoxProps {
     title: string;
@@ -87,19 +88,19 @@ const HeroSection = () => (
 
 
 // Product Card Component
-const ProductCard = ({ image, title, description }: ProductCardProps) => (
+const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
   <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
     <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-    <div className="flex flex-col flex-1 justify-between p-6 text-center">
+    <div className="flex flex-col flex-1 justify-between p-6">
       <div>
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
         <p className="text-gray-300">{description}</p>
       </div>
 
       <a
-        href="/CardDetails"
-        className="mt-4 inline-flex self-center px-6 py-3 bg-black text-white rounded-sm hover:bg-white hover:text-black border border-white transition-all duration-300"
+        href={link}
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
       >
         Explore More
       </a>
@@ -107,24 +108,48 @@ const ProductCard = ({ image, title, description }: ProductCardProps) => (
   </div>
 );
 
-
-
-
 const products = [
   {
-    image: '/images/gptslider1.png',
-    title: 'Persian Rugs',
-    description: 'Traditional Persian designs with intricate motifs and rich colors that bring timeless elegance to any space.',
-  },
-  {
-    image: '/images/gptslider4.png',
+    image: '/images/shopslider5.png',
     title: 'Silk Carpets',
-    description: 'Luxurious silk carpets renowned for their soft texture, shimmering finish, and exquisite craftsmanship.',
+    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+    link: '/SilkCarpet',
   },
   {
-    image: '/images/gptslider5.png',
+    image: '/images/shopslider2.png',
     title: 'Hand Knotted',
-    description: 'Hand-knotted rugs, woven knot by knot by skilled Indian artisans, reflect timeless art, heritage, and craftsmanship.',
+    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+    link: '/HandKnotted',
+  },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Hand Tufted',
+    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+    link: '/HandTuffed',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Indo Nepali Rugs',
+    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+    link: '/IndoNepali',
+  },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Handloom',
+    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+    link: '/HandLoom',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Flatweave',
+    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+    link: '/Flatweave',
+  },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
   },
 ];
 
@@ -208,7 +233,7 @@ const Page = () => {
             {/* About Section */}
   {/* About Text Section */}
 {/* About Description Section (Homepage Style) */}
-<div className="mt-10 text-center px-4 sm:px-8 md:px-16 lg:px-24">
+<div className="mt-10 text-left px-4 sm:px-8 md:px-16 lg:px-24">
   <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
     At the heart of our journey lies a purpose far greater than business — it’s about preserving a legacy, empowering communities, and celebrating the art of handmade excellence rooted in generations of tradition.
   </p>
@@ -332,45 +357,39 @@ const Page = () => {
 
 
             {/* Swiper Product Carousel Section */}
-       <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-  <div className="max-w-[1600px] mx-auto px-4">
-    {/* Heading */}
-    <h2 className="text-4xl font-extrabold text-white mb-6 text-center">
-      Explore Carpet Decor
-    </h2>
-    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto text-center">
-      Elevate your space with the finest craftsmanship and materials. Here’s why Carpets is the ultimate choice.
-    </p>
-
-    {/* Grid */}
-  <div
-  className="
-    grid
-    grid-cols-1
-    sm:grid-cols-2
-    md:grid-cols-3
-    gap-8
-    max-w-6xl
-    mx-auto
-  "
->
-  {products.map((product, index) => (
-    <ProductCard key={index} {...product} />
-  ))}
-</div>
-
-
-    {/* Footer Text */}
-    <div className="mt-16 max-w-3xl mx-auto text-gray-300 text-center">
-      <p>
-        Our handcrafted carpets are woven with the finest materials,
-        ensuring top-tier quality and timeless durability. Each carpet is
-        unique, crafted by skilled artisans who bring decades of tradition
-        to every knot and weave.
-      </p>
-    </div>
-  </div>
-</section>
+   <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+                  <div className="container mx-auto text-center px-4">
+                      {/* Heading */}
+                      <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
+  
+                      {/* Subheading */}
+                      <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+                          Each carpet is a masterpiece, woven with care and tradition.
+                      </p>
+                      {/* Product Grid */}
+                      <Swiper
+                          slidesPerView={1}
+                          spaceBetween={30}
+                          loop={true}
+                          autoplay={{ delay: 3000, disableOnInteraction: false }}
+                          navigation={true}
+                          breakpoints={{
+                              640: { slidesPerView: 1 },
+                              768: { slidesPerView: 2 },
+                              1024: { slidesPerView: 3 },
+                              1280: { slidesPerView: 4 },
+                          }}
+                          modules={[Autoplay, Pagination, Navigation]}
+                          className="mySwiper"
+                      >
+                          {products.map((product, index) => (
+                              <SwiperSlide key={index}>
+                                  <ProductCard {...product} />
+                              </SwiperSlide>
+                          ))}
+                      </Swiper>
+                  </div>
+              </section>
         </div>
     );
 };

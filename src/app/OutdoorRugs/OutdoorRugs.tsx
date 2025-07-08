@@ -29,7 +29,7 @@ interface FlippableProductCardProps {
 const FlippableProductCard = ({
   image,
   title,
- 
+
   usage,
   material,
   care,
@@ -42,7 +42,7 @@ const FlippableProductCard = ({
       <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
         
-        
+       
       </div>
 
       {/* Back */}
@@ -335,12 +335,12 @@ export default function Page() {
     return (
         <div>
            <ProductHero
-  name="Persian Rugs"
+  name="Outdoor"
   description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
 />
 
 
-      <div className="relative">
+       <div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 

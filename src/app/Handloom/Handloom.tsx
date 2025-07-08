@@ -291,24 +291,24 @@ const CardList =  [
     description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
     link: '/IndoNepali',
   },
-  {
-    image: '/images/shopslider5.png',
-    title: 'Handloom',
-    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
-    link: '/Handloom',
-  },
+//   {
+//     image: '/images/shopslider5.png',
+//     title: 'Handloom',
+//     description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+//     link: '/Handloom',
+//   },
   {
     image: '/images/shopslider4.png',
     title: 'Flatweave',
     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
     link: '/Flatweave',
   },
-//   {
-//     image: '/images/shopslider2.png',
-//     title: 'Outdoor Rugs',
-//     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-//     link: '/OutdoorRugs',
-//   },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
@@ -334,13 +334,13 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 export default function Page() {
     return (
         <div>
-           <ProductHero
-  name="Persian Rugs"
-  description="Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces."
+          <ProductHero
+  name="Handloom"
+  description="Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors."
 />
 
 
-      <div className="relative">
+       <div className="relative">
   {/* 🔳 Vertical text inside section – stylish and theme-matching */}
   <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
     <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 
@@ -370,7 +370,6 @@ export default function Page() {
     </div>
   </div>
 </div>
-
 
 
 
