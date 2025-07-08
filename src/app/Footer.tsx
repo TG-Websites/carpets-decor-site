@@ -14,7 +14,7 @@ function Footer() {
           {/* Logo Section */}
           <div className="flex flex-col items-center sm:items-start space-y-4">
             <img
-              src="/images/logo1.png"
+              src="/images/carpetfooterlogo.jpg"
               alt="Logo"
               loading="eager"
               className="w-45 h-45"
