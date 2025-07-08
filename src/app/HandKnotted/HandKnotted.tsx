@@ -338,33 +338,32 @@ export default function Page() {
                 description="Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage."
             />
 
-<div className="relative">
-  {/* 🔳 Vertical text inside section – stylish and theme-matching */}
-  <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
-    <div className="text-sm font-medium tracking-widest whitespace-pre text-center leading-4 
-      bg-gradient-to-b from-black via-gray-900 to-black text-white 
-      px-2 py-3 rounded-l-md shadow-md border-l border-white/20
-      backdrop-blur-sm"
-    >
-      {'H\no\nv\ne\nr\n\nT\no\n\nS\ne\ne\n\nD\ne\nt\na\ni\nl\ns'}
+<div className="overflow-x-hidden">
+  <div className="relative">
+    {/* 🔳 Rotated label aligned like card overlay */}
+    <div className="absolute inset-y-0 flex items-center right-4 z-10">
+      <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
+                      backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
+        HOVER TO SEE DETAILS
+      </div>
     </div>
-  </div>
 
-  {/* 💠 Cards section */}
-  <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {products.map((product, index) => (
-        <FlippableProductCard
-          key={index}
-          image={product.image}
-          title={product.name}
-          description={product.description}
-          usage={product.usage}
-          material={product.material}
-          care={product.care}
-          origin={product.origin}
-        />
-      ))}
+    {/* 💠 Cards Grid */}
+    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {products.map((product, index) => (
+          <FlippableProductCard
+            key={index}
+            image={product.image}
+            title={product.name}
+            description={product.description}
+            usage={product.usage}
+            material={product.material}
+            care={product.care}
+            origin={product.origin}
+          />
+        ))}
+      </div>
     </div>
   </div>
 </div>

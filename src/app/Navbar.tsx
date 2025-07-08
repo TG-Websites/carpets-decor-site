@@ -10,7 +10,7 @@ function Navbar() {
   {/* Logo Image */}
   <Link href="/">
     <img
-      src="/images/logo6.png"
+      src="/images/carpetlogo3.jpg"
       alt="Logo"
       loading="eager"
       className="w-full h-full object-cover"
@@ -22,7 +22,7 @@ function Navbar() {
     className="
       absolute
       bottom-3
-      left-12
+      left-14
       text-white
       uppercase
       text-[12px]
