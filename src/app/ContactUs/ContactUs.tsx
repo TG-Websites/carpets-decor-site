@@ -138,7 +138,8 @@ function Page() {
                       ADDRESS
                     </h2>
                     <p className="text-gray-300 text-sm">
-                      L-20 Central Mall, RPS City. Sector 88 Faridabad
+                      Daro pur , Bhadhohi p.o.- Bhadhohi,<br />Distric- Bhadhohi.
+                      Pin Code - 221401
                     </p>
                   </div>
                   <div>
