@@ -347,7 +347,7 @@ export default function Page() {
     <div className="absolute inset-y-0 flex items-center right-4 z-10">
       <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
                       backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
-        HOVER TO SEE DETAILS
+        HOVER ON IMAGE TO SEE DETAILS
       </div>
     </div>
 

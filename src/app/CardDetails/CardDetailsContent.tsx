@@ -44,7 +44,7 @@ const FlippableProductCard = ({
                 {/* Overlay with message */}
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-white text-sm font-medium bg-white/20 px-4 py-1 rounded-md backdrop-blur-sm border border-white/30">
-                        Hover to see details
+                        HOVER ON IMAGE TO SEE DETAILS
                     </span>
                 </div>
             </div>
