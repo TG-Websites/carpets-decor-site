@@ -335,7 +335,7 @@ export default function Page() {
   return (
     <div>
       <ProductHero
-        name="Hand Tuffed"
+        name="Hand Tufed"
         description="Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish."
       />
 

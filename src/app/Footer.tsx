@@ -44,11 +44,12 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Contact Info</p>
             <p className="text-sm text-gray-400 leading-relaxed">
+              L-20 Central Mall, RPS City, Sector 88 Faridabad . <br />
               Daro pur , Bhadhohi <br />
-              Post Office - Bhadhohi <br />
+              Post Office - Bhadhohi 
               Distric - Bhadhohi <br />
-              Pin Code - 221401 <br />
-              U.P.- India <br />
+              Pin Code - 221401 U.P.- India <br />
+
               Phone: +91 9354715556<br />
               Email: shubhra@carpetsdecor.com
             </p>
