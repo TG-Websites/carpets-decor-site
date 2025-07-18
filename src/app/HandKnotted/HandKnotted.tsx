@@ -20,20 +20,15 @@ interface FlippableProductCardProps {
     image: string;
     title: string;
     description: string;
-    usage: string;
-    material: string;
-    care: string;
-    origin: string;
+    customization: string;
+
 }
 
 const FlippableProductCard = ({
     image,
     title,
-   
-    usage,
-    material,
-    care,
-    origin,
+    description,
+    customization
 }: FlippableProductCardProps) => (
     <div className="group w-full h-[320px] perspective">
         <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
@@ -46,20 +41,30 @@ const FlippableProductCard = ({
 
             {/* Back */}
             <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-                <div className="flex-1 flex flex-col justify-between">
+                <div className="flex-1 flex flex-col justify-center">
                     <div>
-                        <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
+
                         <div className="flex justify-center">
-                            <div className="space-y-1 text-left max-w-[220px]">
-                                <p><span className="font-semibold">Usage:</span> {usage}</p>
-                                <p><span className="font-semibold">Material:</span> {material}</p>
-                                <p><span className="font-semibold">Care:</span> {care}</p>
-                                <p><span className="font-semibold">Origin:</span> {origin}</p>
+                            <div className="space-y-2 text-center max-w-[240px] whitespace-pre-line text-sm">
+                                <p >{description}</p>
+
+                                <p className='mt-3'><span className="font-semibold">Customization:</span> {customization}</p>
                             </div>
                         </div>
                     </div>
+                    <br />
+                    <br />
+                    <div className="mt-4 text-center">
+                        <a
+                            href="/size"
+                            className="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800 transition"
+                        >
+                            Size Available
+                        </a>
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -72,85 +77,63 @@ const FlippableProductCard = ({
 const products = [
     {
         name: "SILVRYN Dove",
-        image: "//handscarpets.com/cdn/shop/files/Silvryn-Dove.jpg?v=1745826280&width=533",
-        description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
-        usage: "Floor decor",
-        material: "Wool and Silk",
-        care: "Vacuum regularly",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (1).jpg",
+        description: `Wool Used 80% New Zealand wool, 20% Indian wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "MESHARA Silver",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Silver.jpg?v=1745826278&width=360",
-        description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
-        usage: "Living room",
-        material: "Pure Wool",
-        care: "Dry clean only",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (2).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "MESHARA Gold",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Gold.jpg?v=1745826277&width=360",
-        description: "Rich golden tones combined with classic patterns to add warmth and character.",
-        usage: "Dining area",
-        material: "Silk blend",
-        care: "Spot clean",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (3).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "MERGIS Ecru",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Soft neutral ecru shades bringing understated elegance to any room.",
-        usage: "Bedroom",
-        material: "Wool",
-        care: "Vacuum gently",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (4).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "LATTICE Mocha",
-        image: "https://handscarpets.com/cdn/shop/files/Lattice-Mocha.jpg?v=1745300598&width=360",
-        description: "Mocha lattice design crafted to complement both classic and modern interiors.",
-        usage: "Office",
-        material: "Cotton blend",
-        care: "Dry clean",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (5).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "VERNA Grey Blue",
-        image: "https://handscarpets.com/cdn/shop/files/VernaGreyBlue1.jpg?v=1745223070&width=360",
-        description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
-        usage: "Hallway",
-        material: "Wool",
-        care: "Vacuum weekly",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (6).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "JORD Grey",
-        image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-        description: "Sophisticated grey patterns adding depth and texture to your space.",
-        usage: "Study",
-        material: "Silk blend",
-        care: "Dry clean only",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (7).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
     {
         name: "MIRAGE Sand",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
-        usage: "Living room",
-        material: "Cotton",
-        care: "Spot clean",
-        origin: "India",
-
+        image: "../images/hand-knotted/handknotted (8).jpg",
+        description: `Wool Used 100% New Zealand wool
+Weaving type Handwoven`,
+        customization: "Yes",
     },
 ];
+
+
 
 
 
@@ -338,35 +321,33 @@ export default function Page() {
                 description="Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage."
             />
 
-<div className="overflow-x-hidden">
-  <div className="relative">
-    {/* 🔳 Rotated label aligned like card overlay */}
-    <div className="absolute inset-y-0 flex items-center right-4 z-10">
-      <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
+            <div className="overflow-x-hidden">
+                <div className="relative">
+                    {/* 🔳 Rotated label aligned like card overlay */}
+                    <div className="absolute inset-y-0 flex items-center right-4 z-10">
+                        <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
                       backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
-        HOVER ON IMAGE TO SEE DETAILS
-      </div>
-    </div>
+                            HOVER ON IMAGE TO SEE DETAILS
+                        </div>
+                    </div>
 
-    {/* 💠 Cards Grid */}
-    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((product, index) => (
-          <FlippableProductCard
-            key={index}
-            image={product.image}
-            title={product.name}
-            description={product.description}
-            usage={product.usage}
-            material={product.material}
-            care={product.care}
-            origin={product.origin}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
+                    {/* 💠 Cards Grid */}
+                    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+                        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                            {products.map((product, index) => (
+                                <FlippableProductCard
+                                    key={index}
+                                    image={product.image}
+                                    title={product.name}
+                                    description={product.description}
+                                    customization={product.customization}
+
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 

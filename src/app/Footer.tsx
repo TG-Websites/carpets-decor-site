@@ -23,36 +23,39 @@ function Footer() {
 
           {/* Our Company */}
           <div>
-            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Our Company</p>
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Quick Link</p>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="/AboutUs" className="hover:text-white transition">About</a></li>
               <li><a href="/Services" className="hover:text-white transition">Categories</a></li>
               <li><a href="/AboutUs#why" className="hover:text-white transition">Why Carpets Decor?</a></li>
-            </ul>
-          </div>
-
-          {/* Customer Service */}
-          <div>
-            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Customer Service</p>
-            <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="/ContactUs" className="hover:text-white transition">Contact Us</a></li>
               <li><a href="/PrivacyPolicy" className="hover:text-white transition">Privacy Policy</a></li>
             </ul>
           </div>
 
-          {/* Address */}
+          {/* Customer Service */}
           <div>
-            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Contact Info</p>
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Address-1</p>
             <p className="text-sm text-gray-400 leading-relaxed">
-              L-20 Central Mall, RPS City, Sector 88 Faridabad . <br />
+
               Daro pur , Bhadhohi <br />
-              Post Office - Bhadhohi 
+              Post Office - Bhadhohi
               Distric - Bhadhohi <br />
               Pin Code - 221401 U.P.- India <br />
 
               Phone: +91 9354715556<br />
               Email: shubhra@carpetsdecor.com
             </p>
+
+          </div>
+
+          {/* Address */}
+          <div>
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Address-2</p>
+            <p className='text-sm text-gray-400 leading-relaxed'>
+              L-20 Central Mall, RPS City, Sector 88 Faridabad .
+            </p>
+
           </div>
         </div>
       </div>

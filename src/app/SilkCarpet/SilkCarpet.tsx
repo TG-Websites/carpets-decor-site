@@ -9,10 +9,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import ProductHero from './../ProductHero';
 interface ProductCardProps {
-    image: string;
-    title: string;
-    description: string;
-    link: string;
+  image: string;
+  title: string;
+  description: string;
+  link: string;
 }
 
 
@@ -47,12 +47,12 @@ const FlippableProductCard = ({
 }: FlippableProductCardProps) => (
   <div className="group w-full h-[320px] perspective">
     <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
-      
+
       {/* Front */}
       <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
-        
-       
+
+
       </div>
 
       {/* Back */}
@@ -81,86 +81,86 @@ const FlippableProductCard = ({
 
 
 const products = [
-    {
-        name: "SILVRYN Dove",
-        image: "//handscarpets.com/cdn/shop/files/Silvryn-Dove.jpg?v=1745826280&width=533",
-        description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
-        usage: "Floor decor",
-        material: "Wool and Silk",
-        care: "Vacuum regularly",
-        origin: "India",
-       
-    },
-    {
-        name: "MESHARA Silver",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Silver.jpg?v=1745826278&width=360",
-        description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
-        usage: "Living room",
-        material: "Pure Wool",
-        care: "Dry clean only",
-        origin: "India",
-        
-    },
-    {
-        name: "MESHARA Gold",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Gold.jpg?v=1745826277&width=360",
-        description: "Rich golden tones combined with classic patterns to add warmth and character.",
-        usage: "Dining area",
-        material: "Silk blend",
-        care: "Spot clean",
-        origin: "India",
-      
-    },
-    {
-        name: "MERGIS Ecru",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Soft neutral ecru shades bringing understated elegance to any room.",
-        usage: "Bedroom",
-        material: "Wool",
-        care: "Vacuum gently",
-        origin: "India",
-        
-    },
-    {
-        name: "LATTICE Mocha",
-        image: "https://handscarpets.com/cdn/shop/files/Lattice-Mocha.jpg?v=1745300598&width=360",
-        description: "Mocha lattice design crafted to complement both classic and modern interiors.",
-        usage: "Office",
-        material: "Cotton blend",
-        care: "Dry clean",
-        origin: "India",
-       
-    },
-    {
-        name: "VERNA Grey Blue",
-        image: "https://handscarpets.com/cdn/shop/files/VernaGreyBlue1.jpg?v=1745223070&width=360",
-        description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
-        usage: "Hallway",
-        material: "Wool",
-        care: "Vacuum weekly",
-        origin: "India",
-        
-    },
-    {
-        name: "JORD Grey",
-        image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-        description: "Sophisticated grey patterns adding depth and texture to your space.",
-        usage: "Study",
-        material: "Silk blend",
-        care: "Dry clean only",
-        origin: "India",
-       
-    },
-    {
-        name: "MIRAGE Sand",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
-        usage: "Living room",
-        material: "Cotton",
-        care: "Spot clean",
-        origin: "India",
-       
-    },
+  {
+    name: "SILVRYN Dove",
+    image: "../images/silk-carpet-image/1.jpg?v=1745826280&width=533",
+    description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
+    usage: "Floor decor",
+    material: "Wool and Silk",
+    care: "Vacuum regularly",
+    origin: "India",
+
+  },
+  {
+    name: "MESHARA Silver",
+    image: "../images/silk-carpet-image/2.jpg?v=1745826278&width=360",
+    description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
+    usage: "Living room",
+    material: "Pure Wool",
+    care: "Dry clean only",
+    origin: "India",
+
+  },
+  {
+    name: "MESHARA Gold",
+    image: "../images/silk-carpet-image/3.jpg?v=1745826277&width=360",
+    description: "Rich golden tones combined with classic patterns to add warmth and character.",
+    usage: "Dining area",
+    material: "Silk blend",
+    care: "Spot clean",
+    origin: "India",
+
+  },
+  {
+    name: "MERGIS Ecru",
+    image: "../images/silk-carpet-image/4.jpg?v=1745826274&width=360",
+    description: "Soft neutral ecru shades bringing understated elegance to any room.",
+    usage: "Bedroom",
+    material: "Wool",
+    care: "Vacuum gently",
+    origin: "India",
+
+  },
+  {
+    name: "LATTICE Mocha",
+    image: "../images/silk-carpet-image/5.jpg?v=1745300598&width=360",
+    description: "Mocha lattice design crafted to complement both classic and modern interiors.",
+    usage: "Office",
+    material: "Cotton blend",
+    care: "Dry clean",
+    origin: "India",
+
+  },
+  {
+    name: "VERNA Grey Blue",
+    image: "../images/silk-carpet-image/6.jpg?v=1745223070&width=360",
+    description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
+    usage: "Hallway",
+    material: "Wool",
+    care: "Vacuum weekly",
+    origin: "India",
+
+  },
+  {
+    name: "JORD Grey",
+    image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
+    description: "Sophisticated grey patterns adding depth and texture to your space.",
+    usage: "Study",
+    material: "Silk blend",
+    care: "Dry clean only",
+    origin: "India",
+
+  },
+  {
+    name: "MIRAGE Sand",
+    image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
+    description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
+    usage: "Living room",
+    material: "Cotton",
+    care: "Spot clean",
+    origin: "India",
+
+  },
 ];
 
 
@@ -276,13 +276,13 @@ const products = [
 // ];
 
 
-const CardList =  [
-//   {
-//     image: '/images/shopslider5.png',
-//     title: 'Silk Carpets',
-//     description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
-//     link: '/SilkCarpet',
-//   },
+const CardList = [
+  //   {
+  //     image: '/images/shopslider5.png',
+  //     title: 'Silk Carpets',
+  //     description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+  //     link: '/SilkCarpet',
+  //   },
   {
     image: '/images/shopslider2.png',
     title: 'Hand Knotted',
@@ -342,83 +342,83 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 );
 
 export default function Page() {
-    return (
-        <div>
-           <ProductHero
-  name="Silk Carpets"
-  description="Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns."
-/>
+  return (
+    <div>
+      <ProductHero
+        name="Silk Carpets"
+        description="Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns."
+      />
 
 
-       <div className="overflow-x-hidden">
-  <div className="relative">
-    {/* 🔳 Rotated label aligned like card overlay */}
-    <div className="absolute inset-y-0 flex items-center right-4 z-10">
-      <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
+      <div className="overflow-x-hidden">
+        <div className="relative">
+          {/* 🔳 Rotated label aligned like card overlay */}
+          <div className="absolute inset-y-0 flex items-center right-4 z-10">
+            <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
                       backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
-        HOVER ON IMAGE TO SEE DETAILS
-      </div>
-    </div>
+              HOVER ON IMAGE TO SEE DETAILS
+            </div>
+          </div>
 
-    {/* 💠 Cards Grid */}
-    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((product, index) => (
-          <FlippableProductCard
-            key={index}
-            image={product.image}
-            title={product.name}
-            description={product.description}
-            usage={product.usage}
-            material={product.material}
-            care={product.care}
-            origin={product.origin}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-            <section id="explore" className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-                <div className="container mx-auto text-center px-4">
-                    {/* Heading */}
-                    <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
-
-                    {/* Subheading */}
-                    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Each carpet is a masterpiece, woven with care and tradition.
-                    </p>
-                    {/* Product Grid */}
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        loop={true}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
-                        navigation={true}
-                        breakpoints={{
-                            640: { slidesPerView: 1 },
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
-                            1280: { slidesPerView: 4 },
-                        }}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        className="mySwiper"
-                    >
-                        {CardList.map((product, index) => (
-                            <SwiperSlide key={index}>
-                                <ProductCard {...product} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </section>
+          {/* 💠 Cards Grid */}
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {products.map((product, index) => (
+                <FlippableProductCard
+                  key={index}
+                  image={product.image}
+                  title={product.name}
+                  description={product.description}
+                  usage={product.usage}
+                  material={product.material}
+                  care={product.care}
+                  origin={product.origin}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-    );
+      </div>
+
+
+
+
+
+
+      <section id="explore" className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+        <div className="container mx-auto text-center px-4">
+          {/* Heading */}
+          <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
+
+          {/* Subheading */}
+          <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+            Each carpet is a masterpiece, woven with care and tradition.
+          </p>
+          {/* Product Grid */}
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            navigation={true}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {CardList.map((product, index) => (
+              <SwiperSlide key={index}>
+                <ProductCard {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+    </div>
+  );
 }
 
