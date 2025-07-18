@@ -35,9 +35,8 @@ function Footer() {
 
           {/* Customer Service */}
           <div>
-            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Address-1</p>
-            <p className="text-sm text-gray-400 leading-relaxed">
-
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Branch Office</p>
+            <p className='text-sm text-gray-400 leading-relaxed'>
               Daro pur , Bhadhohi <br />
               Post Office - Bhadhohi
               Distric - Bhadhohi <br />
@@ -49,13 +48,16 @@ function Footer() {
 
           </div>
 
-          {/* Address */}
-          <div>
-            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Address-2</p>
-            <p className='text-sm text-gray-400 leading-relaxed'>
-              L-20 Central Mall, RPS City, Sector 88 Faridabad .
-            </p>
 
+          {/* Address */}
+          {/* branch office  */}
+          <div>
+            <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Head Office</p>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              L-20 Central Mall, RPS City <br />
+              Sector-88 Faridabad, <br />
+              Haryana- 121002, India
+            </p>
           </div>
         </div>
       </div>
