@@ -24,17 +24,12 @@ interface FlippableProductCardProps {
   material: string;
   care: string;
   origin: string;
+  extraDetails?: string; // ✅ Add this line
 }
 
-interface FlippableProductCardProps {
-  image: string;
-  title: string;
-  description: string;
-  usage: string;
-  material: string;
-  care: string;
-  origin: string;
-}
+
+
+
 
 const FlippableProductCard = ({
   image,
@@ -44,6 +39,7 @@ const FlippableProductCard = ({
   material,
   care,
   origin,
+    extraDetails,
 }: FlippableProductCardProps) => (
   <div className="group w-full h-[320px] perspective">
     <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
@@ -56,21 +52,32 @@ const FlippableProductCard = ({
       </div>
 
       {/* Back */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
-            <div className="flex justify-center">
-              <div className="space-y-1 text-left max-w-[220px]">
-                <p><span className="font-semibold">Usage:</span> {usage}</p>
-                <p><span className="font-semibold">Material:</span> {material}</p>
-                <p><span className="font-semibold">Care:</span> {care}</p>
-                <p><span className="font-semibold">Origin:</span> {origin}</p>
-              </div>
-            </div>
-          </div>
+    {/* Back */}
+<div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+  <div className="flex-1 flex flex-col justify-between">
+    <div>
+      <h3 className="text-lg font-semibold mb-2 text-center">Silk Carpet</h3>
+      <div className="flex justify-center">
+        <div className="space-y-1 text-left max-w-[220px]">
+          <p><span className="font-semibold">Usage:</span> {usage}</p>
+          <p><span className="font-semibold">Material:</span> {material}</p>
+          <p><span className="font-semibold">Care:</span> {care}</p>
+          <p><span className="font-semibold">Origin:</span> {origin}</p>
+
+          {/* ✅ New available sizes info */}
+        {extraDetails && (
+  <p>
+    <span className="font-semibold">Available sizes (cm):</span>{' '}
+    {extraDetails}
+  </p>
+)}
+
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
@@ -141,26 +148,26 @@ const products = [
     origin: "India",
 
   },
-  {
-    name: "JORD Grey",
-    image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-    description: "Sophisticated grey patterns adding depth and texture to your space.",
-    usage: "Study",
-    material: "Silk blend",
-    care: "Dry clean only",
-    origin: "India",
+  // {
+  //   name: "JORD Grey",
+  //   image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
+  //   description: "Sophisticated grey patterns adding depth and texture to your space.",
+  //   usage: "Study",
+  //   material: "Silk blend",
+  //   care: "Dry clean only",
+  //   origin: "India",
 
-  },
-  {
-    name: "MIRAGE Sand",
-    image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-    description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
-    usage: "Living room",
-    material: "Cotton",
-    care: "Spot clean",
-    origin: "India",
+  // },
+  // {
+  //   name: "MIRAGE Sand",
+  //   image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
+  //   description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
+  //   usage: "Living room",
+  //   material: "Cotton",
+  //   care: "Spot clean",
+  //   origin: "India",
 
-  },
+  // },
 ];
 
 
@@ -353,28 +360,31 @@ export default function Page() {
       <div className="overflow-x-hidden">
         <div className="relative">
           {/* 🔳 Rotated label aligned like card overlay */}
-          <div className="absolute inset-y-0 flex items-center right-4 z-10">
-            <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
-                      backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
+          {/* 🔳 Rotated label aligned like card overlay */}
+          <div className="flex justify-center mt-6">
+            <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
               HOVER ON IMAGE TO SEE DETAILS
             </div>
           </div>
 
+
           {/* 💠 Cards Grid */}
           <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
             <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {products.map((product, index) => (
-                <FlippableProductCard
-                  key={index}
-                  image={product.image}
-                  title={product.name}
-                  description={product.description}
-                  usage={product.usage}
-                  material={product.material}
-                  care={product.care}
-                  origin={product.origin}
-                />
-              ))}
+           {products.slice(0, 6).map((product, index) => (
+  <FlippableProductCard
+    key={index}
+    image={product.image}
+    title="Silk Carpet"
+    description={product.description}
+    usage={product.usage}
+    material={product.material}
+    care={product.care}
+    origin={product.origin}
+    extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+  />
+))}
+
             </div>
           </div>
         </div>
