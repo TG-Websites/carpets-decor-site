@@ -20,9 +20,9 @@ interface FlippableProductCardProps {
   image: string;
   title: string;
   description: string;
-  usage: string;
+ 
   material: string;
-  care: string;
+
   origin: string;
   extraDetails?: string; // ✅ Add this line
 }
@@ -35,11 +35,11 @@ const FlippableProductCard = ({
   image,
   title,
 
-  usage,
+  
   material,
-  care,
+ 
   origin,
-    extraDetails,
+  extraDetails,
 }: FlippableProductCardProps) => (
   <div className="group w-full h-[320px] perspective">
     <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
@@ -52,31 +52,31 @@ const FlippableProductCard = ({
       </div>
 
       {/* Back */}
-    {/* Back */}
-<div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-  <div className="flex-1 flex flex-col justify-between">
-    <div>
-      <h3 className="text-lg font-semibold mb-2 text-center">Silk Carpet</h3>
-      <div className="flex justify-center">
-        <div className="space-y-1 text-left max-w-[220px]">
-          <p><span className="font-semibold">Usage:</span> {usage}</p>
-          <p><span className="font-semibold">Material:</span> {material}</p>
-          <p><span className="font-semibold">Care:</span> {care}</p>
-          <p><span className="font-semibold">Origin:</span> {origin}</p>
+      {/* Back */}
+      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+        <div className="flex-1 flex flex-col justify-between">
+          <div>
+            <h3 className="text-lg font-semibold mb-2 text-center">Silk Carpet</h3>
+            <div className="flex justify-center">
+              <div className="space-y-1 text-left max-w-[220px]">
+             
+                <p><span className="font-semibold">Material:</span> {material}</p>
+         
+                <p><span className="font-semibold">Origin:</span> {origin}</p>
 
-          {/* ✅ New available sizes info */}
-        {extraDetails && (
-  <p>
-    <span className="font-semibold">Available sizes (cm):</span>{' '}
-    {extraDetails}
-  </p>
-)}
+                {/* ✅ New available sizes info */}
+                {extraDetails && (
+                  <p>
+                    <span className="font-semibold">Available sizes (cm):</span>{' '}
+                    {extraDetails}
+                  </p>
+                )}
 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
     </div>
@@ -92,9 +92,9 @@ const products = [
     name: "SILVRYN Dove",
     image: "../images/silk-carpet-image/1.jpg?v=1745826280&width=533",
     description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
-    usage: "Floor decor",
-    material: "Wool and Silk",
-    care: "Vacuum regularly",
+    // usage: "Floor decor",
+    material: "Silk",
+    // care: "Vacuum regularly",
     origin: "India",
 
   },
@@ -102,9 +102,9 @@ const products = [
     name: "MESHARA Silver",
     image: "../images/silk-carpet-image/2.jpg?v=1745826278&width=360",
     description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
-    usage: "Living room",
-    material: "Pure Wool",
-    care: "Dry clean only",
+    // usage: "Living room",
+    material: "Silk",
+    // care: "Dry clean only",
     origin: "India",
 
   },
@@ -112,9 +112,9 @@ const products = [
     name: "MESHARA Gold",
     image: "../images/silk-carpet-image/3.jpg?v=1745826277&width=360",
     description: "Rich golden tones combined with classic patterns to add warmth and character.",
-    usage: "Dining area",
-    material: "Silk blend",
-    care: "Spot clean",
+   
+    material: "Silk",
+   
     origin: "India",
 
   },
@@ -122,9 +122,9 @@ const products = [
     name: "MERGIS Ecru",
     image: "../images/silk-carpet-image/4.jpg?v=1745826274&width=360",
     description: "Soft neutral ecru shades bringing understated elegance to any room.",
-    usage: "Bedroom",
-    material: "Wool",
-    care: "Vacuum gently",
+   
+    material: "Silk",
+  
     origin: "India",
 
   },
@@ -132,9 +132,7 @@ const products = [
     name: "LATTICE Mocha",
     image: "../images/silk-carpet-image/5.jpg?v=1745300598&width=360",
     description: "Mocha lattice design crafted to complement both classic and modern interiors.",
-    usage: "Office",
-    material: "Cotton blend",
-    care: "Dry clean",
+     material: "Silk",
     origin: "India",
 
   },
@@ -142,9 +140,7 @@ const products = [
     name: "VERNA Grey Blue",
     image: "../images/silk-carpet-image/6.jpg?v=1745223070&width=360",
     description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
-    usage: "Hallway",
-    material: "Wool",
-    care: "Vacuum weekly",
+    material: "Silk",
     origin: "India",
 
   },
@@ -371,19 +367,19 @@ export default function Page() {
           {/* 💠 Cards Grid */}
           <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
             <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-           {products.slice(0, 6).map((product, index) => (
-  <FlippableProductCard
-    key={index}
-    image={product.image}
-    title="Silk Carpet"
-    description={product.description}
-    usage={product.usage}
-    material={product.material}
-    care={product.care}
-    origin={product.origin}
-    extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
-  />
-))}
+              {products.slice(0, 6).map((product, index) => (
+                <FlippableProductCard
+                  key={index}
+                  image={product.image}
+                  title="Silk Carpet"
+                  description={product.description}
+                  // usage={product.usage}
+                  material={product.material}
+                  // care={product.care}
+                  origin={product.origin}
+                  extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+                />
+              ))}
 
             </div>
           </div>
