@@ -25,12 +25,13 @@ interface FlippableProductCardProps {
   material: string;
   care: string;
   origin: string;
+     extraDetails?: string;
 }
 
 const FlippableProductCard = ({
   image,
   title,
-
+ extraDetails,
   usage,
   material,
   care,
@@ -57,6 +58,13 @@ const FlippableProductCard = ({
                 <p><span className="font-semibold">Material:</span> {material}</p>
                 <p><span className="font-semibold">Care:</span> {care}</p>
                 <p><span className="font-semibold">Origin:</span> {origin}</p>
+
+                 {extraDetails && (
+                  <p>
+                    <span className="font-semibold">Available sizes (cm):</span>{' '}
+                    {extraDetails}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -362,6 +370,8 @@ export default function Page() {
                   material={product.material}
                   care={product.care}
                   origin={product.origin}
+                  
+             extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
                 />
               ))}
             </div>
