@@ -17,59 +17,73 @@ interface ProductCardProps {
 
 
 interface FlippableProductCardProps {
-    image: string;
-    title: string;
-    description: string;
-    customization: string;
+  image: string;
+  title: string;
+  description: string;
 
+  material: string;
+  customization?: string; // ✅ Add this line
+  origin: string;
+  extraDetails?: string; // ✅ Add this line
 }
 
+
+
+
+
 const FlippableProductCard = ({
-    image,
-    title,
-    description,
-    customization
+  image,
+  title,
+
+  customization, // ✅ Add this line
+  material,
+
+  origin,
+  extraDetails,
 }: FlippableProductCardProps) => (
-    <div className="group w-full h-[320px] perspective">
-        <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+  <div className="group w-full h-[320px] perspective">
+    <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
 
-            {/* Front */}
-            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
-                <img src={image} alt={title} className="w-full h-full object-cover" />
+      {/* Front */}
+      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
+        <img src={image} alt={title} className="w-full h-full object-cover" />
 
+
+      </div>
+
+      {/* Back */}
+      {/* Back */}
+      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+        <div className="flex-1 flex flex-col justify-between">
+          <div>
+            <h3 className="text-lg font-semibold mb-2 text-center">Handwoven </h3>
+            <div className="flex justify-center">
+              <div className="space-y-1 text-left max-w-[220px]">
+
+                <p><span className="font-semibold">Material:</span> {material}</p>
+                {/* ✅ New customization info */}
+                <p><span className="font-semibold">Customization:</span> {customization}</p>
+
+                <p><span className="font-semibold">Origin:</span> {origin}</p>
+
+                {/* ✅ New available sizes info */}
+                {extraDetails && (
+                  <p>
+                    <span className="font-semibold">Available sizes (cm):</span>{' '}
+                    {extraDetails}
+                  </p>
+                )}
+
+              </div>
             </div>
-
-            {/* Back */}
-            <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-                <div className="flex-1 flex flex-col justify-center">
-                    <div>
-
-                        <div className="flex justify-center">
-                            <div className="space-y-2 text-center max-w-[240px] whitespace-pre-line text-sm">
-                                <p >{description}</p>
-
-                                <p className='mt-3'><span className="font-semibold">Customization:</span> {customization}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <br />
-                    <div className="mt-4 text-center">
-                        <a
-                            href="/size"
-                            className="inline-block px-4 py-2 text-sm font-medium text-white bg-black rounded hover:bg-gray-800 transition"
-                        >
-                            Size Available
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
+          </div>
         </div>
-    </div>
-);
+      </div>
 
+
+    </div>
+  </div>
+);
 
 
 
@@ -79,57 +93,81 @@ const products = [
         name: "SILVRYN Dove",
         image: "../images/hand-knotted/handknotted (1).jpg",
         description: `Wool Used 80% New Zealand wool, 20% Indian wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 80% New Zealand wool, 20% Indian wool
+`,
+        origin: "India",
     },
     {
         name: "MESHARA Silver",
         image: "../images/hand-knotted/handknotted (2).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material:`Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "MESHARA Gold",
         image: "../images/hand-knotted/handknotted (3).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "MERGIS Ecru",
         image: "../images/hand-knotted/handknotted (4).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "LATTICE Mocha",
         image: "../images/hand-knotted/handknotted (5).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "VERNA Grey Blue",
         image: "../images/hand-knotted/handknotted (6).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "JORD Grey",
         image: "../images/hand-knotted/handknotted (7).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
     {
         name: "MIRAGE Sand",
         image: "../images/hand-knotted/handknotted (8).jpg",
         description: `Wool Used 100% New Zealand wool
-Weaving type Handwoven`,
+`,
         customization: "Yes",
+        material: `Wool Used 100% New Zealand wool
+`,
+        origin: "India",
     },
 ];
 
@@ -336,23 +374,33 @@ export default function Page() {
             </div>
           </div>
 
-                    {/* 💠 Cards Grid */}
-                    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-                        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                            {products.map((product, index) => (
-                                <FlippableProductCard
-                                    key={index}
-                                    image={product.image}
-                                    title={product.name}
-                                    description={product.description}
-                                    customization={product.customization}
+                            {/* 💠 Cards Grid */}
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {products.slice(0, 6).map((product, index) => (
+                <FlippableProductCard
+                  key={index}
+                  image={product.image}
+                  title="Hand tufted"
+                  description={product.description}
+                  // usage={product.usage}
+                  material={product.material}
+                  // care={product.care}
+                  customization={product.customization}
+                  origin={product.origin}
+                  extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350, 150 x 150,
+200 x 200,
+Ø 150,
+Ø 200,
+Ø 250,
+Ø 300`}
+                />
+              ))}
 
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
+        </div>
+      </div>
 
 
 

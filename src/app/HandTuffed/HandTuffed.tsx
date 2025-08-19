@@ -20,9 +20,9 @@ interface FlippableProductCardProps {
   image: string;
   title: string;
   description: string;
- 
-  material: string;
 
+  material: string;
+  customization?: string; // ✅ Add this line
   origin: string;
   extraDetails?: string; // ✅ Add this line
 }
@@ -35,9 +35,9 @@ const FlippableProductCard = ({
   image,
   title,
 
-  
+  customization, // ✅ Add this line
   material,
- 
+
   origin,
   extraDetails,
 }: FlippableProductCardProps) => (
@@ -59,9 +59,11 @@ const FlippableProductCard = ({
             <h3 className="text-lg font-semibold mb-2 text-center">Hand Tufted</h3>
             <div className="flex justify-center">
               <div className="space-y-1 text-left max-w-[220px]">
-             
+
                 <p><span className="font-semibold">Material:</span> {material}</p>
-         
+                {/* ✅ New customization info */}
+                <p><span className="font-semibold">Customization:</span> {customization}</p>
+
                 <p><span className="font-semibold">Origin:</span> {origin}</p>
 
                 {/* ✅ New available sizes info */}
@@ -93,7 +95,9 @@ const products = [
     image: "../images/hand-tufted/(1).jpg",
     description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
     usage: "Floor decor",
-    material: "Wool and Silk",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes",
+
     care: "Vacuum regularly",
     origin: "India",
   },
@@ -102,7 +106,9 @@ const products = [
     image: "../images/hand-tufted/(2).jpg",
     description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
     usage: "Living room",
-    material: "Pure Wool",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes",
+
     care: "Dry clean only",
     origin: "India",
   },
@@ -111,7 +117,11 @@ const products = [
     image: "../images/hand-tufted/(3).jpg",
     description: "Rich golden tones combined with classic patterns to add warmth and character.",
     usage: "Dining area",
-    material: "Silk blend",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes",
+
+
+
     care: "Spot clean",
     origin: "India",
   },
@@ -120,8 +130,8 @@ const products = [
     image: "../images/hand-tufted/(4).jpg",
     description: "Soft neutral ecru shades bringing understated elegance to any room.",
     usage: "Bedroom",
-    material: "Wool",
-    care: "Vacuum gently",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes", care: "Vacuum gently",
     origin: "India",
   },
   {
@@ -129,8 +139,8 @@ const products = [
     image: "../images/hand-tufted/(5).jpg",
     description: "Mocha lattice design crafted to complement both classic and modern interiors.",
     usage: "Office",
-    material: "Cotton blend",
-    care: "Dry clean",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes", care: "Dry clean",
     origin: "India",
   },
   {
@@ -138,7 +148,8 @@ const products = [
     image: "../images/hand-tufted/(6).jpg",
     description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
     usage: "Hallway",
-    material: "Wool",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes",
     care: "Vacuum weekly",
     origin: "India",
   },
@@ -147,7 +158,8 @@ const products = [
     image: "../images/hand-tufted/(7).jpg",
     description: "Sophisticated grey patterns adding depth and texture to your space.",
     usage: "Study",
-    material: "Silk blend",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes",
     care: "Dry clean only",
     origin: "India",
   },
@@ -156,8 +168,8 @@ const products = [
     image: "../images/hand-tufted/(8).jpg",
     description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
     usage: "Living room",
-    material: "Cotton",
-    care: "Spot clean",
+    material: "Wool Used 100% New Zealand wool",
+    customization: "Yes", care: "Spot clean",
     origin: "India",
   },
 ];
@@ -353,14 +365,14 @@ export default function Page() {
       <div className="overflow-x-hidden">
         <div className="relative">
           {/* 🔳 Rotated label aligned like card overlay */}
-            <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6">
             <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
               HOVER ON IMAGE TO SEE DETAILS
             </div>
           </div>
 
           {/* 💠 Cards Grid */}
-            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
             <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {products.slice(0, 6).map((product, index) => (
                 <FlippableProductCard
@@ -371,8 +383,14 @@ export default function Page() {
                   // usage={product.usage}
                   material={product.material}
                   // care={product.care}
+                  customization={product.customization}
                   origin={product.origin}
-                  extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+                  extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350, 150 x 150,
+200 x 200,
+Ø 150,
+Ø 200,
+Ø 250,
+Ø 300`}
                 />
               ))}
 
