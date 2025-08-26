@@ -9,10 +9,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import ProductHero from './../ProductHero';
 interface ProductCardProps {
-    image: string;
-    title: string;
-    description: string;
-    link: string;
+  image: string;
+  title: string;
+  description: string;
+  link: string;
 }
 
 
@@ -89,86 +89,114 @@ const FlippableProductCard = ({
 
 
 const products = [
-    {
-        name: "SILVRYN Dove",
-        image: "../images/hand-knotted/handknotted (1).jpg",
-        description: `Wool Used 80% New Zealand wool, 20% Indian wool
+  {
+    name: "SILVRYN Dove",
+    image: "../images/hand-knotted/handknotted (1).jpg",
+    description: `Wool Used 80% New Zealand wool, 20% Indian wool
 `,
-        customization: "Yes",
-        material: `Wool Used 80% New Zealand wool, 20% Indian wool
+    customization: "Yes",
+    material: `Wool Used 80% New Zealand wool, 20% Indian wool
 `,
-        origin: "India",
-    },
-    {
-        name: "MESHARA Silver",
-        image: "../images/hand-knotted/handknotted (2).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "MESHARA Silver",
+    image: "../images/hand-knotted/handknotted (2).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material:`Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "MESHARA Gold",
-        image: "../images/hand-knotted/handknotted (3).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "MESHARA Gold",
+    image: "../images/hand-knotted/handknotted (3).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "MERGIS Ecru",
-        image: "../images/hand-knotted/handknotted (4).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "MERGIS Ecru",
+    image: "../images/hand-knotted/handknotted (4).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "LATTICE Mocha",
-        image: "../images/hand-knotted/handknotted (5).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "LATTICE Mocha",
+    image: "../images/hand-knotted/handknotted (5).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "VERNA Grey Blue",
-        image: "../images/hand-knotted/handknotted (6).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "VERNA Grey Blue",
+    image: "../images/hand-knotted/handknotted (6).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "JORD Grey",
-        image: "../images/hand-knotted/handknotted (7).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "JORD Grey",
+    image: "../images/hand-knotted/handknotted (7).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
-    {
-        name: "MIRAGE Sand",
-        image: "../images/hand-knotted/handknotted (8).jpg",
-        description: `Wool Used 100% New Zealand wool
+    origin: "India",
+  },
+  {
+    name: "MIRAGE Sand",
+    image: "../images/hand-knotted/handknotted (8).jpg",
+    description: `Wool Used 100% New Zealand wool
 `,
-        customization: "Yes",
-        material: `Wool Used 100% New Zealand wool
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
 `,
-        origin: "India",
-    },
+    origin: "India",
+  },
+
+  {
+    name: "JORD Grey",
+    image: "../images/hand-knotted/handknotted (9).jpg",
+    description: `Wool Used 100% New Zealand wool
+`,
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
+`,
+    origin: "India",
+  },
+
+
+
+
+  {
+    name: "JORD Grey",
+    image: "../images/hand-knotted/handknotted(11).jpg",
+    description: `Wool Used 100% New Zealand wool
+`,
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
+`,
+    origin: "India",
+  },
+
+
+
 ];
 
 
@@ -287,108 +315,106 @@ const products = [
 
 
 const CardList = [
-    {
-        image: '/images/shopslider5.png',
-        title: 'Silk Carpets',
-        description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
-        link: '/SilkCarpet',
-    },
-    //   {
-    //     image: '/images/shopslider2.png',
-    //     title: 'Hand Knotted',
-    //     description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
-    //     link: '/HandKnotted',
-    //   },
-    {
-        image: '/images/shopslider3.png',
-        title: 'Hand Tufted',
-        description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
-        link: '/HandTuffed',
-    },
-    {
-        image: '/images/shopslider4.png',
-        title: 'Indo Nepali Rugs',
-        description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
-        link: '/IndoNepali',
-    },
-    {
-        image: '/images/shopslider5.png',
-        title: 'Handloom',
-        description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
-        link: '/Handloom',
-    },
-    {
-        image: '/images/shopslider4.png',
-        title: 'Flatweave',
-        description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
-        link: '/Flatweave',
-    },
-    {
-        image: '/images/shopslider2.png',
-        title: 'Outdoor Rugs',
-        description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-        link: '/OutdoorRugs',
-    },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Silk Carpets',
+    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+    link: '/SilkCarpet',
+  },
+  //   {
+  //     image: '/images/shopslider2.png',
+  //     title: 'Hand Knotted',
+  //     description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+  //     link: '/HandKnotted',
+  //   },
+  {
+    image: '/images/shopslider3.png',
+    title: 'Hand Tufted',
+    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+    link: '/HandTuffed',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Indo Nepali Rugs',
+    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+    link: '/IndoNepali',
+  },
+  {
+    image: '/images/shopslider5.png',
+    title: 'Handloom',
+    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+    link: '/Handloom',
+  },
+  {
+    image: '/images/shopslider4.png',
+    title: 'Flatweave',
+    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+    link: '/Flatweave',
+  },
+  {
+    image: '/images/shopslider2.png',
+    title: 'Outdoor Rugs',
+    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    link: '/OutdoorRugs',
+  },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
-    <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
-        <img src={image} alt={title} className="w-full h-64 object-cover" />
+  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+    <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-        <div className="flex flex-col flex-1 justify-between p-6">
-            <div>
-                <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-                <p className="text-gray-300">{description}</p>
-            </div>
+    <div className="flex flex-col flex-1 justify-between p-6">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+        <p className="text-gray-300">{description}</p>
+      </div>
 
-            <a
-                href={link}
-                className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
-            >
-                Explore More
-            </a>
-        </div>
+      <a
+        href={link}
+        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+      >
+        Explore More
+      </a>
     </div>
+  </div>
 );
 
 export default function Page() {
-    return (
-        <div>
-            <ProductHero
-                name="Hand Knotted"
-                description="Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage."
-            />
+  return (
+    <div>
+      <ProductHero
+        name="Hand Knotted"
+        description="Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage."
+      />
 
-            <div className="overflow-x-hidden">
-                <div className="relative">
-                    {/* 🔳 Rotated label aligned like card overlay */}
-                    {/* <div className="absolute inset-y-0 flex items-center right-4 z-10">
+      <div className="overflow-x-hidden">
+        <div className="relative">
+          {/* 🔳 Rotated label aligned like card overlay */}
+          {/* <div className="absolute inset-y-0 flex items-center right-4 z-10">
                         <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
                       backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
                             HOVER ON IMAGE TO SEE DETAILS
                         </div>
                     </div> */}
-                       <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6">
             <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
               HOVER ON IMAGE TO SEE DETAILS
             </div>
           </div>
 
-                            {/* 💠 Cards Grid */}
+          {/* 💠 Cards Grid */}
           <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
             <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {products.slice(0, 6).map((product, index) => (
+              {products.slice(0, 12).map((product, index) => (
                 <FlippableProductCard
                   key={index}
                   image={product.image}
-                  title="Hand tufted"
+                  title="Handwoven" // <-- Always Handwoven
                   description={product.description}
-                  // usage={product.usage}
                   material={product.material}
-                  // care={product.care}
                   customization={product.customization}
                   origin={product.origin}
-                  extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350, 150 x 150,
+                  extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350, 150 x 150,
 200 x 200,
 Ø 150,
 Ø 200,
@@ -406,40 +432,40 @@ export default function Page() {
 
 
 
-            <section id="explore" className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-                <div className="container mx-auto text-center px-4">
-                    {/* Heading */}
-                    <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
+      <section id="explore" className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+        <div className="container mx-auto text-center px-4">
+          {/* Heading */}
+          <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
 
-                    {/* Subheading */}
-                    <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Each carpet is a masterpiece, woven with care and tradition.
-                    </p>
-                    {/* Product Grid */}
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        loop={true}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
-                        navigation={true}
-                        breakpoints={{
-                            640: { slidesPerView: 1 },
-                            768: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
-                            1280: { slidesPerView: 4 },
-                        }}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        className="mySwiper"
-                    >
-                        {CardList.map((product, index) => (
-                            <SwiperSlide key={index}>
-                                <ProductCard {...product} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-            </section>
+          {/* Subheading */}
+          <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+            Each carpet is a masterpiece, woven with care and tradition.
+          </p>
+          {/* Product Grid */}
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            navigation={true}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {CardList.map((product, index) => (
+              <SwiperSlide key={index}>
+                <ProductCard {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-    );
+      </section>
+    </div>
+  );
 }
 

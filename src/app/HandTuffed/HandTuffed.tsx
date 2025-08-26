@@ -172,6 +172,27 @@ const products = [
     customization: "Yes", care: "Spot clean",
     origin: "India",
   },
+    {
+    name: "JORD Grey",
+    image: "../images/hand-knotted/handknotted (12).jpg",
+    description: `Wool Used 100% New Zealand wool
+`,
+    customization: "Yes",
+    material: `Wool Used 100% New Zealand wool
+`,
+    origin: "India",
+  },
+
+    {
+      name: "JORD Grey",
+      image: "../images/hand-knotted/handknotted (10).jpg",
+      description: `Wool Used 100% New Zealand wool
+  `,
+      customization: "Yes",
+      material: `Wool Used 100% New Zealand wool
+  `,
+      origin: "India",
+    },
 ];
 
 
@@ -374,7 +395,7 @@ export default function Page() {
           {/* 💠 Cards Grid */}
           <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
             <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {products.slice(0, 6).map((product, index) => (
+              {products.slice(0, 10).map((product, index) => (
                 <FlippableProductCard
                   key={index}
                   image={product.image}
