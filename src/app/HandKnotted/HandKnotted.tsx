@@ -92,80 +92,93 @@ const products = [
   {
     name: "SILVRYN Dove",
     image: "../images/hand-knotted/handknotted (1).jpg",
-    description: `Wool Used 80% New Zealand wool, 20% Indian wool
+    description: `80% New Zealand wool, 20% Indian wool
 `,
     customization: "Yes",
-    material: `Wool Used 80% New Zealand wool, 20% Indian wool
+    material: `80% New Zealand wool, 20% Indian wool
 `,
     origin: "India",
   },
   {
     name: "MESHARA Silver",
     image: "../images/hand-knotted/handknotted (2).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "MESHARA Gold",
     image: "../images/hand-knotted/handknotted (3).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "MERGIS Ecru",
     image: "../images/hand-knotted/handknotted (4).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "LATTICE Mocha",
     image: "../images/hand-knotted/handknotted (5).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "VERNA Grey Blue",
     image: "../images/hand-knotted/handknotted (6).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "JORD Grey",
     image: "../images/hand-knotted/handknotted (7).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
   {
     name: "MIRAGE Sand",
     image: "../images/hand-knotted/handknotted (8).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
@@ -173,10 +186,12 @@ const products = [
   {
     name: "JORD Grey",
     image: "../images/hand-knotted/handknotted (9).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },
@@ -187,10 +202,12 @@ const products = [
   {
     name: "JORD Grey",
     image: "../images/hand-knotted/handknotted(11).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool      
+
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool      
+
 `,
     origin: "India",
   },

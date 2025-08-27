@@ -95,7 +95,7 @@ const products = [
     image: "../images/hand-tufted/(1).jpg",
     description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
     usage: "Floor decor",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes",
 
     care: "Vacuum regularly",
@@ -106,7 +106,7 @@ const products = [
     image: "../images/hand-tufted/(2).jpg",
     description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
     usage: "Living room",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes",
 
     care: "Dry clean only",
@@ -117,7 +117,7 @@ const products = [
     image: "../images/hand-tufted/(3).jpg",
     description: "Rich golden tones combined with classic patterns to add warmth and character.",
     usage: "Dining area",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes",
 
 
@@ -130,7 +130,7 @@ const products = [
     image: "../images/hand-tufted/(4).jpg",
     description: "Soft neutral ecru shades bringing understated elegance to any room.",
     usage: "Bedroom",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes", care: "Vacuum gently",
     origin: "India",
   },
@@ -139,7 +139,7 @@ const products = [
     image: "../images/hand-tufted/(5).jpg",
     description: "Mocha lattice design crafted to complement both classic and modern interiors.",
     usage: "Office",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes", care: "Dry clean",
     origin: "India",
   },
@@ -148,7 +148,7 @@ const products = [
     image: "../images/hand-tufted/(6).jpg",
     description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
     usage: "Hallway",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes",
     care: "Vacuum weekly",
     origin: "India",
@@ -158,7 +158,7 @@ const products = [
     image: "../images/hand-tufted/(7).jpg",
     description: "Sophisticated grey patterns adding depth and texture to your space.",
     usage: "Study",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes",
     care: "Dry clean only",
     origin: "India",
@@ -168,17 +168,17 @@ const products = [
     image: "../images/hand-tufted/(8).jpg",
     description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
     usage: "Living room",
-    material: "Wool Used 100% New Zealand wool",
+    material: "100% New Zealand wool",
     customization: "Yes", care: "Spot clean",
     origin: "India",
   },
     {
     name: "JORD Grey",
     image: "../images/hand-knotted/handknotted (12).jpg",
-    description: `Wool Used 100% New Zealand wool
+    description: `100% New Zealand wool
 `,
     customization: "Yes",
-    material: `Wool Used 100% New Zealand wool
+    material: `100% New Zealand wool
 `,
     origin: "India",
   },
@@ -186,10 +186,10 @@ const products = [
     {
       name: "JORD Grey",
       image: "../images/hand-knotted/handknotted (10).jpg",
-      description: `Wool Used 100% New Zealand wool
+      description: `100% New Zealand wool
   `,
       customization: "Yes",
-      material: `Wool Used 100% New Zealand wool
+      material: `100% New Zealand wool
   `,
       origin: "India",
     },
