@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -25,55 +25,59 @@ interface FlippableProductCardProps {
   material: string;
   care: string;
   origin: string;
-     extraDetails?: string;
+  extraDetails?: string;
 }
 
 const FlippableProductCard = ({
   image,
   title,
- extraDetails,
+  description,
   usage,
   material,
   care,
   origin,
-}: FlippableProductCardProps) => (
-  <div className="group w-full h-[320px] perspective">
-    <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+  extraDetails,
+}: FlippableProductCardProps) => {
+  const [flipped, setFlipped] = useState(false);
 
-      {/* Front */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+  return (
+    <div
+      className="group w-full h-[320px] perspective cursor-pointer"
+      onClick={() => setFlipped(!flipped)} // Mobile tap
+    >
+      <div
+        className={`relative w-full h-full duration-700 transform-style-preserve-3d
+          group-hover:rotate-y-180 ${flipped ? 'rotate-y-180' : ''}`}
+      >
+        {/* Front */}
+        <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover" />
+        </div>
 
-
-      </div>
-
-      {/* Back */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
-            <div className="flex justify-center">
-              <div className="space-y-1 text-left max-w-[220px]">
-                <p><span className="font-semibold">Usage:</span> {usage}</p>
-                <p><span className="font-semibold">Material:</span> {material}</p>
-                <p><span className="font-semibold">Care:</span> {care}</p>
-                <p><span className="font-semibold">Origin:</span> {origin}</p>
-
-                 {extraDetails && (
-                  <p>
-                    <span className="font-semibold">Available sizes (cm):</span>{' '}
-                    {extraDetails}
-                  </p>
-                )}
+        {/* Back */}
+        <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+          <div className="flex-1 flex flex-col justify-between">
+            <div>
+              <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
+              <div className="flex justify-center">
+                <div className="space-y-1 text-left max-w-[220px]">
+                  {/* <p><span className="font-semibold">Description:</span> {description}</p> */}
+                  <p><span className="font-semibold">Usage:</span> {usage}</p>
+                  <p><span className="font-semibold">Material:</span> {material}</p>
+                  <p><span className="font-semibold">Care:</span> {care}</p>
+                  <p><span className="font-semibold">Origin:</span> {origin}</p>
+                  {extraDetails && (
+                    <p><span className="font-semibold">Available sizes (cm):</span> {extraDetails}</p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-);
+  );
+};
 
 
 
@@ -341,58 +345,47 @@ export default function Page() {
         description="Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas."
       />
 
-
-      <div className="overflow-x-hidden">
-        <div className="relative">
-          {/* 🔳 Rotated label aligned like card overlay */}
-          {/* <div className="absolute inset-y-0 flex items-center right-4 z-10">
-            <div className="transform rotate-90 origin-right bg-black text-white border border-white/30 
-                      backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
-              HOVER ON IMAGE TO SEE DETAILS
-            </div>
-          </div> */}
-             <div className="flex justify-center mt-6">
-            <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
-              HOVER ON IMAGE TO SEE DETAILS
-            </div>
-          </div>
-
-          {/* 💠 Cards Grid */}
-          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {products.map((product, index) => (
-                <FlippableProductCard
-                  key={index}
-                  image={product.image}
-                  title={product.name}
-                  description={product.description}
-                  usage={product.usage}
-                  material={product.material}
-                  care={product.care}
-                  origin={product.origin}
-                  
-             extraDetails={` 60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
-                />
-              ))}
-            </div>
-          </div>
+      {/* Desktop Hint */}
+      <div className="hidden md:flex justify-center mt-6">
+        <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
+          HOVER ON IMAGE TO SEE DETAILS
         </div>
       </div>
 
+      {/* Mobile Hint */}
+      <div className="flex md:hidden justify-center mt-6">
+        <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
+          TAP ON IMAGE TO SEE DETAILS
+        </div>
+      </div>
 
+      {/* 💠 Cards Grid */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {products.map((product, index) => (
+            <FlippableProductCard
+              key={index}
+              image={product.image}
+              title={product.name}
+              description={product.description}
+              usage={product.usage}
+              material={product.material}
+              care={product.care}
+              origin={product.origin}
+              extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+            />
+          ))}
+        </div>
+      </div>
 
-
-
+      {/* 🌀 Explore Section with Swiper */}
       <section id="explore" className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
         <div className="container mx-auto text-center px-4">
-          {/* Heading */}
           <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>
-
-          {/* Subheading */}
           <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
             Each carpet is a masterpiece, woven with care and tradition.
           </p>
-          {/* Product Grid */}
+
           <Swiper
             slidesPerView={1}
             spaceBetween={30}
@@ -419,4 +412,3 @@ export default function Page() {
     </div>
   );
 }
-
