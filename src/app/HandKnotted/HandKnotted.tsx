@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { useState } from "react";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -31,59 +33,56 @@ interface FlippableProductCardProps {
 
 
 
+
 const FlippableProductCard = ({
   image,
   title,
-
-  customization, // ✅ Add this line
+  customization,
   material,
-
   origin,
   extraDetails,
-}: FlippableProductCardProps) => (
-  <div className="group w-full h-[320px] perspective">
-    <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+}: FlippableProductCardProps) => {
+  const [flipped, setFlipped] = useState(false);
 
-      {/* Front */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+  return (
+    <div
+      className="group w-full h-[320px] perspective cursor-pointer"
+      onClick={() => setFlipped(!flipped)} // Mobile ke liye tap/click
+    >
+      <div
+        className={`relative w-full h-full duration-700 transform-style-preserve-3d
+          group-hover:rotate-y-180 ${flipped ? "rotate-y-180" : ""}`}
+      >
+        {/* Front */}
+        <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover" />
+        </div>
 
-
-      </div>
-
-      {/* Back */}
-      {/* Back */}
-      <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
-        <div className="flex-1 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-center">Handwoven </h3>
-            <div className="flex justify-center">
-              <div className="space-y-1 text-left max-w-[220px]">
-
-                <p><span className="font-semibold">Material:</span> {material}</p>
-                {/* ✅ New customization info */}
-                <p><span className="font-semibold">Customization:</span> {customization}</p>
-
-                <p><span className="font-semibold">Origin:</span> {origin}</p>
-
-                {/* ✅ New available sizes info */}
-                {extraDetails && (
-                  <p>
-                    <span className="font-semibold">Available sizes (cm):</span>{' '}
-                    {extraDetails}
-                  </p>
-                )}
-
+        {/* Back */}
+        <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white text-gray-800 p-4 rotate-y-180 backface-hidden flex flex-col justify-between shadow-lg">
+          <div className="flex-1 flex flex-col justify-between">
+            <div>
+              <h3 className="text-lg font-semibold mb-2 text-center">Handwoven</h3>
+              <div className="flex justify-center">
+                <div className="space-y-1 text-left max-w-[220px]">
+                  <p><span className="font-semibold">Material:</span> {material}</p>
+                  <p><span className="font-semibold">Customization:</span> {customization}</p>
+                  <p><span className="font-semibold">Origin:</span> {origin}</p>
+                  {extraDetails && (
+                    <p>
+                      <span className="font-semibold">Available sizes (cm):</span> {extraDetails}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
-  </div>
-);
+  );
+};
+
 
 
 
