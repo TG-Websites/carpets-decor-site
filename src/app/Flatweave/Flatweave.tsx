@@ -20,7 +20,6 @@ interface ProductCardProps {
 interface FlippableProductCardProps {
   image: string;
   title: string;
-  description: string;
   usage: string;
   material: string;
   care: string;
@@ -31,7 +30,6 @@ interface FlippableProductCardProps {
 const FlippableProductCard = ({
   image,
   title,
-  description,
   usage,
   material,
   care,
@@ -367,7 +365,6 @@ export default function Page() {
               key={index}
               image={product.image}
               title={product.name}
-              description={product.description}
               usage={product.usage}
               material={product.material}
               care={product.care}
