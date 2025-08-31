@@ -26,6 +26,8 @@ interface FlippableProductCardProps {
   care: string;
   origin: string;
   extraDetails?: string;
+  isFlipped: boolean;               // ✅ parent se milega
+  onClick: () => void;              // ✅ parent ka handler
 }
 
 const FlippableProductCard = ({
@@ -36,17 +38,17 @@ const FlippableProductCard = ({
   care,
   origin,
   extraDetails,
+  isFlipped,
+  onClick,
 }: FlippableProductCardProps) => {
-  const [flipped, setFlipped] = useState(false);
-
   return (
     <div
       className="group w-full h-[320px] perspective cursor-pointer"
-      onClick={() => setFlipped(!flipped)} // Mobile tap
+      onClick={onClick} // ✅ parent state ko trigger karega
     >
       <div
         className={`relative w-full h-full duration-700 transform-style-preserve-3d
-        ${flipped ? 'rotate-y-180' : ''} group-hover:rotate-y-180`}
+          ${isFlipped ? 'rotate-y-180' : ''} group-hover:rotate-y-180`}
       >
         {/* Front */}
         <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
@@ -76,7 +78,6 @@ const FlippableProductCard = ({
     </div>
   );
 };
-
 
 
 
@@ -342,21 +343,23 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 );
 
 export default function Page() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null); // ✅ track karta hai konsa card open hai
+
   return (
     <div>
       <ProductHero
-        name="Handloom"
-        description="Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors."
+        name="Indo Nepali"
+        description="A blend of Indian weaving and Nepali art, combining simplicity with elegant design."
       />
 
-      {/* Desktop Hint */}
+      {/* Desktop hint */}
       <div className="hidden md:flex justify-center mt-6">
         <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
           HOVER ON IMAGE TO SEE DETAILS
         </div>
       </div>
 
-      {/* Mobile Hint */}
+      {/* Mobile hint */}
       <div className="flex md:hidden justify-center mt-6">
         <div className="bg-black text-white border border-white/30 backdrop-blur-sm shadow-md px-4 py-2 rounded-md text-sm font-semibold tracking-widest">
           TAP ON IMAGE TO SEE DETAILS
@@ -376,6 +379,10 @@ export default function Page() {
               care={product.care}
               origin={product.origin}
               extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+              isFlipped={flippedIndex === index}           // ✅ sirf yeh card flip hoga
+              onClick={() =>
+                setFlippedIndex(flippedIndex === index ? null : index) // ✅ agar same card dobara click ho to close ho jaye
+              }
             />
           ))}
         </div>
