@@ -24,6 +24,8 @@ interface FlippableProductCardProps {
   customization?: string;
   origin: string;
   extraDetails?: string;
+  isFlipped: boolean;     // ✅ parent decide karega
+  onClick: () => void;    // ✅ parent ka handler
 }
 
 // ---------------- Flippable Product Card ----------------
@@ -34,17 +36,17 @@ const FlippableProductCard = ({
   material,
   origin,
   extraDetails,
+  isFlipped,
+  onClick,
 }: FlippableProductCardProps) => {
-  const [flipped, setFlipped] = useState(false);
-
   return (
     <div
       className="group w-full h-[320px] perspective cursor-pointer"
-      onClick={() => setFlipped(!flipped)} // Mobile tap toggle
+      onClick={onClick} // ✅ toggle handled by parent
     >
       <div
         className={`relative w-full h-full duration-700 transform-style-preserve-3d
-          group-hover:rotate-y-180 ${flipped ? "rotate-y-180" : ""}`}
+          group-hover:rotate-y-180 ${isFlipped ? 'rotate-y-180' : ''}`}
       >
         {/* Front */}
         <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
@@ -58,9 +60,15 @@ const FlippableProductCard = ({
               <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
               <div className="flex justify-center">
                 <div className="space-y-1 text-left max-w-[220px]">
-                  {material && <p><span className="font-semibold">Material:</span> {material}</p>}
-                  {customization && <p><span className="font-semibold">Customization:</span> {customization}</p>}
-                  {origin && <p><span className="font-semibold">Origin:</span> {origin}</p>}
+                  {material && (
+                    <p><span className="font-semibold">Material:</span> {material}</p>
+                  )}
+                  {customization && (
+                    <p><span className="font-semibold">Customization:</span> {customization}</p>
+                  )}
+                  {origin && (
+                    <p><span className="font-semibold">Origin:</span> {origin}</p>
+                  )}
                   {extraDetails && (
                     <p>
                       <span className="font-semibold">Available sizes (cm):</span> {extraDetails}
@@ -222,6 +230,8 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 
 // ---------------- Main Page ----------------
 export default function Page() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null); // ✅ ek hi card open rahega
+
   return (
     <div>
       <ProductHero
@@ -256,6 +266,10 @@ export default function Page() {
               customization={product.customization}
               origin={product.origin}
               extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350, 150 x 150, 200 x 200, Ø 150, Ø 200, Ø 250, Ø 300`}
+              isFlipped={flippedIndex === index} // ✅ sirf ek card flip
+              onClick={() =>
+                setFlippedIndex(flippedIndex === index ? null : index) // ✅ dobara click pe close
+              }
             />
           ))}
         </div>

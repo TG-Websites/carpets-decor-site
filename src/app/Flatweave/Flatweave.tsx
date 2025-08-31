@@ -16,7 +16,6 @@ interface ProductCardProps {
   link: string;
 }
 
-
 interface FlippableProductCardProps {
   image: string;
   title: string;
@@ -25,6 +24,8 @@ interface FlippableProductCardProps {
   care: string;
   origin: string;
   extraDetails?: string;
+  isFlipped: boolean;       // ✅ parent se milega
+  onClick: () => void;      // ✅ parent ka handler
 }
 
 const FlippableProductCard = ({
@@ -35,17 +36,17 @@ const FlippableProductCard = ({
   care,
   origin,
   extraDetails,
+  isFlipped,
+  onClick,
 }: FlippableProductCardProps) => {
-  const [flipped, setFlipped] = useState(false);
-
   return (
     <div
       className="group w-full h-[320px] perspective cursor-pointer"
-      onClick={() => setFlipped(!flipped)} // Mobile tap
+      onClick={onClick} // ✅ parent state trigger karega
     >
       <div
         className={`relative w-full h-full duration-700 transform-style-preserve-3d
-          group-hover:rotate-y-180 ${flipped ? 'rotate-y-180' : ''}`}
+          group-hover:rotate-y-180 ${isFlipped ? 'rotate-y-180' : ''}`}
       >
         {/* Front */}
         <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
@@ -59,7 +60,6 @@ const FlippableProductCard = ({
               <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
               <div className="flex justify-center">
                 <div className="space-y-1 text-left max-w-[220px]">
-                  {/* <p><span className="font-semibold">Description:</span> {description}</p> */}
                   <p><span className="font-semibold">Usage:</span> {usage}</p>
                   <p><span className="font-semibold">Material:</span> {material}</p>
                   <p><span className="font-semibold">Care:</span> {care}</p>
@@ -159,115 +159,7 @@ const products = [
 
 
 
-// const page = () => {
-//     const products = [
-//         {
-//             name: "SILVRYN Dove",
-//             image: "//handscarpets.com/cdn/shop/files/Silvryn-Dove.jpg?v=1745826280&width=533",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "MESHARA Silver",
-//             image: "https://handscarpets.com/cdn/shop/files/Meshara-Silver.jpg?v=1745826278&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "MESHARA Gold",
-//             image: "https://handscarpets.com/cdn/shop/files/Meshara-Gold.jpg?v=1745826277&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/Lattice-Mocha.jpg?v=1745300598&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/VernaGreyBlue1.jpg?v=1745223070&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         {
-//             name: "SILVRYN Dove",
-//             image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-//             sizes: "5'6\" x 8' - 12' x 18'",
-//             priceRange: "₹ 2,54,100 - ₹ 12,47,400"
-//         },
-//         // Add other products here
-//     ];
 
-// const CardList = [
-//     {
-//         image:
-//             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-//         title: 'Silk Vintage Carpet',
-//         description: 'A vintage silk carpet that adds elegance to any room.',
-//     },
-//     {
-//         image:
-//             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0GXwHz53377F1P8swEifWw9adKbVCJcSb9Q&s',
-//         title: 'Traditional Wool Carpet',
-//         description: 'Crafted with fine wool, perfect for a cozy ambiance.',
-//     },
-//     {
-//         image:
-//             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-//         title: 'Geometric Pattern Carpet',
-//         description: 'Bold patterns ideal for contemporary decor.',
-//     },
-//     {
-//         image:
-//             'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-//         title: 'Luxury Persian Carpet',
-//         description: 'Intricate design with vibrant colors.',
-//     },
-//     {
-//         image:
-//             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-//         title: 'Handwoven Jute Rug',
-//         description: 'Rustic eco-friendly jute with natural texture.',
-//     },
-//     {
-//         image:
-//             'https://m.media-amazon.com/images/I/81VMMgaSseL._AC_UF894,1000_QL80_.jpg',
-//         title: 'Shaggy Area Carpet',
-//         description: 'Ultra-soft rug that adds warmth.',
-//     },
-//     {
-//         image:
-//             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOBf1PNGrjiwpwI7pj6wJP44-214CanScA&s',
-//         title: 'Modern Abstract Carpet',
-//         description: 'Perfect for bold, artistic interiors.',
-//     },
-// ];
 
 
 const CardList = [
@@ -336,6 +228,8 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 );
 
 export default function Page() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null); // ✅ track karta hai konsa card open hai
+
   return (
     <div>
       <ProductHero
@@ -370,6 +264,10 @@ export default function Page() {
               care={product.care}
               origin={product.origin}
               extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
+              isFlipped={flippedIndex === index}   // ✅ sirf ek card flip hoga
+              onClick={() =>
+                setFlippedIndex(flippedIndex === index ? null : index) // ✅ same card dobara click ho to close ho jaye
+              }
             />
           ))}
         </div>

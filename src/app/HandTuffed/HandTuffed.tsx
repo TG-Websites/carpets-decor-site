@@ -9,14 +9,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import ProductHero from './../ProductHero';
 
-
 interface ProductCardProps {
   image: string;
   title: string;
   description: string;
   link: string;
 }
-
 
 interface FlippableProductCardProps {
   image: string;
@@ -26,11 +24,9 @@ interface FlippableProductCardProps {
   customization?: string;
   origin: string;
   extraDetails?: string;
+  isFlipped: boolean;   // ✅ parent control karega
+  onClick: () => void;  // ✅ parent ka handler
 }
-
-
-
-
 
 const FlippableProductCard = ({
   image,
@@ -39,17 +35,17 @@ const FlippableProductCard = ({
   customization,
   origin,
   extraDetails,
+  isFlipped,
+  onClick,
 }: FlippableProductCardProps) => {
-  const [flipped, setFlipped] = useState(false);
-
   return (
     <div
       className="group w-full h-[320px] perspective cursor-pointer"
-      onClick={() => setFlipped(!flipped)} // Mobile tap
+      onClick={onClick} // ✅ mobile tap
     >
       <div
         className={`relative w-full h-full duration-700 transform-style-preserve-3d
-        ${flipped ? 'rotate-y-180' : ''} group-hover:rotate-y-180`}
+        ${isFlipped ? 'rotate-y-180' : ''} group-hover:rotate-y-180`}
       >
         {/* Front */}
         <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
@@ -63,9 +59,9 @@ const FlippableProductCard = ({
               <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
               <div className="flex justify-center">
                 <div className="space-y-1 text-left max-w-[220px]">
-                  <p><span className="font-semibold">Material:</span> {material}</p>
-                  <p><span className="font-semibold">Customization:</span> {customization}</p>
-                  <p><span className="font-semibold">Origin:</span> {origin}</p>
+                  {material && <p><span className="font-semibold">Material:</span> {material}</p>}
+                  {customization && <p><span className="font-semibold">Customization:</span> {customization}</p>}
+                  {origin && <p><span className="font-semibold">Origin:</span> {origin}</p>}
                   {extraDetails && (
                     <p><span className="font-semibold">Available sizes (cm):</span> {extraDetails}</p>
                   )}
@@ -78,6 +74,7 @@ const FlippableProductCard = ({
     </div>
   );
 };
+
 
 
 
@@ -370,6 +367,8 @@ const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
 
 
 export default function Page() {
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null); // ✅ ek card open
+
   return (
     <div>
       <ProductHero
@@ -404,6 +403,10 @@ export default function Page() {
               customization={product.customization}
               origin={product.origin}
               extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250x350, 150x150, 200x200, Ø150, Ø200, Ø250, Ø300`}
+              isFlipped={flippedIndex === index}
+              onClick={() =>
+                setFlippedIndex(flippedIndex === index ? null : index)
+              }
             />
           ))}
         </div>
