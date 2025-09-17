@@ -29,11 +29,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           className="fixed bottom-6 right-6 z-50 group"
           aria-label="Chat on WhatsApp"
         >
-          <span className="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition-all duration-200 border-2 border-white">
+          <span className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition-all duration-200 border-2 border-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="28"
+              height="28"
               fill="white"
               viewBox="0 0 24 24"
               className="group-hover:scale-110 transition-transform duration-200"

@@ -1,79 +1,61 @@
+'use client';
+
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 
 function Navbar() {
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+
+  const handleMobileLinkClick = () => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.open = false;
+    }
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-black shadow-md">
       <div className="max-w-7xl mx-auto px-5 flex justify-between items-center">
         {/* Logo with overlay text at bottom */}
-       <div className="relative w-[270px] h-[85px]">
-  {/* Logo Image */}
-  <Link href="/">
-    <img
-      src="/images/carpetlogo3.jpg"
-      alt="Logo"
-      loading="eager"
-      className="w-full h-full object-cover"
-    />
-  </Link>
-  
-  {/* Tagline */}
-  <span
-    className="
-      absolute
-      bottom-3
-      left-14
-      text-white
-      uppercase
-      text-[12px]
-      md:text-xs
-      font-light
-      tracking-wide
-    "
-  >
-    The Handmade Carpet Company
-  </span>
-</div>
-
+        <div className="relative w-[270px] h-[85px]">
+          <Link href="/">
+            <img
+              src="/images/carpetlogo3.jpg"
+              alt="Logo"
+              loading="eager"
+              className="w-full h-full object-cover"
+            />
+          </Link>
+          <span className="absolute bottom-3 left-14 text-white uppercase text-[12px] md:text-xs font-light tracking-wide">
+            The Handmade Carpet Company
+          </span>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-white font-semibold uppercase">
           <li>
-            <Link
-              href="/"
-              className="hover:text-gray-300 transition text-lg py-6 inline-block"
-            >
+            <Link href="/" className="hover:text-gray-300 transition text-lg py-6 inline-block">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              href="/AboutUs"
-              className="hover:text-gray-300 transition text-lg py-6 inline-block"
-            >
+            <Link href="/AboutUs" className="hover:text-gray-300 transition text-lg py-6 inline-block">
               About
             </Link>
           </li>
           <li>
-            <Link
-              href="/Services"
-              className="hover:text-gray-300 transition text-lg py-6 inline-block"
-            >
+            <Link href="/Services" className="hover:text-gray-300 transition text-lg py-6 inline-block">
               Categories
             </Link>
           </li>
           <li>
-            <Link
-              href="/ContactUs"
-              className="hover:text-gray-300 transition text-lg py-6 inline-block"
-            >
+            <Link href="/ContactUs" className="hover:text-gray-300 transition text-lg py-6 inline-block">
               Contact
             </Link>
           </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <details className="md:hidden relative">
+        <details className="md:hidden relative" ref={mobileMenuRef}>
           <summary className="text-white cursor-pointer list-none">
             <svg
               className="w-7 h-7"
@@ -93,22 +75,22 @@ function Navbar() {
 
           <ul className="absolute right-0 mt-2 bg-black text-white w-48 shadow-lg rounded-md p-4 space-y-4 z-50 uppercase">
             <li>
-              <Link href="/" className="hover:text-gray-300 transition">
+              <Link href="/" className="hover:text-gray-300 transition" onClick={handleMobileLinkClick}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/AboutUs" className="hover:text-gray-300 transition">
+              <Link href="/AboutUs" className="hover:text-gray-300 transition" onClick={handleMobileLinkClick}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="/Services" className="hover:text-gray-300 transition">
+              <Link href="/Services" className="hover:text-gray-300 transition" onClick={handleMobileLinkClick}>
                 Categories
               </Link>
             </li>
             <li>
-              <Link href="/ContactUs" className="hover:text-gray-300 transition">
+              <Link href="/ContactUs" className="hover:text-gray-300 transition" onClick={handleMobileLinkClick}>
                 Contact
               </Link>
             </li>
