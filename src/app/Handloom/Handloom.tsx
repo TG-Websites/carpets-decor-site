@@ -21,21 +21,17 @@ interface ProductCardProps {
 interface FlippableProductCardProps {
   image: string;
   title: string;
-  usage: string;
   material: string;
-  care: string;
   origin: string;
   extraDetails?: string;
-  isFlipped: boolean;               // ✅ parent se milega
-  onClick: () => void;              // ✅ parent ka handler
+  isFlipped: boolean;    // ✅ parent se control
+  onClick: () => void;   // ✅ parent handler
 }
 
 const FlippableProductCard = ({
   image,
   title,
-  usage,
   material,
-  care,
   origin,
   extraDetails,
   isFlipped,
@@ -44,11 +40,11 @@ const FlippableProductCard = ({
   return (
     <div
       className="group w-full h-[320px] perspective cursor-pointer"
-      onClick={onClick} // ✅ parent state ko trigger karega
+      onClick={onClick} // ✅ parent state trigger karega
     >
       <div
         className={`relative w-full h-full duration-700 transform-style-preserve-3d
-          ${isFlipped ? 'rotate-y-180' : ''} group-hover:rotate-y-180`}
+          group-hover:rotate-y-180 ${isFlipped ? 'rotate-y-180' : ''}`}
       >
         {/* Front */}
         <div className="absolute w-full h-full rounded-xl overflow-hidden bg-white shadow-lg backface-hidden">
@@ -62,9 +58,7 @@ const FlippableProductCard = ({
               <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
               <div className="flex justify-center">
                 <div className="space-y-1 text-left max-w-[220px]">
-                  <p><span className="font-semibold">Usage:</span> {usage}</p>
                   <p><span className="font-semibold">Material:</span> {material}</p>
-                  <p><span className="font-semibold">Care:</span> {care}</p>
                   <p><span className="font-semibold">Origin:</span> {origin}</p>
                   {extraDetails && (
                     <p><span className="font-semibold">Available sizes (cm):</span> {extraDetails}</p>
@@ -348,7 +342,7 @@ export default function Page() {
   return (
     <div>
       <ProductHero
-        name="Indo Nepali"
+        name="Handloom"
         description="A blend of Indian weaving and Nepali art, combining simplicity with elegant design."
       />
 
@@ -369,19 +363,17 @@ export default function Page() {
       {/* 💠 Cards Grid */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.map((product, index) => (
+          {products.slice(0, 15).map((product, index) => (
             <FlippableProductCard
               key={index}
               image={product.image}
-              title={product.name}
-              usage={product.usage}
+              title="Handloom"
               material={product.material}
-              care={product.care}
               origin={product.origin}
-              extraDetails={`60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250 x 350`}
-              isFlipped={flippedIndex === index}           // ✅ sirf yeh card flip hoga
+              extraDetails="60x120, 90x150, 120x180, 150x210, 180x270, 240x300, 300x400, 250x350"
+              isFlipped={flippedIndex === index}
               onClick={() =>
-                setFlippedIndex(flippedIndex === index ? null : index) // ✅ agar same card dobara click ho to close ho jaye
+                setFlippedIndex(flippedIndex === index ? null : index)
               }
             />
           ))}

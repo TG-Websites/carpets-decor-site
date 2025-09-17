@@ -397,7 +397,7 @@ export default function Page() {
             <FlippableProductCard
               key={index}
               image={product.image}
-              title={product.name}
+title="Handtufted"
               description={product.description}
               material={product.material}
               customization={product.customization}
