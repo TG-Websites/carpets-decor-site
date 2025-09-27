@@ -70,68 +70,68 @@ const contactOptions = [
 
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
-  <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
-    <img src={image} alt={title} className="w-full h-64 object-cover" />
+    <div className="flex flex-col bg-gray-800 shadow-lg rounded-lg overflow-hidden h-[500px]">
+        <img src={image} alt={title} className="w-full h-64 object-cover" />
 
-    <div className="flex flex-col flex-1 justify-between p-6">
-      <div>
-        <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-gray-300">{description}</p>
-      </div>
+        <div className="flex flex-col flex-1 justify-between p-6">
+            <div>
+                <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+                <p className="text-gray-300">{description}</p>
+            </div>
 
-      <a
-        href={link}
-        className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
-      >
-        Explore More
-      </a>
+            <a
+                href={link}
+                className="mt-4 self-center px-6 py-3 bg-black text-white rounded-lg hover:bg-white hover:text-black border border-white transition-all duration-300"
+            >
+                Explore More
+            </a>
+        </div>
     </div>
-  </div>
 );
 
 const products = [
-  {
-    image: '/images/shopslider5.png',
-    title: 'Silk Carpets',
-    description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
-    link: '/SilkCarpet',
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Hand Knotted',
-    description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
-    link: '/HandKnotted',
-  },
-  {
-    image: '/images/shopslider3.png',
-    title: 'Hand Tufted',
-    description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
-    link: '/HandTuffed',
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Indo Nepali Rugs',
-    description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
-    link: '/IndoNepali',
-  },
-  {
-    image: '/images/shopslider5.png',
-    title: 'Handloom',
-    description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
-    link: '/Handloom',
-  },
-  {
-    image: '/images/shopslider4.png',
-    title: 'Flatweave',
-    description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
-    link: '/Flatweave',
-  },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Outdoor Rugs',
-    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-    link: '/OutdoorRugs',
-  },
+    {
+        image: '/images/shopslider5.png',
+        title: 'Silk Carpets',
+        description: 'Silk carpets are renowned for their fine craftsmanship, luxurious texture, and finely detailed patterns.',
+        link: '/SilkCarpet',
+    },
+    {
+        image: '/images/shopslider2.png',
+        title: 'Hand Knotted',
+        description: 'Individually knotted by skilled Indian artisans, these rugs showcase timeless craftsmanship and cultural heritage.',
+        link: '/HandKnotted',
+    },
+    {
+        image: '/images/shopslider3.png',
+        title: 'Hand Tufted',
+        description: 'Crafted from premium wool and viscose with a tufting tool for a soft, resilient pile and smooth finish.',
+        link: '/HandTuffed',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Indo Nepali Rugs',
+        description: 'A blend of Indian weaving and nepali art, combining simplicity with elegant design.',
+        link: '/IndoNepali',
+    },
+    {
+        image: '/images/shopslider5.png',
+        title: 'Handloom',
+        description: 'Durable, soft rugs made with loom-assisted precision and rich textures for modern interiors.',
+        link: '/Handloom',
+    },
+    {
+        image: '/images/shopslider4.png',
+        title: 'Flatweave',
+        description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
+        link: '/Flatweave',
+    },
+    // {
+    //     image: '/images/shopslider2.png',
+    //     title: 'Outdoor Rugs',
+    //     description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+    //     link: '/OutdoorRugs',
+    // },
 ];
 
 
@@ -164,20 +164,23 @@ const Page = () => {
 
             {/* Text Content */}
             <div className="mt-6 text-left px-4 sm:px-8">
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed ">
-                    Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region. </p>
                 <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+                    We create and supply handmade carpets for B2B businesses — from interior designers and boutique stores to global retailers. Each piece is crafted by skilled women artisans using traditional techniques, natural dyes, and hand-spun yarns, making every rug both a work of art and a story of heritage. By partnering with us, you don’t just get authentic, ethically sourced carpets — you support women’s empowerment, sustainable livelihoods, and the preservation of ancient craftsmanship.
+                </p>
 
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+                    Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region.
+                </p>
+
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
                     The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
                 </p>
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
 
+                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
                     Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history.
                 </p>
-
-
-
             </div>
+
 
             {/* Section Title */}
             <div className="section-title text-center mt-8">
@@ -677,7 +680,7 @@ const Page = () => {
                     </div>
                 </div>
             </section> */}
- <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+            <section className="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
                 <div className="container mx-auto text-center px-4">
                     {/* Heading */}
                     <h2 className="text-4xl font-extrabold text-white mb-6">Explore Our Handcrafted Carpets</h2>

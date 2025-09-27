@@ -26,10 +26,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           href="https://wa.me/919354715556"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-50 group"
+          className="fixed top-1/2 right-6 -translate-y-1/2 z-50 group"
           aria-label="Chat on WhatsApp"
         >
-          <span className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition-all duration-200 border-2 border-white">
+          <span className="flex items-center justify-center w-16 h-16 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition-all duration-200 border-2 border-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"

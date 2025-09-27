@@ -79,87 +79,80 @@ const FlippableProductCard = ({
 
 
 const products = [
-    {
-        name: "SILVRYN Dove",
-        image: "//handscarpets.com/cdn/shop/files/Silvryn-Dove.jpg?v=1745826280&width=533",
-        description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
-        usage: "Floor decor",
-        material: "Wool and Silk",
-        care: "Vacuum regularly",
-        origin: "India",
-       
-    },
-    {
-        name: "MESHARA Silver",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Silver.jpg?v=1745826278&width=360",
-        description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
-        usage: "Living room",
-        material: "Pure Wool",
-        care: "Dry clean only",
-        origin: "India",
-        
-    },
-    {
-        name: "MESHARA Gold",
-        image: "https://handscarpets.com/cdn/shop/files/Meshara-Gold.jpg?v=1745826277&width=360",
-        description: "Rich golden tones combined with classic patterns to add warmth and character.",
-        usage: "Dining area",
-        material: "Silk blend",
-        care: "Spot clean",
-        origin: "India",
-      
-    },
-    {
-        name: "MERGIS Ecru",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Soft neutral ecru shades bringing understated elegance to any room.",
-        usage: "Bedroom",
-        material: "Wool",
-        care: "Vacuum gently",
-        origin: "India",
-        
-    },
-    {
-        name: "LATTICE Mocha",
-        image: "https://handscarpets.com/cdn/shop/files/Lattice-Mocha.jpg?v=1745300598&width=360",
-        description: "Mocha lattice design crafted to complement both classic and modern interiors.",
-        usage: "Office",
-        material: "Cotton blend",
-        care: "Dry clean",
-        origin: "India",
-       
-    },
-    {
-        name: "VERNA Grey Blue",
-        image: "https://handscarpets.com/cdn/shop/files/VernaGreyBlue1.jpg?v=1745223070&width=360",
-        description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
-        usage: "Hallway",
-        material: "Wool",
-        care: "Vacuum weekly",
-        origin: "India",
-        
-    },
-    {
-        name: "JORD Grey",
-        image: "https://handscarpets.com/cdn/shop/files/JordGrey1_ef622d86-6234-46f5-b753-683e69a0ef97.jpg?v=1745223084&width=360",
-        description: "Sophisticated grey patterns adding depth and texture to your space.",
-        usage: "Study",
-        material: "Silk blend",
-        care: "Dry clean only",
-        origin: "India",
-       
-    },
-    {
-        name: "MIRAGE Sand",
-        image: "https://handscarpets.com/cdn/shop/files/Mergis-Ecru.jpg?v=1745826274&width=360",
-        description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
-        usage: "Living room",
-        material: "Cotton",
-        care: "Spot clean",
-        origin: "India",
-       
-    },
+  {
+    name: "SILVRYN Dove",
+    image: "/images/indo-nepali/indo-1.jpeg",
+    description: "A premium hand-knotted carpet in soft dove tones with intricate detailing for an elegant finish.",
+    usage: "Floor decor",
+    material: "Wool and Silk",
+    care: "Vacuum regularly",
+    origin: "India",
+  },
+  {
+    name: "MESHARA Silver",
+    image: "/images/indo-nepali/indo-2.jpeg",
+    description: "Elegant silver design that enhances modern spaces with luxury and style effortlessly.",
+    usage: "Living room",
+    material: "Pure Wool",
+    care: "Dry clean only",
+    origin: "India",
+  },
+  {
+    name: "MESHARA Gold",
+    image: "/images/indo-nepali/indo-3.jpeg",
+    description: "Rich golden tones combined with classic patterns to add warmth and character.",
+    usage: "Dining area",
+    material: "Silk blend",
+    care: "Spot clean",
+    origin: "India",
+  },
+  {
+    name: "MERGIS Ecru",
+    image: "/images/indo-nepali/indo-4.jpeg",
+    description: "Soft neutral ecru shades bringing understated elegance to any room.",
+    usage: "Bedroom",
+    material: "Wool",
+    care: "Vacuum gently",
+    origin: "India",
+  },
+  {
+    name: "LATTICE Mocha",
+    image: "/images/indo-nepali/indo-5.jpeg",
+    description: "Mocha lattice design crafted to complement both classic and modern interiors.",
+    usage: "Office",
+    material: "Cotton blend",
+    care: "Dry clean",
+    origin: "India",
+  },
+  {
+    name: "VERNA Grey Blue",
+    image: "/images/indo-nepali/indo-6.jpeg",
+    description: "Subtle grey-blue tones perfect for contemporary minimalist themes.",
+    usage: "Hallway",
+    material: "Wool",
+    care: "Vacuum weekly",
+    origin: "India",
+  },
+  {
+    name: "JORD Grey",
+    image: "/images/indo-nepali/indo-7.jpeg",
+    description: "Sophisticated grey patterns adding depth and texture to your space.",
+    usage: "Study",
+    material: "Silk blend",
+    care: "Dry clean only",
+    origin: "India",
+  },
+  {
+    name: "MIRAGE Sand",
+    image: "/images/indo-nepali/indo-8.jpeg",
+    description: "Warm sand tones and intricate textures for a welcoming atmosphere.",
+    usage: "Living room",
+    material: "Cotton",
+    care: "Spot clean",
+    origin: "India",
+  },
 ];
+
 
 
 
@@ -311,12 +304,12 @@ const CardList =  [
     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
     link: '/Flatweave',
   },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Outdoor Rugs',
-    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-    link: '/OutdoorRugs',
-  },
+  // {
+  //   image: '/images/shopslider2.png',
+  //   title: 'Outdoor Rugs',
+  //   description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+  //   link: '/OutdoorRugs',
+  // },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (

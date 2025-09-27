@@ -39,7 +39,7 @@ function Navbar() {
           </li>
           <li>
             <Link href="/AboutUs" className="hover:text-gray-300 transition text-lg py-6 inline-block">
-              About
+              About Us
             </Link>
           </li>
           <li>
@@ -81,7 +81,7 @@ function Navbar() {
             </li>
             <li>
               <Link href="/AboutUs" className="hover:text-gray-300 transition" onClick={handleMobileLinkClick}>
-                About
+                About Us
               </Link>
             </li>
             <li>
