@@ -163,21 +163,20 @@ const Page = () => {
             <SwiperComponent />
 
             {/* Text Content */}
-            <div className="mt-6 text-left px-4 sm:px-8">
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed ">
-                    Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region. </p>
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+           <div className="mt-6 text-left px-4 sm:px-8 space-y-4">
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    Step into a world where tradition meets ageless artistry. Our hand-woven rugs are not simple floor coverings & wall hangings; they are vibrant portraits of cultural heritage, handmade by expert artisans employing time-honored techniques, each rug holds the essence of its creator and the tale of a history-filled region.
+  </p>
 
-                    The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
-                </p>
-                <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    The intricate designs based on nature and mythology, with natural dyes and hand-spun yarns, reflect a strong connection to culture, craftsmanship, and community. In selecting our carpets, one is not simply buying an excellent work of art; one is contributing to maintaining the livelihood of artisans and assisting in preserving a beautiful, ancient art.
+  </p>
 
-                    Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history.
-                </p>
+  <p className="graytxt text-gray-800 text-base sm:text-lg leading-relaxed">
+    Feel the warmth of tradition. Experience the touch of heritage. Be the owner of a piece of history.
+  </p>
+</div>
 
-
-
-            </div>
 
             {/* Section Title */}
             <div className="section-title text-center mt-8">
