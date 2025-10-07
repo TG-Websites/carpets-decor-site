@@ -25,7 +25,7 @@ function Footer() {
           <div>
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider">Quick Link</p>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="/AboutUs" className="hover:text-white transition">About</a></li>
+              <li><a href="/AboutUs" className="hover:text-white transition">About Us</a></li>
               <li><a href="/Services" className="hover:text-white transition">Categories</a></li>
               <li><a href="/AboutUs#why" className="hover:text-white transition">Why Carpets Decor?</a></li>
               <li><a href="/ContactUs" className="hover:text-white transition">Contact Us</a></li>

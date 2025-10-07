@@ -193,12 +193,12 @@ const CardList = [
   //     description: 'Lightweight, reversible rugs with bold geometric patterns—ideal for casual and high-traffic areas.',
   //     link: '/Flatweave',
   //   },
-  {
-    image: '/images/shopslider2.png',
-    title: 'Outdoor Rugs',
-    description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
-    link: '/OutdoorRugs',
-  },
+  // {
+  //   image: '/images/shopslider2.png',
+  //   title: 'Outdoor Rugs',
+  //   description: 'Weather-resistant, UV-stable rugs that add comfort and style to patios and outdoor spaces.',
+  //   link: '/OutdoorRugs',
+  // },
 ];
 
 const ProductCard = ({ image, title, description, link }: ProductCardProps) => (
